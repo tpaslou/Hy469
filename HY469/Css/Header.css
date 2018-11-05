@@ -3,10 +3,9 @@ div{margin:0;padding:0;background-color:transparent;text-align:left}
 
 .TopPanel {
   position: absolute;
+  display:inline-block;
   width: 768px;
   height: 354px;
-  left: 0px;
-  top: 0px;
 }
 
 .VideoPresentationPanel {
@@ -22,6 +21,7 @@ div{margin:0;padding:0;background-color:transparent;text-align:left}
   /* Steve: equal height of the children, otherwise
   div wthin a div do not start from same height*/
   display: flex;
+  overflow: hidden;
   position: relative;
   float:left;
   width: 248px;
@@ -40,6 +40,15 @@ div{margin:0;padding:0;background-color:transparent;text-align:left}
   text-align: center;
 }
 
+.PresentationControlsPanel {
+  position: relative;
+  width: 248px;
+  height: 178px;
+  left: -248px;
+  top: 178px;
+  text-align: center;
+}
+
 h1.NextSlideText {
   position: relative;
   max-width: 248px;
@@ -52,3 +61,21 @@ h1.NextSlideText {
   font-size: 18px;
   color: #383838;
 }
+
+.buttonPrevious {
+  background:url('../Images/Buttons/Button_Previous.png');
+  background-color:white;
+  background-size: cover;
+  border: none;
+  width: 45px;
+  height: 45px;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.buttonPrevious:hover {
+  background-color: rgb(102, 178, 236);
+}
+
+
