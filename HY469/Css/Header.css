@@ -62,20 +62,31 @@ h1.NextSlideText {
   color: #383838;
 }
 
-.buttonPrevious {
-  background:url('../Images/Buttons/Button_Previous.png');
+.buttonHeader {
   background-color:white;
   background-size: cover;
   border: none;
   width: 45px;
   height: 45px;
-  display: inline-block;
-  margin: 4px 2px;
+  margin: 5px 5px;
   cursor: pointer;
 }
 
-.buttonPrevious:hover {
+.buttonHeader:hover {
+  background-color: rgb(163, 215, 255);
+}
+
+.buttonHeader:active {
   background-color: rgb(102, 178, 236);
+}
+
+.buttonImage {
+  position: relative;
+  left: -5px;
+  top: -1px;
+
+  width:45px;
+  height:45px;
 }
 
 
