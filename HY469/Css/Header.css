@@ -1,0 +1,54 @@
+html,body,blockquote,code,h1,h2,h3,h4,h5,h6,p,pre{margin:0;padding:0}
+div{margin:0;padding:0;background-color:transparent;text-align:left}
+
+.TopPanel {
+  position: absolute;
+  width: 768px;
+  height: 354px;
+  left: 0px;
+  top: 0px;
+}
+
+.VideoPresentationPanel {
+  position: relative;
+  float:left;
+  width: 520px;
+  height: 354px;
+  left: 0px;
+  top: 0px;
+}
+
+.SidePanel {
+  /* Steve: equal height of the children, otherwise
+  div wthin a div do not start from same height*/
+  display: flex;
+  position: relative;
+  float:left;
+  width: 248px;
+  height: 354px;
+  left: 0px;
+  top: 0px;
+  background-color: #c8c8c8
+}
+
+.NextSlidePanel {
+  position: relative;
+  width: 248px;
+  height: 178px;
+  left: 0px;
+  top: 0px;
+  text-align: center;
+}
+
+h1.NextSlideText {
+  position: relative;
+  max-width: 248px;
+  width: auto;
+  max-height: 26px;
+  height: auto;
+  top: 0px;
+  font-family: SegoeUI;
+  font-weight: bold;
+  font-size: 18px;
+  color: #383838;
+}
