@@ -1,0 +1,12 @@
+html,body,blockquote,code,h1,h2,h3,h4,h5,h6,p,pre{margin:0;padding:0}
+div{margin:0;padding:0;background-color:transparent;text-align:left}
+
+.Footer{
+    position: absolute;
+    display:inline-block;
+    width: 768px;
+    height: 154px;
+    left: 0px;
+    top: 870px;
+    background-color: #1C67A0;
+}
