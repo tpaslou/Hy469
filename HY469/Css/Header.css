@@ -56,16 +56,17 @@ h1.NextSlideText {
   background-color:white;
   background-size: cover;
   display: inline;
+  border-radius: 6px;
   border: none;
+  outline: 0;
   width: 45px;
   height: 45px;
-  border-radius: 6px;
   margin: 4px 0px;
   cursor: pointer;
 }
 
 .buttonHeader:active {
-  background-color: rgb(102, 178, 236);
+  background-color: rgb(28, 103, 160);
 }
 
 .buttonImage {
@@ -76,5 +77,38 @@ h1.NextSlideText {
   width:45px;
   height:45px;
 }
+
+.slidecontainer {
+  width: 100%;
+}
+
+/*Leave as 
+is all slider compartemnts*/
+
+.slider {
+  -webkit-appearance: none;
+  width: 80%;
+  height: 12px;
+  align-content: center;
+  background: white;
+  outline: none;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+
+  top: 10px;
+  margin: 15px auto;
+  display: block;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgb(28, 103, 160);
+  cursor: pointer;
+}
+
 
 
