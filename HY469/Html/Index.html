@@ -9,9 +9,11 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css">
     <link rel="stylesheet" href="../Css/Header.css">
     <link rel="stylesheet" href="../Css/Footer.css">
+    <link rel="stylesheet" href="../Css/Notification.css">
     <script  type="text/javascript"  src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script  type="text/javascript"  src="../Js/Header.js"></script>
     <script  type="text/javascript"  src="../Js/footer.js"></script>
+    <script  type="text/javascript"  src="../Js/Notification.js"></script>
 
     <title>Coord.ME</title>
 </head>
@@ -105,6 +107,25 @@
 
 
 
+    </div>
+
+    <div class="Notification"style="display: none;">
+        <button type="button" class="NotificationButton">
+            <img src="../Images/Notification/Button_Exit.png"class="ButtonExit" alt="Exit">
+        </button>
+        <h1 class="RequestText">New Request</h1>
+        <h1 class="RequestInfoText">Wants to make an Annotation</h1>   
+        
+        <div class="NotificationsOptions">
+            <button id="AcceptBtn" type="button" class="NotificationsOptionsButton">
+                <img src="../Images/Notification/Button_Accept.png" class="NotificationsOptionsButtonImage" alt="Accept">
+                <h1 class="NotificationsOptionsText">Accept</h1>   
+            </button>
+            <button id="DeclineBtn" type="button" class="NotificationsOptionsButton">
+                    <img src="../Images/Notification/Button_Decline.png" class="NotificationsOptionsButtonImage" alt="Decline">
+                    <h1 class="NotificationsOptionsText">Decline</h1>   
+            </button>
+        </div>
     </div>
 </body>
 
