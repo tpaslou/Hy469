@@ -18,26 +18,17 @@
 
 <body>
 
-    <div class="TopPanel">
-        
-        <div class="VideoPresentationPanel" id = "Slide 1">
-            <img src="../Images/VideoPresentation/PV_1.png" alt="PPT" style="width:520px;height:354px;">
-        </div>
+    <div class="TopPanel">       
+        <div class="VideoPresentationPanel">
+            <img id="PPTVideoImg" src="../Images/VideoPresentation/PV_1.png" alt="PPT" style="width:520px;height:354px;">
 
-        <div class="VideoPresentationPanel" id = "Slide 2" style="display:none">
-            <img src="../Images/VideoPresentation/PV_2.png" alt="PPT" style="width:520px;height:354px;">
-        </div>
-
-        <div class="VideoPresentationPanel" id = "Slide 3, Video"> <!-- style="display:none" -->
-            <img src="../Images/VideoPresentation/PV_3.png" alt="PPT" style="width:520px;height:354px;">
-
-            <div class="VideoControls">
+            <div id="VideoControlsDiv" class="VideoControls" style="display:none">
                 <button type="button" class="buttonHeader"  style="margin: 3px 4px;">
                     <img src="../Images/Buttons/Button_PlayPause.png" class="buttonImage" alt="PlayPause">
                 </button>
     
-                <button id="SwapButtonMute" type="button" class="buttonHeader" style="margin: 3px 4px;">
-                    <img id="MuteUnmuteBtn" src="../Images/Buttons/Button_Mute.png" class="buttonImage" alt="Mute">
+                <button id="SwapMuteBtn" type="button" class="buttonHeader" style="margin: 3px 4px;">
+                    <img id="MuteUnmuteImg" src="../Images/Buttons/Button_Mute.png" class="buttonImage" alt="Mute">
                 </button>
 
                 <img src="../Images/VideoPresentation/VideoSlider.png" alt="Slider" style="position:relative;width:375px;height:14.5px;">
@@ -48,16 +39,16 @@
         <div class="SidePanel">
             <div class="NextSlidePanel">                  
                 <h1 class="NextSlideText">Next Slide</h1>               
-                <img src="../Images/VideoPresentation/PV_2.png" alt="PPT" style="width:248px;height:152px;">
+                <img id="NextSlideImg" src="../Images/VideoPresentation/PV_2.png" alt="PPT" style="width:248px;height:152px;">
                 <img src="../Images/VideoPresentation/PV_3.png" alt="PPT" style="width:248px;height:152px; display: none;">
             </div>
     
             <div class="PresentationControlsPanel">
-                <button type="button" class="buttonHeader">
+                <button id="PreviousBtn" type="button" class="buttonHeader">
                     <img src="../Images/Buttons/Button_Previous.png" class="buttonImage" alt="Previous">
                 </button>
     
-                <button type="button" class="buttonHeader">
+                <button id="NextBtn" type="button" class="buttonHeader">
                     <img src="../Images/Buttons/Button_Next.png" class="buttonImage" alt="Next">
                 </button>
     
