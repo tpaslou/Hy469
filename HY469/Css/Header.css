@@ -2,14 +2,16 @@ html,body,blockquote,code,h1,h2,h3,h4,h5,h6,p,pre{margin:0;padding:0}
 div{margin:50px;padding:0;background-color:transparent;text-align:left}
 
 .TopPanel {
-  position: absolute;
+  /*same as absolute, just listens to root
+  not to parent div, doesnt have one*/
+  position: fixed;
   display:inline-block;
   width: 768px;
   height: 354px;
 }
 
 .VideoPresentationPanel {
-  position: relative;
+  position: absolute;
   float:left;
   width: 520px;
   height: 354px;
@@ -17,15 +19,34 @@ div{margin:50px;padding:0;background-color:transparent;text-align:left}
   top: 0px;
 }
 
-.NextSlidePanel {
+.VideoControls{
   position: relative;
-  float:left;
+  width: 500px;
+  height: 51px;
+  top: -60px;
+  left: 10px;
+  align-content: center;
+  background-color: #c8c8c8
+}
+
+.SidePanel {
+  position: absolute;
+  width: 248px;
+  height: 354px;
+  left: 520px;
+  top: 0px;
+  background-color: #c8c8c8
+}
+
+.NextSlidePanel {
+  /*since I dont alter the position,
+  static would work the same*/
+  position: relative;
   width: 248px;
   height: 178px;
   left: 0px;
   top: 0px;
-  text-align: center;
-  background-color: #c8c8c8
+  text-align: center;  
 }
 
 h1.NextSlideText {
@@ -43,25 +64,28 @@ h1.NextSlideText {
 
 .PresentationControlsPanel {
   position: relative;
-  float: left;
   width: 248px;
   height: 178px;
   left: 0px;
   top: 0px;
   text-align: center;
-  background-color: #c8c8c8
 }
 
 .buttonHeader {
+  position: relative;
+
   background-color:white;
   background-size: cover;
   display: inline;
+
   border-radius: 6px;
   border: none;
   outline: 0;
+
   width: 45px;
   height: 45px;
   margin: 4px 0px;
+
   cursor: pointer;
 }
 
