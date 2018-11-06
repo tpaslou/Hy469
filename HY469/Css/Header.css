@@ -2,9 +2,9 @@ html,body,blockquote,code,h1,h2,h3,h4,h5,h6,p,pre{margin:0;padding:0}
 div{margin:50px;padding:0;background-color:transparent;text-align:left}
 
 .TopPanel {
-  /*same as absolute, just listens to root
-  not to parent div, doesnt have one*/
-  position: fixed;
+  /*same as fixed, just listens to parent div
+  not to root, hence is scrollable*/
+  position: absolut;
   display:inline-block;
   width: 768px;
   height: 354px;
