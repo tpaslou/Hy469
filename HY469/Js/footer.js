@@ -1,11 +1,6 @@
-$(document).ready(function(){
-
-
-$(".Footer > .btn").click(function(){
-    $(".Footer > .btn").removeClass("active");
-    $(this).addClass("active");
-});
-
-
-
+$(document).ready(function() {
+  $(".btn").click(function(e) {
+    var id = e.target.id;
+    console.log(id);
+  });
 });
