@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css">
     <link rel="stylesheet" href="../Css/Header.css">
     <link rel="stylesheet" href="../Css/Footer.css">
+    <script  type="text/javascript"  src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script  type="text/javascript"  src="../Js/Header.js"></script>
+    <script  type="text/javascript"  src="../Js/Footer.js"></script>
 
     <title>Coord.ME</title>
 </head>
@@ -25,7 +28,7 @@
             <img src="../Images/VideoPresentation/PV_2.png" alt="PPT" style="width:520px;height:354px;">
         </div>
 
-        <div class="VideoPresentationPanel" id = "Slide 3, Video" style="display:none">
+        <div class="VideoPresentationPanel" id = "Slide 3, Video"> <!-- style="display:none" -->
             <img src="../Images/VideoPresentation/PV_3.png" alt="PPT" style="width:520px;height:354px;">
 
             <div class="VideoControls">
@@ -33,8 +36,8 @@
                     <img src="../Images/Buttons/Button_PlayPause.png" class="buttonImage" alt="PlayPause">
                 </button>
     
-                <button type="button" class="buttonHeader" style="margin: 3px 4px;">
-                    <img src="../Images/Buttons/Button_Mute.png" class="buttonImage" alt="Mute">
+                <button id="SwapButtonMute" type="button" class="buttonHeader" style="margin: 3px 4px;">
+                    <img id="MuteUnmuteBtn" src="../Images/Buttons/Button_Mute.png" class="buttonImage" alt="Mute">
                 </button>
 
                 <img src="../Images/VideoPresentation/VideoSlider.png" alt="Slider" style="position:relative;width:375px;height:14.5px;">
