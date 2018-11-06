@@ -17,61 +17,82 @@
 
     <div class="TopPanel">
         
-        <div class="VideoPresentationPanel">
+        <div class="VideoPresentationPanel" id = "Slide 1">
             <img src="../Images/VideoPresentation/PV_1.png" alt="PPT" style="width:520px;height:354px;">
         </div>
 
-        <div class="NextSlidePanel">                  
-            <h1 class="NextSlideText">Presentation Controls</h1>
-            <img src="../Images/VideoPresentation/PV_2.png" alt="PPT" style="width:248px;height:152px;">
+        <div class="VideoPresentationPanel" id = "Slide 2" style="display:none">
+            <img src="../Images/VideoPresentation/PV_2.png" alt="PPT" style="width:520px;height:354px;">
         </div>
 
-        <div class="PresentationControlsPanel">
-            <button type="button" class="buttonHeader">
-                <img src="../Images/Buttons/Button_Previous.png" class="buttonImage" alt="Previous">
-            </button>
+        <div class="VideoPresentationPanel" id = "Slide 3, Video" style="display:none">
+            <img src="../Images/VideoPresentation/PV_3.png" alt="PPT" style="width:520px;height:354px;">
 
-            <button type="button" class="buttonHeader">
-                <img src="../Images/Buttons/Button_Next.png" class="buttonImage" alt="Next">
-            </button>
-
-            <button type="button" class="buttonHeader">
-                <img src="../Images/Buttons/Button_Annotation.png" class="buttonImage" alt="Annotation">
-            </button>
-
-            <button type="button" class="buttonHeader">
-                <img src="../Images/Buttons/Button_Notes.png" class="buttonImage" alt="TakeNotes">
-            </button>
-
-            <button type="button" class="buttonHeader">
-                <img src="../Images/Buttons/Button_ChangePPT.png" class="buttonImage" alt="FileChange">
-            </button>
-
-            <h1 class="NextSlideText">Annotation Controls</h1>
-
-            <button type="button" class="buttonHeader">
-                <img src="../Images/Buttons/Button_Color_Black.png" class="buttonImage" alt="BlackColor">
-            </button>
+            <div class="VideoControls">
+                <button type="button" class="buttonHeader"  style="margin: 3px 4px;">
+                    <img src="../Images/Buttons/Button_PlayPause.png" class="buttonImage" alt="PlayPause">
+                </button>
     
-            <button type="button" class="buttonHeader">
-                <img src="../Images/Buttons/Button_Color_Green.png" class="buttonImage" alt="GreenColor">
-            </button>
-    
-            <button type="button" class="buttonHeader">
-                <img src="../Images/Buttons/Button_Color_Red.png" class="buttonImage" alt="RedColor">
-            </button>
+                <button type="button" class="buttonHeader" style="margin: 3px 4px;">
+                    <img src="../Images/Buttons/Button_Mute.png" class="buttonImage" alt="Mute">
+                </button>
 
-            <div class="slidecontainer">
-                <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                <img src="../Images/VideoPresentation/VideoSlider.png" alt="Slider" style="position:relative;width:375px;height:14.5px;">
             </div>
+
         </div>
+
+        <div class="SidePanel">
+            <div class="NextSlidePanel">                  
+                <h1 class="NextSlideText">Next Slide</h1>               
+                <img src="../Images/VideoPresentation/PV_2.png" alt="PPT" style="width:248px;height:152px;">
+                <img src="../Images/VideoPresentation/PV_3.png" alt="PPT" style="width:248px;height:152px; display: none;">
+            </div>
+    
+            <div class="PresentationControlsPanel">
+                <button type="button" class="buttonHeader">
+                    <img src="../Images/Buttons/Button_Previous.png" class="buttonImage" alt="Previous">
+                </button>
+    
+                <button type="button" class="buttonHeader">
+                    <img src="../Images/Buttons/Button_Next.png" class="buttonImage" alt="Next">
+                </button>
+    
+                <button type="button" class="buttonHeader">
+                    <img src="../Images/Buttons/Button_Annotation.png" class="buttonImage" alt="Annotation">
+                </button>
+    
+                <button type="button" class="buttonHeader">
+                    <img src="../Images/Buttons/Button_Notes.png" class="buttonImage" alt="TakeNotes">
+                </button>
+    
+                <button type="button" class="buttonHeader">
+                    <img src="../Images/Buttons/Button_ChangePPT.png" class="buttonImage" alt="FileChange">
+                </button>
+    
+                <h1 class="NextSlideText">Annotation Controls</h1>
+    
+                <button type="button" class="buttonHeader">
+                    <img src="../Images/Buttons/Button_Color_Black.png" class="buttonImage" alt="BlackColor">
+                </button>
         
-        <div id="Footer" class="Footer">
-
-        </div>
-
+                <button type="button" class="buttonHeader">
+                    <img src="../Images/Buttons/Button_Color_Green.png" class="buttonImage" alt="GreenColor">
+                </button>
+        
+                <button type="button" class="buttonHeader">
+                    <img src="../Images/Buttons/Button_Color_Red.png" class="buttonImage" alt="RedColor">
+                </button>
+    
+                <div class="slidecontainer">
+                    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                </div>
+            </div>
+        </div>        
+        
     </div>
 
+    <div id="Footer" class="Footer"></div>
 </body>
 
 </html>
