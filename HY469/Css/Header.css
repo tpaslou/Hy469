@@ -4,7 +4,7 @@ div{margin:50px;padding:0;background-color:transparent;text-align:left}
 .TopPanel {
   /*same as fixed, just listens to parent div
   not to root, hence is scrollable*/
-  position: absolut;
+  position: absolute;
   display:inline-block;
   width: 768px;
   height: 354px;
@@ -102,12 +102,12 @@ h1.NextSlideText {
   height:45px;
 }
 
+/*Leave as 
+is all slider compartemnts*/
+
 .slidecontainer {
   width: 100%;
 }
-
-/*Leave as 
-is all slider compartemnts*/
 
 .slider {
   -webkit-appearance: none;
