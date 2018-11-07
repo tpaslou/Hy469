@@ -19,7 +19,7 @@ div{margin:0;padding:0;background-color:transparent;text-align:left}
 
     background-color:transparent;
     background-size: cover;
-    display: inline;
+    display: inline-block;
   
     border-radius: 20px;
     border: none;

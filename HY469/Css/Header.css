@@ -1,5 +1,5 @@
 html,body,blockquote,code,h1,h2,h3,h4,h5,h6,p,pre{margin:0;padding:0}
-div{margin:50px;padding:0;background-color:transparent;text-align:left}
+div{margin:0px;padding:0;background-color:transparent;text-align:left}
 
 .TopPanel {
   /*same as fixed, just listens to parent div
@@ -76,7 +76,7 @@ h1.NextSlideText {
 
   background-color:white;
   background-size: cover;
-  display: inline;
+  display: inline-block;
 
   border-radius: 6px;
   border: none;
