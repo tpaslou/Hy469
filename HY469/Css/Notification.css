@@ -70,7 +70,6 @@ h1.RequestInfoText {
 
 .NotificationsOptionsButton {
     position: relative;
-  
     background-color:white;
     background-size: cover;
     display: block;
@@ -81,8 +80,25 @@ h1.RequestInfoText {
     outline: 0;
     width: 45px;
     height: 45px;
-    margin: 30px 0px;
+    margin:20px;
+    padding:0px;
   
+    cursor: pointer;
+}
+
+.NotificationsExitButton {
+    position: relative;
+    background-color:rgba(255, 255, 255, 0);
+    background-size: cover;
+    top: 0px;
+    left: 680px;
+    border-radius: 6px;
+    border: none;
+    outline: 0;
+    width: 45px;
+    height: 45px;
+    margin:20px;
+    padding:0px;
     cursor: pointer;
 }
   
@@ -92,9 +108,8 @@ h1.RequestInfoText {
   
 .NotificationsOptionsButtonImage {
     position: relative;
-    left: -5px;
+    left: 0px;
     top: 2px;
-  
     width:40px;
     height:40px;
   }
