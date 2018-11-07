@@ -229,12 +229,13 @@
         <script>
             $(document).ready(function(){
                 $("#HideKeyboardBtn").click( function () {
+                    $(this).css("background-color","rgb(17, 66, 104)");
                     $("#Keyboard").slideUp(600);
                 });
             });
         </script>
         
-        <button id="HideKeyboardBtn" type="button" onclick="colorChange()" style="
+        <button id="HideKeyboardBtn" type="button" style="
         width: 65px;
         height:65px;
         border-radius: 6px;
