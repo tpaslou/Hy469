@@ -110,14 +110,6 @@ input[type="checkbox"]:checked:active + .toggle i {
 	left: 14px;
 }
 
-.PPTButton {
-    position: relative;
-    left: 590px;
-    top: -30px;
-  
-    width:60px;
-    height:60px;
-}
 .PresentationButton {
     position: relative;
     background-color:rgba(155, 155, 155, 0.534);
@@ -138,6 +130,38 @@ input[type="checkbox"]:checked:active + .toggle i {
     position: relative;
     left: 0px;
     top: 0px;
-    width:30px;
+    width:40px;
     height:40px;
   }
+
+  .ReuestCoordButton {
+    position: relative;
+    background-color:rgba(155, 155, 155, 0.534);
+    background-size: cover;
+    top: -138px;
+    left: 680px;
+    border-radius: 6px;
+    border: none;
+    outline: 0;
+    width: 45px;
+    height: 45px;
+    margin:20px;
+    padding:0px;
+    cursor: pointer;
+}
+
+.LogOutButton {
+    position: relative;
+    background-color:rgba(155, 155, 155, 0.534);
+    background-size: cover;
+    top: -83px;
+    left: 590px;
+    border-radius: 6px;
+    border: none;
+    outline: 0;
+    width: 45px;
+    height: 45px;
+    margin:20px;
+    padding:0px;
+    cursor: pointer;
+}

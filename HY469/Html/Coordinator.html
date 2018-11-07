@@ -38,7 +38,8 @@
 
                 <img src="../Images/VideoPresentation/VideoSlider.png" alt="Slider" style="position:relative;width:375px;height:14.5px;">
             </div>
-            <div id="MiddlePanel" class="MiddlePanel" style="display:none">
+
+            <div id="MiddlePanelPresentationOptions" class="MiddlePanelPresentationOptions" style="display:none">
                 <fieldset>
                     <legend>TV MONITOR:</legend>
                     <form action="">
@@ -74,7 +75,79 @@
                     </form>
                 </fieldset>
                 <button id="SelectPPTBtn" type="button" class="PresentationButton">
-                    <img id="SelectPPTButtonImg" src="../Images/MiddleSection/Button_PPT.png"class="PresentationButtonImage" alt="Exit">
+                    <img id="SelectPPTButtonImg" src="../Images/MiddleSection/Button_File.png"class="PresentationButtonImage" alt="SelectPPT">
+                </button>
+            </div>
+
+            <div id="MiddlePanelMoreOptions" class="MiddlePanelMoreOptions" style="display:none">
+                <fieldset>
+                    <legend>OPTIONS:</legend>
+                    <form action="">
+                        <div class="item">
+                            <p>Microphone</p>
+                            <input type="checkbox" id="toggle_microphone" name="" value="">
+                            <div class="toggle">
+                                <label for="toggle_microphone"><i></i></label>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <p>Camera</p>
+                            <input type="checkbox" id="toggle_camera" name="" value="">
+                            <div class="toggle">
+                                <label for="toggle_camera"><i></i></label>
+                            </div>
+                        </div>
+                    </form>
+                </fieldset>
+                <fieldset>
+                    <legend>SESSION:</legend>
+                    <form action="">
+                        <div class="item">
+                            <p>Terminate Session</p>
+                        </div>
+                    </form>
+                </fieldset>
+                <button id="TerminateSessionBtn" type="button" class="PresentationButton">
+                    <img id="TerminateSessionButtonImg" src="../Images/Notification/Button_RemoveUser.png"class="PresentationButtonImage" alt="TerminateSession">
+                </button>
+            </div>
+
+            <div id="MiddlePanelMoreOptionsParticipant" class="MiddlePanelMoreOptionsParticipant" style="display:none">
+                <fieldset>
+                    <legend>OPTIONS:</legend>
+                    <form action="">
+                        <div class="item">
+                            <p>Microphone</p>
+                            <input type="checkbox" id="toggle_microphonePart" name="" value="">
+                            <div class="toggle">
+                                <label for="toggle_microphonePart"><i></i></label>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <p>Camera</p>
+                            <input type="checkbox" id="toggle_cameraPart" name="" value="">
+                            <div class="toggle">
+                                <label for="toggle_cameraPart"><i></i></label>
+                            </div>
+                        </div>
+                    </form>
+                </fieldset>
+                <fieldset>
+                    <legend>SESSION:</legend>
+                    <form action="">
+                        <div class="item">
+                            <p>Request Coordinator Privileges</p>
+                        </div>
+                        <div class="item">
+                            <p>Log Out</p>
+                        </div>
+                    </form>
+                </fieldset>
+                <button id="RequestCoordBtn" type="button" class="ReuestCoordButton">
+                    <img id="RequestCoordButtonImg" src="../Images/MiddleSection/Button_Coordinator.png"class="PresentationButtonImage" alt="RequestCoord">
+                </button>
+                <button id="LogOutBtn" type="button" class="LogOutButton">
+                    <img id="LogOutButtonImg" src="../Images/MiddleSection/Button_LogOut.png"class="PresentationButtonImage" alt="LogOut">
                 </button>
             </div>
         </div>
