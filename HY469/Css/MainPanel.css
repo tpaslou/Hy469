@@ -1,20 +1,17 @@
 html,body,blockquote,code,h1,h2,h3,h4,h5,h6,p,pre{margin:0;padding:0}
 div{margin:0;padding:0;background-color:transparent;text-align:left}
 
-.Footer{
+.MainPanel{
     position: absolute;
     display:inline-block;
     width: 768px;
-    height: 154px;
+    height: 82px;
     left: 0px;
-    top: 870px;
+    top: 780px;
     background-color: #1C67A0;
 }
 
-
-
-
-.FooterbuttonHeader{
+/*.MainPanelBottombuttonHeader{
     position: relative;
 
     background-color:transparent;
@@ -25,30 +22,41 @@ div{margin:0;padding:0;background-color:transparent;text-align:left}
     border: none;
     outline: 0;
   
-    width: 252px;
-    height: 154px;
+    width: 380px;
+    height: 76px;
     margin: 0px 0px;
 }
 
-.ChatbuttonImage{
+.PrivateChatbuttonImage{
     position: relative;
     top:6px;
 }
 
-.ParticipantsbuttonImage{
+.GroupChatbuttonImage{
     position: relative;
     top:6px;
 }
-.SettingsbuttonImage{
-    position: relative;
-    top:10px;
-}
 
-.FooterbuttonHeader:active{
+
+.MainPanelBottombuttonHeader:active{
     background-color: #383838 ;
 }
 
-.active, .FT:hover {
+.target, .BT:hover {
     background-color: #383838 ;
+}
+*/
+.tablink {
+    background-color:transparent;
+    color: white;
+    float: left;
+    border: none;
+    border-radius: 20px;
+
+    outline: none;
+    cursor: pointer;
+    padding: 24px 18px;
+    font-size: 22px;
+    width: 50%;
 }
 
