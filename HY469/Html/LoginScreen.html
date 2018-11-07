@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="../Css/Login.css">
     <script  type="text/javascript"  src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script  type="text/javascript"  src="../Js/Login.js"></script>
-    <script  type="text/javascript"  src="../Js/Header.js"></script>
 
     <title>Coord.ME</title>
 </head>
@@ -25,7 +24,7 @@
     <div id="LoginPart1" class="MidBottomControls" style="display:none">
         <div class="LoginControl">
             <img id="InputBackImg" src="../Images/Static/TextArea.png">
-            <input class="InputLogin" type="text" maxlength="22" value="Username...">
+            <input class="InputLogin" type="text" maxlength="22" value="Username...">           
         </div>
         <div class="LoginControl">
             <img id="InputBackImg" src="../Images/Static/TextArea.png">
@@ -45,7 +44,7 @@
 
     <div id="LoginPart2" class="MidBottomControls" style="display:none">
         <div class="LoginControl">
-            <button type="button" class="ButtonLogin">
+            <button id="NewSessionBtn" type="button" class="ButtonLogin">
                 <h1 style="color:white;font-weight:bold">New Session</h1>
             </button>
         </div>
@@ -61,10 +60,17 @@
         </div>
     </div>
 
-    <div id="LoginPart4" class="MidBottomControls">
-        <div class="LoginControl">
+    <div id="LoginPart3" class="MidBottomControls" style="display:none">
+        <!-- MIDDLE FILE SYSTEM -->
+    </div>
+
+    <div id="LoginPart4" class="MidBottomControls" style="display:none">
+        <div class="LoginControl">           
             <img id="InputBackImg" src="../Images/Static/TextArea.png">
-            <input class="InputLogin" type="text" maxlength="22" value="Name New Session">
+            <button type="button" class="buttonLogin">
+                <img src="../Images/Buttons/Button_Dropdown.png" class="buttonImage" alt="FileChange">
+            </button>
+            <input class="InputLogin" type="text" maxlength="18" value="Name New Session">   
         </div>
         <div class="LoginControl">
             <p>File Selected:</p>
@@ -74,10 +80,145 @@
             </tr></table>
         </div>
         <div class="LoginControl">
+            <button id="BackToLoginBtn" type="button" class="ButtonLogin">
+                <h1 style="color:white;font-weight:bold">Back</h1>
+            </button>
             <button id="StartSessionBtn" type="button" class="ButtonLogin" onclick="window.location.href='../Html/Coordinator.html'">
                 <h1 style="color:white;font-weight:bold">Lest's Start</h1>
             </button>
         </div>
+    </div>
+
+    <div id="LoginPart5" class="MidBottomControls" style="display:none;background-color:#E6E6E6;overflow:auto;">
+        <div class="ButtonTextAlign">
+            <button id="SelectSessionBtn" type="button" class="ButtonLogin">
+                    <h1 style="color:white;font-weight:bold">Select</h1>
+            </button>
+            
+            <div id="ButtonSessionMultipleInfo">
+                <h1  id="SelectSessionT1" style="color:rgb(56,56,56);font-weight:bold">
+                    Quick Sync on GDPR
+                </h1>
+                <p  id="SelectSessionT1" style="color:black;font-weight:bold">
+                    Sep - 10 - 2018
+                </p>
+            </div>
+        </div>    
+        <div class="ButtonTextAlign">
+            <button id="SelectSessionBtn" type="button" class="ButtonLogin">
+                    <h1 style="color:white;font-weight:bold">Select</h1>
+            </button>
+            
+            <div id="ButtonSessionMultipleInfo">
+                <h1  id="SelectSessionT1" style="color:rgb(56,56,56);font-weight:bold">
+                    New Office on Jipard Str
+                </h1>
+                <p  id="SelectSessionT1" style="color:black;font-weight:bold">
+                    Sep - 4 - 2018
+                </p>
+            </div>
+        </div> 
+        <div class="ButtonTextAlign">
+            <button id="SelectSessionBtn" type="button" class="ButtonLogin">
+                    <h1 style="color:white;font-weight:bold">Select</h1>
+            </button>
+            
+            <div id="ButtonSessionMultipleInfo">
+                <h1  id="SelectSessionT1" style="color:rgb(56,56,56);font-weight:bold">
+                    CONFIDENTIAL: CEO, PR
+                </h1>
+                <p  id="SelectSessionT1" style="color:black;font-weight:bold">
+                    Aug - 15 - 2018
+                </p>
+            </div>
+        </div>                
+    </div>
+
+    <div id="LoginPart6" class="MidBottomControls" style="background-color: #E6E6E6; overflow:auto;">
+        <div class="ButtonTextAlign">
+            <button id="JoinSessionBtn" type="button" class="ButtonLogin">
+                    <h1 style="color:white;font-weight:bold">Self Join</h1>
+            </button>
+            
+            <div id="ButtonSessionMultipleInfo">
+                <h1  id="SelectSessionT1" style="color:rgb(56,56,56);font-weight:bold">
+                    John's Retirement
+                </h1>
+                <p  id="SelectSessionT1" style="color:black;font-weight:bold">
+                    22min   -   12 participants
+                </p>
+            </div>
+        </div>  
+        <div class="ButtonTextAlign">
+            <button id="RequestSessionBtn" type="button" class="ButtonLogin">
+                    <h1 style="color:white;font-weight:bold">Request Join</h1>
+            </button>
+            
+            <div id="ButtonSessionMultipleInfo">
+                <h1  id="SelectSessionT1" style="color:rgb(56,56,56);font-weight:bold">
+                    CONF: New CEO Update
+                </h1>
+                <p  id="SelectSessionT1" style="color:black;font-weight:bold">
+                    4hrs 06min   -   7 participants
+                </p>
+            </div>
+        </div>  
+        <div class="ButtonTextAlign">
+            <button id="RequestSessionBtn" type="button" class="ButtonLogin">
+                    <h1 style="color:white;font-weight:bold">Request Join</h1>
+            </button>
+            
+            <div id="ButtonSessionMultipleInfo">
+                <h1  id="SelectSessionT1" style="color:rgb(56,56,56);font-weight:bold">
+                    New Partner: Lenovo
+                </h1>
+                <p  id="SelectSessionT1" style="color:black;font-weight:bold">
+                    52min   -   26 participants
+                </p>
+            </div>
+        </div>
+        <div class="ButtonTextAlign">
+            <button id="JoinSessionBtn" type="button" class="ButtonLogin">
+                    <h1 style="color:white;font-weight:bold">Self Join</h1>
+            </button>
+            
+            <div id="ButtonSessionMultipleInfo">
+                <h1  id="SelectSessionT1" style="color:rgb(56,56,56);font-weight:bold">
+                    Pay for Parking?
+                </h1>
+                <p  id="SelectSessionT1" style="color:black;font-weight:bold">
+                    10min   -   1 participants
+                </p>
+            </div>
+        </div> 
+        <div class="ButtonTextAlign">
+            <button id="JoinSessionBtn" type="button" class="ButtonLogin">
+                    <h1 style="color:white;font-weight:bold">Self Join</h1>
+            </button>
+            
+            <div id="ButtonSessionMultipleInfo">
+                <h1  id="SelectSessionT1" style="color:rgb(56,56,56);font-weight:bold">
+                    Wonna Eat? Join
+                </h1>
+                <p  id="SelectSessionT1" style="color:black;font-weight:bold">
+                    8min   -   19 participants
+                </p>
+            </div>
+        </div>
+        <div class="ButtonTextAlign">
+            <button id="RequestSessionBtn" type="button" class="ButtonLogin">
+                    <h1 style="color:white;font-weight:bold">Request Join</h1>
+            </button>
+            
+            <div id="ButtonSessionMultipleInfo">
+                <h1  id="SelectSessionT1" style="color:rgb(56,56,56);font-weight:bold">
+                    8 o'clock wrap up!
+                </h1>
+                <p  id="SelectSessionT1" style="color:black;font-weight:bold">
+                    22min   -   9 participants
+                </p>
+            </div>
+        </div>                    
     </div>
 </body>
 

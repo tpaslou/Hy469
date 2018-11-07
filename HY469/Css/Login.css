@@ -56,7 +56,7 @@ h1.LoginText {
   position: relative;
   top: -40px;
   left: 20px;
-  width: 360px;
+  width: 300px;
   height: 40px;
   resize: none;
   border: none;
@@ -89,4 +89,56 @@ h1.LoginText {
 
 .ButtonLogin:active {
   background-color: rgb(17, 66, 104);
+}
+
+/* Small differences from button header*/
+
+.buttonLogin {
+  position: absolute;
+
+  background-color:white;
+  background-size: cover;
+
+  top: 22px;
+  left: 10px;
+
+  border-radius: 6px;
+  border: none;
+  outline: 0;
+
+  width: 45px;
+  height: 45px;
+  margin: 4px 0px;
+
+  cursor: pointer;
+}
+
+.buttonLogin:active {
+  background-color: rgb(28, 103, 160);
+}
+
+.buttonImage {
+  position: relative;
+  left: -5px;
+  top: -1px;
+
+  width:45px;
+  height:45px;
+}
+
+.ButtonSessionMultipleInfo{
+  position: relative;
+  float:left;
+  left: 254px;
+}
+
+.ButtonTextAlign{
+  position: relative;
+  left: 40px;
+}
+
+#SelectNameBtn, #ButtonSessionMultipleInfo{
+  display: inline-block;
+  vertical-align: top;
+  margin: 10px 20px;
 }
