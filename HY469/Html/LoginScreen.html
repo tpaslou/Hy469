@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../Css/Login.css">
     <script  type="text/javascript"  src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script  type="text/javascript"  src="../Js/Login.js"></script>
+    <script  type="text/javascript"  src="../Js/Header.js"></script>
 
     <title>Coord.ME</title>
 </head>
@@ -20,14 +21,15 @@
         <h1 class="LoginText">Welcome back:</h1>
         <h1 class="LoginText"><b>Steve Kateros</b></h1>
     </div>
-    <div id="BottomStaticHalf" class="MidBottomControls">
+
+    <div id="LoginPart1" class="MidBottomControls" style="display:none">
         <div class="LoginControl">
-            <img src="../Images/Static/TextArea.png">
+            <img id="InputBackImg" src="../Images/Static/TextArea.png">
             <input class="InputLogin" type="text" maxlength="22" value="Username...">
         </div>
         <div class="LoginControl">
-            <img src="../Images/Static/TextArea.png">
-            <input  class="InputLogin" type="text" maxlength="22" value="Password...">
+            <img id="InputBackImg" src="../Images/Static/TextArea.png">
+            <input class="InputLogin" type="text" maxlength="22" value="Password...">
         </div>
         <div class="LoginControl">
             <button id="LoginBtn" type="button" class="ButtonLogin">
@@ -37,6 +39,43 @@
         <div class="LoginControl">
             <button type="button" class="ButtonLogin">
                 <h1 style="color:white;font-weight:bold">Sign Up</h1>
+            </button>
+        </div>
+    </div>
+
+    <div id="LoginPart2" class="MidBottomControls" style="display:none">
+        <div class="LoginControl">
+            <button type="button" class="ButtonLogin">
+                <h1 style="color:white;font-weight:bold">New Session</h1>
+            </button>
+        </div>
+        <div class="LoginControl">
+            <button type="button" class="ButtonLogin">
+                <h1 style="color:white;font-weight:bold">Join Session</h1>
+            </button>
+        </div>
+        <div class="LoginControl">
+            <button  id="LogoutBtn" type="button" class="ButtonLogin">
+                <h1 style="color:white;font-weight:bold">Log Out</h1>
+            </button>
+        </div>
+    </div>
+
+    <div id="LoginPart4" class="MidBottomControls">
+        <div class="LoginControl">
+            <img id="InputBackImg" src="../Images/Static/TextArea.png">
+            <input class="InputLogin" type="text" maxlength="22" value="Name New Session">
+        </div>
+        <div class="LoginControl">
+            <p>File Selected:</p>
+            <table><tr>
+                <td><img src="../Images/Static/PPTIcon.png"></td>
+                <td> <h1 style="color:rgb(56, 56, 56);font-weight:bold">InvoiceQ2_2018.ppt</h1></td>
+            </tr></table>
+        </div>
+        <div class="LoginControl">
+            <button id="StartSessionBtn" type="button" class="ButtonLogin" onclick="window.location.href='../Html/Coordinator.html'">
+                <h1 style="color:white;font-weight:bold">Lest's Start</h1>
             </button>
         </div>
     </div>

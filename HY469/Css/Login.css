@@ -28,14 +28,14 @@ h1.LoginText {
 /* --- LOWER HALF ---*/
 
 .MidBottomControls {
-  position: relative;
+  position: absolute;
   width: 768px;
   height: 564px;
 
   text-align: center;
 }
 
-#BottomStaticHalf img{
+#InputBackImg{
   margin-left: auto;
 	margin-right: auto;
   display: block;
@@ -82,7 +82,7 @@ h1.LoginText {
   width: 254px;
   /*same size as Input Image*/
   height: 70px;
-  margin: 15px 0px;
+  margin: 20px 0px;
 
   cursor: pointer;
 }
