@@ -1,0 +1,92 @@
+Lohtml,body,blockquote,code,h1,h2,h3,h4,h5,h6,p,pre{margin:0;padding:0}
+div{margin:0px;padding:0;background-color:transparent;text-align:left}
+
+.TopLogo {
+  position: relative;
+  width: 768px;
+  height: 460px;
+
+  text-align: center;
+}
+
+#TopStaticHalf img{
+  margin-left: auto;
+	margin-right: auto;
+  display: block;
+  
+  position: relative;
+  top: 14px;
+}
+
+h1.LoginText {
+  position: relative;
+  top:14px;
+  font-size: 36px;
+  color: #383838;
+}
+
+/* --- LOWER HALF ---*/
+
+.MidBottomControls {
+  position: relative;
+  width: 768px;
+  height: 564px;
+
+  text-align: center;
+}
+
+#BottomStaticHalf img{
+  margin-left: auto;
+	margin-right: auto;
+  display: block;
+  
+  position: relative;
+  top: 14px;
+}
+
+.LoginControl{
+  position: relative;
+  margin-left: auto;
+	margin-right: auto;
+  width: 400px;
+  text-align: center;
+}
+
+.InputLogin{
+  position: relative;
+  top: -40px;
+  left: 20px;
+  width: 360px;
+  height: 40px;
+  resize: none;
+  border: none;
+  outline: 0; 
+
+  background-color: #c8c8c8;
+
+  font-style: italic;
+  font-size: 24px;
+}
+
+.ButtonLogin {
+  position: relative;
+
+  background-color: rgb(28, 103, 160);
+  
+  background-size: cover;
+  
+  border-radius: 20px;
+  border: none;
+  outline: 0;
+
+  width: 254px;
+  /*same size as Input Image*/
+  height: 70px;
+  margin: 15px 0px;
+
+  cursor: pointer;
+}
+
+.ButtonLogin:active {
+  background-color: rgb(17, 66, 104);
+}
