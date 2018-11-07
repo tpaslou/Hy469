@@ -5,6 +5,8 @@ $(document).ready(function(){
     });
 
     $("#LoginBtn").click( function () {
+        $('#LoginTxt').show();
+        $('#LoginNameTxt').fadeIn(3000);
         $('#LoginPart2').show();
         $('#LoginPart1').hide();
     });
