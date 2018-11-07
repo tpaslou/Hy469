@@ -11,10 +11,12 @@
     href="../Css/Header.css">
     <link rel="stylesheet" href="../Css/Footer.css">
     <link rel="stylesheet" href="../Css/Notification.css">
+    <link rel="stylesheet" href="../Css/MiddlePanel.css">
     <script  type="text/javascript"  src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script  type="text/javascript"  src="../Js/Header.js"></script>
     <script  type="text/javascript"  src="../Js/footer.js"></script>
     <script  type="text/javascript"  src="../Js/Notification.js"></script>
+    <script  type="text/javascript"  src="../Js/MiddlePanel.js"></script>
 
     <title>Coord.ME</title>
 </head>
@@ -36,7 +38,45 @@
 
                 <img src="../Images/VideoPresentation/VideoSlider.png" alt="Slider" style="position:relative;width:375px;height:14.5px;">
             </div>
-
+            <div id="MiddlePanel" class="MiddlePanel" style="display:none">
+                <fieldset>
+                    <legend>TV MONITOR:</legend>
+                    <form action="">
+                        <div class="item">
+                            <p>Presentation</p>
+                            <input type="checkbox" id="toggle_presentation" name="" value="">
+                            <div class="toggle">
+                                <label for="toggle_presentation"><i></i></label>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <p>Participants</p>
+                            <input type="checkbox" id="toggle_participants" name="" value="">
+                            <div class="toggle">
+                                <label for="toggle_participants"><i></i></label>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <p>Chat</p>
+                            <input type="checkbox" id="toggle_chat" name="" value="">
+                            <div class="toggle">
+                                <label for="toggle_chat"><i></i></label>
+                            </div>
+                        </div>
+                    </form>
+                </fieldset>
+                <fieldset>
+                    <legend>PRESENTATION:</legend>
+                    <form action="">
+                        <div class="item">
+                            <p>Select PowerPoint</p>
+                        </div>
+                    </form>
+                </fieldset>
+                <button id="SelectPPTBtn" type="button" class="PresentationButton">
+                    <img id="SelectPPTButtonImg" src="../Images/MiddleSection/Button_PPT.png"class="PresentationButtonImage" alt="Exit">
+                </button>
+            </div>
         </div>
 
         <div class="SidePanel">
@@ -109,6 +149,8 @@
 
 
     </div>
+
+
 
     <div id="AnnotationsNotification" class="Notification" style="display:none">
         <button id="ExitBtn" type="button" class="NotificationsExitButton">
