@@ -165,3 +165,20 @@ input[type="checkbox"]:checked:active + .toggle i {
     padding:0px;
     cursor: pointer;
 }
+
+.SelectFileButton {
+    position: relative;
+    background-color:rgba(155, 155, 155, 0.534);
+	background-size: cover;
+	display: block;
+    top: -229px;
+    left: 700px;
+    border-radius: 6px;
+    border: none;
+    outline: 0;
+    width: 45px;
+    height: 45px;
+	margin-bottom: 10px;
+    padding:0px;
+    cursor: pointer;
+}
