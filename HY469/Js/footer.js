@@ -5,9 +5,12 @@ $(document).ready(function() {
     if (id == "chatB") {
       $(MainPanel).show();
     } else if (id == "partB") {
+
       $(MainPanel).hide();
+
     } else if (id == "settB") {
       $(MainPanel).hide();
+      
     }
   });
 });
