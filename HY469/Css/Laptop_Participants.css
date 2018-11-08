@@ -34,7 +34,17 @@ div{margin:0px;padding:0;background-color:transparent;text-align:left}
   float:right;
   width: 325px;
   height: 575px;
-  background-color:orange;
+
+  text-align: center;
+
+  background-color:#c8c8c8;
+}
+
+h1.NextSlideText {
+  font-family: SegoeUI;
+  font-weight: bold;
+  font-size: 36px;
+  color: #383838;
 }
 
 .AllOptionPanelsLowerLeftPanel {
