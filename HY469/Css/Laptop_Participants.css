@@ -40,13 +40,6 @@ div{margin:0px;padding:0;background-color:transparent;text-align:left}
   background-color:#c8c8c8;
 }
 
-h1.NextSlideText {
-  font-family: SegoeUI;
-  font-weight: bold;
-  font-size: 36px;
-  color: #383838;
-}
-
 .AllOptionPanelsLowerLeftPanel {
   float:left;
   width: 310px;
@@ -67,6 +60,22 @@ h1.NextSlideText {
   height: 365px;
   background-color:yellow;
 }
+
+/* -- IMAGES , BUTTONS , TEXTS -- */
+
+h1.NextSlideText {
+  font-family: SegoeUI;
+  font-weight: bold;
+  font-size: 36px;
+  color: #383838;
+}
+
+#LaptopCurrentPPTScreen, #LaptopNextPPTScreen, #LaptopUserCamera{
+  max-width: 100%;
+  height: auto;
+}
+
+
 
 
 
