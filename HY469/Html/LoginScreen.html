@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css">
     <link rel="stylesheet" href="../Css/Login.css">
     <link rel="stylesheet" href="../Css/MiddlePanel.css">
+    <link rel="stylesheet" href="../Css/Notification.css">
     <script  type="text/javascript"  src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script  type="text/javascript"  src="../Js/Login.js"></script>
-    <script  type="text/javascript"  src="../Js/MiddlePanel.js"></script>
 
     <title>Coord.ME</title>
 </head>
@@ -23,7 +23,7 @@
         <h1 id="LoginNameTxt" class="LoginText" style="display:none"><b>Steve Kateros</b></h1>
     </div>
 
-    <div id="LoginPart1" class="MidBottomControls" style="display:none">
+    <div id="LoginPart1" class="MidBottomControls">
         <div class="LoginControl">
             <img id="InputBackImg" src="../Images/Static/TextArea.png">
             <input class="InputLogin" type="text" maxlength="22" value="Username...">           
@@ -62,8 +62,42 @@
         </div>
     </div>
 
-    <div id="LoginPart3" class="MidBottomControls">
-        <!-- PAUL HERE -->
+    <div id="LoginPart3" class="MidBottomControls" style="display:none">
+        <div id="MiddlePanelMoreOptionsSelectFile" class="MiddlePanelMoreOptionsSelectFile" style="margin-top: 190px">
+            <fieldset>
+                <legend>SELECT FILE FROM:</legend>
+                <form action="">
+                    <div class="item">
+                        <p>Local File System</p>
+                    </div>
+                    <div class="item">
+                        <p>DropBox</p>
+                    </div>
+                    <div class="item">
+                        <p>Google Drive</p>
+                    </div>
+                    <div class="item">
+                        <p>iCloud</p>
+                    </div>
+                </form>
+            </fieldset>
+            <button id="LocalFileSystemBtn" type="button" class="SelectFileButton">
+                <img id="RequestCoordButtonImg" src="../Images/MiddleSection/Button_File.png"class="PresentationButtonImage" alt="LocalFileSystem">
+            </button>
+            <button id="DropBoxBtn" type="button" class="SelectFileButton">
+                <img id="DropBoxButtonImg" src="../Images/MiddleSection/Button_Dropbox.png"class="PresentationButtonImage" alt="DropBox">
+            </button>
+            <button id="GoogleDriveBtn" type="button" class="SelectFileButton">
+                <img id="GoogleDriveButtonImg" src="../Images/MiddleSection/Button_GoogleDrive.png"class="PresentationButtonImage" alt="GoogleDrive">
+            </button>
+            <button id="iCloudBtn" type="button" class="SelectFileButton">
+                <img id="iCloudButtonImg" src="../Images/MiddleSection/Button_ICloud.png"class="PresentationButtonImage" alt="iCloud">
+            </button>
+
+            <button id="ExitFileSystemBtn" type="button" class="ExitFileSystemButton">
+                <img id="ExitFileSystemButtonImg" src="../Images/Notification/Button_Exit.png"class="NotificationsOptionsButtonImage" alt="ExitFileSystem">
+            </button>
+        </div>
     </div>
 
     <div id="LoginPart4" class="MidBottomControls" style="display:none">
@@ -232,6 +266,10 @@
                 $("#HideKeyboardBtn").click( function () {
                     $(this).css("background-color","rgb(17, 66, 104)");
                     $("#Keyboard").slideUp(600);
+                });
+
+                $("#HideKeyboardBtn").focusout( function () {
+                    $(this).css("background-color","#c8c8c8");
                 });
             });
         </script>

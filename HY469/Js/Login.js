@@ -47,4 +47,16 @@ $(document).ready(function(){
         $('#LoginPart4').show();
         $('#LoginPart5').hide();
     });  
+
+    /* FILE SYSTEM */
+    
+    $("#LocalFileSystemBtn").click( function () {
+        $('#LoginPart4').show();
+        $('#LoginPart3').hide();
+    }); 
+    
+    $("#ExitFileSystemBtn").click( function () {
+        $('#LoginPart2').show();
+        $('#LoginPart3').hide();
+    }); 
 });
