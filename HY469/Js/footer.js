@@ -8,6 +8,7 @@ $(document).ready(function() {
       $('#MiddlePanelRemoteParticipants').hide();
 
     } else if (id == "partB") {
+
       $(MainPanel).hide();
       $('#SettingsPanel').hide();
       $('#MiddlePanelRemoteParticipants').show();

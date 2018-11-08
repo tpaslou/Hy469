@@ -76,7 +76,7 @@ $(document).ready(function(){
       $('#MiddlePanelPresentationOptions').hide();
     });
 
-    $('#SettingsSelectPPTBtn').click(function(){
+    $('#LogOutBtn').click(function(){
         $('#MiddlePanelMoreOptionsSelectFile').show();
         $('#MiddlePanelPresentationOptions').hide();
       });
