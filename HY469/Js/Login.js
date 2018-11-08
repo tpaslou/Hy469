@@ -2,6 +2,7 @@ $(document).ready(function(){
    
     $(".InputLogin").focus( function () {
         this.value = "";
+        $("#Keyboard").slideDown(600);
     });
 
     $("#LoginBtn").click( function () {
@@ -37,10 +38,13 @@ $(document).ready(function(){
         $('#LoginPart4').hide();
     });
 
+    $("#ExistingSessionBtn").click( function () {
+        $('#LoginPart5').show();
+        $('#LoginPart4').hide();
+    }); 
+
     $("#SelectSessionBtn").click( function () {
         $('#LoginPart4').show();
         $('#LoginPart5').hide();
-    });
-
-
+    });  
 });

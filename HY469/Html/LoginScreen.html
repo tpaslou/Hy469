@@ -67,7 +67,7 @@
     <div id="LoginPart4" class="MidBottomControls" style="display:none">
         <div class="LoginControl">           
             <img id="InputBackImg" src="../Images/Static/TextArea.png">
-            <button type="button" class="buttonLogin">
+            <button id="ExistingSessionBtn" type="button" class="buttonLogin">
                 <img src="../Images/Buttons/Button_Dropdown.png" class="buttonImage" alt="FileChange">
             </button>
             <input class="InputLogin" type="text" maxlength="18" value="Name New Session">   
@@ -220,6 +220,35 @@
             </div>
         </div>                    
     </div>
+
+    <!-- MULTIPLE USE: Keyboard Div (No Css No js)-->
+    <!-- HOW TO USE, JS: #Keyboard to find it, SlideDown(600) to get it Up -->
+
+    <div id="Keyboard" style="position: absolute; bottom: 0;width: 100%; display: none;">     
+        <script>
+            $(document).ready(function(){
+                $("#HideKeyboardBtn").click( function () {
+                    $(this).css("background-color","rgb(17, 66, 104)");
+                    $("#Keyboard").slideUp(600);
+                });
+            });
+        </script>
+        
+        <button id="HideKeyboardBtn" type="button" style="
+        width: 65px;
+        height:65px;
+        border-radius: 6px;
+        border: none;
+        outline: 0;
+        background-color: #c8c8c8">
+            <img src="../Images/Buttons/Button_Dropdown.png" style="width: 40px;height: 40px;">
+        </button>
+
+        <img src="../Images/Static/iPadKeyboard.png">
+
+        
+    </div>
+
 </body>
 
 </html>
