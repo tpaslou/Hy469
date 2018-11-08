@@ -97,3 +97,15 @@ div{margin:0;padding:0;background-color:transparent;text-align:left}
     background-color:#FFFFFF;
 }
 
+.UserIcon {
+    position: relative;
+    top: 65px;
+  }
+
+.UserImage {
+    border-radius: 50%;
+    top: 0px;
+    left: 40px;
+    width: 160px;
+    height: 160px;
+  }
