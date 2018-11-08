@@ -78,7 +78,7 @@
                 </button>
             </div>
 
-            <div id="MiddlePanelTakeNotes" class="MiddlePanelTakeNotes"style="display:none">
+            <div id="MiddlePanelTakeNotes" class="MiddlePanelTakeNotes"style="display:none;" >
 
                 <fieldset>
                     <legend>NOTEBOOK:</legend>
@@ -103,9 +103,39 @@
                         </div>
                     </form>
                 </fieldset>
-                <button id="ExitNotes" type="button" class="ExitNotesButton">
+                <button id="ExitNotesBtn" type="button" class="ExitNotesButton">
                     <img id="ExitNotesButtonImg" src="../Images/Notification/Button_Exit.png"class="NotificationsOptionsButtonImage" alt="ExitNotes">
                 </button>
+
+                <div class="SendWrapper" style="top:-190px">
+                        <button type="button" class="OpenFile" >
+                            <img src="../Images/Buttons/file.png" class="btn OpenFileImage" id="fi" alt="Chat">
+                        </button>
+                        <textarea name="message-to-send" id="message-to-send" class="message-to-send" placeholder ="Type your message" rows="3"></textarea>
+                        <button type="button" class="SendMessage" >
+                            <img src="../Images/Buttons/Tick.png" class="btn SendMessageImage" id="si" alt="Chat">
+                        </button>
+                    </div>  
+                    
+                    <div id="Keyboard" style="position: relative; top: -183px;width: 100%; z-index: 1;">     
+                            <script>
+                                $(document).ready(function(){
+                                    $("#HideKeyboardBtn").click( function () {
+                                        $(this).css("background-color","rgb(17, 66, 104)");
+                                        $("#Keyboard").slideUp(600);
+                                    });
+                    
+                                    $("#HideKeyboardBtn").focusout( function () {
+                                        $(this).css("background-color","#c8c8c8");
+                                    });
+                                });
+                            </script>
+                        
+                    
+                            <img src="../Images/Static/iPadKeyboard.png">
+                    
+                            
+                        </div>
             </div>
 
         </div>
@@ -130,7 +160,7 @@
                     <img src="../Images/Buttons/Button_Annotation.png" class="buttonImage" alt="Annotation">
                 </button>
     
-                <button type="button" class="buttonHeader">
+                <button type="button" class="buttonHeader" id="TakeNotesBtn">
                     <img src="../Images/Buttons/Button_Notes.png" class="buttonImage" alt="TakeNotes">
                 </button>
     
@@ -219,7 +249,6 @@
             <button type="button" class="SendMessage" >
                 <img src="../Images/Buttons/Tick.png" class="btn SendMessageImage" id="si" alt="Chat">
             </button>
-
         </div>   
 
 
@@ -276,9 +305,8 @@
                     <button class="tablink" onclick="openChat('Private Chat', this)"id="LocalUsersBtn">Local Users</button>
                 </div>
             </div> 
-        </div>
+    </div>
     
-
     <div id="SettingsPanel" class="MainPanel" style="display:none">
             <div id="MiddlePanelPresentationOptions" class="MiddlePanelPresentationOptions" style="display:none">
                     <fieldset>
@@ -407,10 +435,6 @@
                 </div>
             </div> 
     </div>
-
-
-    
-
 
     <div id="Footer" class="Footer">
         

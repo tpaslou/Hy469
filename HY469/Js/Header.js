@@ -59,5 +59,13 @@ $(document).ready(function(){
             /* Do Nothing */ 
         }  
     });
+
+    //-------------Take Notes-------------------
+    $('#TakeNotesBtn').click(function(){
+        $('#MiddlePanelTakeNotes').show();
+        $('#MainPanel').hide();
+        $('#ParticipantsPanel').hide();
+        $('#SettingsPanel').hide();
+    });
     
 });
