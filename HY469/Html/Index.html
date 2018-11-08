@@ -96,36 +96,47 @@
     <div id="MainPanel" class="MainPanel">
 
        
-        <div id="Group Chat" class="tabcontent">
+        <div class="Chat">
             
-
-        </div>
-          
-          <div id="Private Chat" class="tabcontent">
-            
-
+        
         </div>
 
+        <div class="SendWrapper">
+            <button type="button" class="OpenFile" >
+                <img src="../Images/Buttons/file.png" class="btn OpenFileImage" id="fi" alt="Chat">
+            </button>
+            <textarea name="message-to-send" id="message-to-send" class="message-to-send" placeholder ="Type your message" rows="3"></textarea>
+            <button type="button" class="SendMessage" >
+                <img src="../Images/Buttons/Tick.png" class="btn SendMessageImage" id="si" alt="Chat">
+            </button>
 
-        <button class="tablink" onclick="openChat('Group Chat', this,)" id="defaultOpen">Group Chat</button>
-        <button class="tablink" onclick="openChat('Private Chat', this)">Private Chat</button>
-    
+        </div>   
+
+
+        <div class="tab_wrapper">
+            <button class="tablink" onclick="openChat('Group Chat', this,)" id="defaultOpen">Group Chat</button>
+            <script>
+                document.getElementById("defaultOpen").click();
+            </script>
+            <button class="tablink" onclick="openChat('Private Chat', this)">Private Chat</button>
+        </div>
+        
     </div>
 
 
     <div id="Footer" class="Footer">
         
-        <button type="button" class="FT FooterbuttonHeader">
+        <button type="button" class="FT FooterbuttonHeader" onclick="openSection('FT FooterbuttonHeader', this)">
             <img src="../Images/Buttons/Button_Chat.png" class="btn ChatbuttonImage" id="b1" alt="Chat">
         </button>
         
 
-        <button type="button" class="FT FooterbuttonHeader">
+        <button type="button" class="FT FooterbuttonHeader" onclick="openSection('FT FooterbuttonHeader', this)" >
             <img src="../Images/Buttons/Button_Participants.png" class="btn ParticipantsbuttonImage" id="b2" alt="Participants">
         </button>
 
 
-        <button type="button" class="FT FooterbuttonHeader">
+        <button type="button" class="FT FooterbuttonHeader" onclick="openSection('FT FooterbuttonHeader', this) ">
             <img src="../Images/Buttons/Button_Settings.png" class="btn SettingsbuttonImage" id="b3" alt="Settings">
         </button>
         
