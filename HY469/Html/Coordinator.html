@@ -12,11 +12,15 @@
     <link rel="stylesheet" href="../Css/Footer.css">
     <link rel="stylesheet" href="../Css/Notification.css">
     <link rel="stylesheet" href="../Css/MiddlePanel.css">
+    <link rel="stylesheet" href="../Css/MainPanel.css">
+
     <script  type="text/javascript"  src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script  type="text/javascript"  src="../Js/Header.js"></script>
     <script  type="text/javascript"  src="../Js/footer.js"></script>
     <script  type="text/javascript"  src="../Js/Notification.js"></script>
     <script  type="text/javascript"  src="../Js/MiddlePanel.js"></script>
+    <script  type="text/javascript"  src="../Js/Chat.js"></script>
+
 
     <title>Coord.ME</title>
 </head>
@@ -217,6 +221,31 @@
                 </button>
             </div>
 
+            <div id="MiddlePanelRemoteParticipants" class="MiddlePanelRemoteParticipants" style="display:none">
+                <div id="RemoteUserIcon" class="RemoteUserIcon">
+                    <button id="RemoteUserZikasButton" type="button" class="RemoteUserButton">
+                        <img src="../Images/Users/User_Paul.jpg" class="RemoteUserImage">
+                    </button>
+                    <span class="RemoteUserDot"></span>
+                    <h1 class="RemoteUserName">Paul Zikas</h1>  
+                </div>
+                <div id="RemoteUserIcon" class="RemoteUserIcon">
+                    <button id="RemoteUserSteveButton" type="button" class="RemoteUserButton">
+                        <img src="../Images/Users/User_Steve.jpg" class="RemoteUserImage">
+                    </button>
+                    <span class="RemoteUserDot"></span>
+                    <h1 class="RemoteUserName">Steve Ens</h1>  
+                </div>
+                <div id="RemoteUserIcon" class="RemoteUserIcon">
+                    <button id="RemoteUserStratosButton" type="button" class="RemoteUserButton">
+                        <img src="../Images/Users/User_Stratos.jpg" class="RemoteUserImage">
+                    </button>
+                    <span class="RemoteUserDot"></span>
+                    <h1 class="RemoteUserName">Stratos W.</h1>  
+                </div>
+
+            </div>
+
         </div>
 
         <div class="SidePanel">
@@ -269,20 +298,58 @@
         
     </div>
 
+
+
+    <div id="MainPanel" class="MainPanel">
+
+       
+        <div class="Chat">
+             <div id="UserIcon" class="UserIcon" style="text-align:center">
+            <img src="../Images/Users/User_Paul.jpg" class="UserImage">
+            <span class="dot"></span>
+            <h1 class="RequestInfoText" style="top:10px;color: black;">Paul Zikas</h1>  
+        </div>
+            
+        </div>
+
+        <div class="SendWrapper">
+            <button type="button" class="OpenFile" >
+                <img src="../Images/Buttons/file.png" class="btn OpenFileImage" id="fi" alt="Chat">
+            </button>
+            <textarea name="message-to-send" id="message-to-send" class="message-to-send" placeholder ="Type your message" rows="3"></textarea>
+            <button type="button" class="SendMessage" >
+                <img src="../Images/Buttons/Tick.png" class="btn SendMessageImage" id="si" alt="Chat">
+            </button>
+
+        </div>   
+
+
+        <div class="tab_wrapper">
+            <button class="tablink" onclick="openChat('Group Chat', this,)" id="defaultOpen">Group Chat</button>
+            <script>
+                document.getElementById("defaultOpen").click();
+            </script>
+            <button class="tablink" onclick="openChat('Private Chat', this)">Private Chat</button>
+        </div>
+        
+    </div>
+
+
+
     <div id="Footer" class="Footer">
         
-        <button type="button" class="FooterbuttonHeader">
-            <img src="../Images/Buttons/Button_Chat.png" class="btn ChatbuttonImage" id="b1" alt="Chat">
+        <button type="button" class="FT FooterbuttonHeader" onclick="openSection('FT FooterbuttonHeader', this)">
+            <img src="../Images/Buttons/Button_Chat.png" class="btn ChatbuttonImage" id="chatB" alt="Chat">
         </button>
         
 
-        <button type="button" class="FooterbuttonHeader">
-            <img src="../Images/Buttons/Button_Participants.png" class="btn ParticipantsbuttonImage" id="b2" alt="Participants">
+        <button type="button" class="FT FooterbuttonHeader" onclick="openSection('FT FooterbuttonHeader', this)" >
+            <img src="../Images/Buttons/Button_Participants.png" class="btn ParticipantsbuttonImage" id="partB" alt="Participants">
         </button>
 
 
-        <button type="button" class="FooterbuttonHeader">
-            <img src="../Images/Buttons/Button_Settings.png" class="btn SettingsbuttonImage" id="b3" alt="Settings">
+        <button type="button" class="FT FooterbuttonHeader" onclick="openSection('FT FooterbuttonHeader', this) ">
+            <img src="../Images/Buttons/Button_Settings.png" class="btn SettingsbuttonImage" id="settB" alt="Settings">
         </button>
         
 
@@ -402,9 +469,9 @@
         </button>
 
         <div id="UserIcon" class="UserIcon" style="text-align:center">
-            <img src="../Images/Users/User_Paul.jpg" class="UserImage">
+            <img id="UserIconNoticicationButtonImg" src="../Images/Users/User_Paul.jpg" class="UserImage">
             <span class="dot"></span>
-            <h1 class="RequestInfoText" style="top:10px">Paul Zikas</h1>  
+            <h1 id="RequestInfoTextNotification" class="RequestInfoText" style="top:10px">Paul Zikas</h1>  
         </div>
         
         <div class="NotificationsOptions" >
