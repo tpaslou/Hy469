@@ -182,3 +182,43 @@ input[type="checkbox"]:checked:active + .toggle i {
     padding:0px;
     cursor: pointer;
 }
+
+.ExitNotesButton {
+    position: relative;
+    background-color:rgba(255, 255, 255, 0);
+    background-size: cover;
+    top: -442px;
+    left: 699px;
+    border-radius: 6px;
+    border: none;
+    outline: 0;
+    width: 45px;
+    height: 45px;
+    margin:20px;
+    padding:0px;
+    cursor: pointer;
+}
+
+.ExitMiddleScreenButtonImage {
+    position: relative;
+    left: 0px;
+    top: 2px;
+    width:4px;
+    height:4px;
+  }
+
+.ExitFileSystemButton {
+    position: relative;
+    background-color:rgba(255, 255, 255, 0);
+    background-size: cover;
+    top: -552px;
+    left: 699px;
+    border-radius: 6px;
+    border: none;
+    outline: 0;
+    width: 45px;
+    height: 45px;
+    margin:20px;
+    padding:0px;
+    cursor: pointer;
+}
