@@ -4,10 +4,16 @@ $(document).ready(function() {
     console.log(id);
     if (id == "chatB") {
       $(MainPanel).show();
+      $('#MiddlePanelRemoteParticipants').hide();
+
     } else if (id == "partB") {
       $(MainPanel).hide();
+      $('#MiddlePanelRemoteParticipants').show();
+
     } else if (id == "settB") {
       $(MainPanel).hide();
+      $('#MiddlePanelRemoteParticipants').hide();
+      
     }
   });
 });
