@@ -14,6 +14,20 @@ $(document).ready(function(){
         $('#ExitNotesButtonImg').attr('src', '../Images/Notification/Button_Exit.png'); 
     });
 
+    $('#ExitNotesBtn').click(function(){
+        $('#ExitNotesButtonImg').attr('src', '../Images/Notification/Button_Exit.png'); 
+        $('#MiddlePanelTakeNotes').hide();
+        $('#MainPanel').show();
+    });
+
+    $("#ExitNotesBtn").mousedown(function(){
+        $('#ExitNotesButtonImg').attr('src', '../Images/Notification/Button_Decline.png'); 
+    });
+
+    $("#ExitNotesBtn").mouseleave(function(){
+        $('#ExitNotesButtonImg').attr('src', '../Images/Notification/Button_Exit.png'); 
+    });
+
     //-----------------File System----------------
     $('#SettingsExitFileSystemBtn').click(function(){
         $('#ExitFileSystemButtonImg').attr('src', '../Images/Notification/Button_Exit.png'); 
@@ -80,5 +94,16 @@ $(document).ready(function(){
         $('#MiddlePanelMoreOptionsSelectFile').show();
         $('#MiddlePanelPresentationOptions').hide();
       });
+
+    //-----------------Participants Buttons----------------
+    $('#RemoteUsersBtn').click(function(){
+        $('#MiddlePanelRemoteParticipants').show();
+        $('#MiddlePanelLocalParticipants').hide();
+    });
+
+    $('#LocalUsersBtn').click(function(){
+        $('#MiddlePanelRemoteParticipants').hide();
+        $('#MiddlePanelLocalParticipants').show();
+    });
 
 });

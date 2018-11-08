@@ -5,18 +5,18 @@ $(document).ready(function() {
     if (id == "chatB") {
       $(MainPanel).show();
       $('#SettingsPanel').hide();
-      $('#MiddlePanelRemoteParticipants').hide();
+      $('#ParticipantsPanel').hide();
 
     } else if (id == "partB") {
 
       $(MainPanel).hide();
       $('#SettingsPanel').hide();
-      $('#MiddlePanelRemoteParticipants').show();
+      $('#ParticipantsPanel').show();
 
     } else if (id == "settB") {
       $(MainPanel).hide();
       $('#SettingsPanel').show();
-      $('#MiddlePanelRemoteParticipants').hide();
+      $('#ParticipantsPanel').hide();
       
     }
   });
