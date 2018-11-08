@@ -90,6 +90,13 @@ h1.BottomButtonExp{
   color: white;
 }
 
+h1.UserButtonExp{
+  position: relative;
+  font-weight: bold;
+  font-size: 16px;
+  color: white;
+}
+
 /* --- USER BUTTON --- */
 
 .buttonUserLaptop {

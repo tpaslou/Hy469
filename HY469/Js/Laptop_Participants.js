@@ -50,5 +50,30 @@ $(document).ready(function(){
         $('.NotificationImage').hide();
 
     });
+
+    $('#UserLaptopBtn').click(function () {
+        $('.PerOptionsPanel').hide();
+        $('#UserAccountLaptopPanel').show();
+
+    });
+
+    /* - USER BUTTON TWO STATES - */
     
+    $('#SwapCameraLaptopBtn').click(function () {
+        if ($(this).attr('src') == "../Images/Buttons/Camera.png") {
+            $(this).attr('src', '../Images/Buttons/CameraOFF.png'); 
+        }
+        else{
+            $(this).attr('src', '../Images/Buttons/Camera.png'); 
+        }
+    });
+
+    $('#SwapMicLaptopBtn').click(function () {
+        if ($(this).attr('src') == "../Images/Buttons/Mic.png") {
+            $(this).attr('src', '../Images/Buttons/MicOFF.png'); 
+        }
+        else{
+            $(this).attr('src', '../Images/Buttons/Mic.png'); 
+        }
+    });
 });
