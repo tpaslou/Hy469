@@ -4,20 +4,26 @@ $(document).ready(function() {
     console.log(id);
     if (id == "chatB") {
       $(MainPanel).show();
-      $('#MiddlePanelRemoteParticipants').hide();
+      $('#SettingsPanel').hide();
+      $('#ParticipantsPanel').hide();
 
     } else if (id == "partB") {
 
       $(MainPanel).hide();
-      $('#MiddlePanelRemoteParticipants').show();
+      $('#SettingsPanel').hide();
+      $('#ParticipantsPanel').show();
 
     } else if (id == "settB") {
       $(MainPanel).hide();
-      $('#MiddlePanelRemoteParticipants').hide();
+      $('#SettingsPanel').show();
+      $('#ParticipantsPanel').hide();
       
     }
   });
+
+
 });
+
 
 function openSection(ChatName, elmnt) {
   var i, tabcontent, tablinks;

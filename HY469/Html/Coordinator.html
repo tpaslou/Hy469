@@ -45,46 +45,6 @@
                 <img src="../Images/VideoPresentation/VideoSlider.png" alt="Slider" style="position:relative;width:375px;height:14.5px;">
             </div>
 
-            <div id="MiddlePanelPresentationOptions" class="MiddlePanelPresentationOptions" style="display:none">
-                <fieldset>
-                    <legend>TV MONITOR:</legend>
-                    <form action="">
-                        <div class="item">
-                            <p>Presentation</p>
-                            <input type="checkbox" id="toggle_presentation" name="" value="">
-                            <div class="toggle">
-                                <label for="toggle_presentation"><i></i></label>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <p>Participants</p>
-                            <input type="checkbox" id="toggle_participants" name="" value="">
-                            <div class="toggle">
-                                <label for="toggle_participants"><i></i></label>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <p>Chat</p>
-                            <input type="checkbox" id="toggle_chat" name="" value="">
-                            <div class="toggle">
-                                <label for="toggle_chat"><i></i></label>
-                            </div>
-                        </div>
-                    </form>
-                </fieldset>
-                <fieldset>
-                    <legend>PRESENTATION:</legend>
-                    <form action="">
-                        <div class="item">
-                            <p>Select PowerPoint</p>
-                        </div>
-                    </form>
-                </fieldset>
-                <button id="SelectPPTBtn" type="button" class="PresentationButton">
-                    <img id="SelectPPTButtonImg" src="../Images/MiddleSection/Button_File.png"class="PresentationButtonImage" alt="SelectPPT">
-                </button>
-            </div>
-
             <div id="MiddlePanelMoreOptions" class="MiddlePanelMoreOptions" style="display:none">
                 <fieldset>
                     <legend>OPTIONS:</legend>
@@ -118,81 +78,6 @@
                 </button>
             </div>
 
-            <div id="MiddlePanelMoreOptionsParticipant" class="MiddlePanelMoreOptionsParticipant" style="display:none">
-                <fieldset>
-                    <legend>OPTIONS:</legend>
-                    <form action="">
-                        <div class="item">
-                            <p>Microphone</p>
-                            <input type="checkbox" id="toggle_microphonePart" name="" value="">
-                            <div class="toggle">
-                                <label for="toggle_microphonePart"><i></i></label>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <p>Camera</p>
-                            <input type="checkbox" id="toggle_cameraPart" name="" value="">
-                            <div class="toggle">
-                                <label for="toggle_cameraPart"><i></i></label>
-                            </div>
-                        </div>
-                    </form>
-                </fieldset>
-                <fieldset>
-                    <legend>SESSION:</legend>
-                    <form action="">
-                        <div class="item">
-                            <p>Request Coordinator Privileges</p>
-                        </div>
-                        <div class="item">
-                            <p>Log Out</p>
-                        </div>
-                    </form>
-                </fieldset>
-                <button id="RequestCoordBtn" type="button" class="ReuestCoordButton">
-                    <img id="RequestCoordButtonImg" src="../Images/MiddleSection/Button_Coordinator.png"class="PresentationButtonImage" alt="RequestCoord">
-                </button>
-                <button id="LogOutBtn" type="button" class="LogOutButton">
-                    <img id="LogOutButtonImg" src="../Images/MiddleSection/Button_LogOut.png"class="PresentationButtonImage" alt="LogOut">
-                </button>
-            </div>
-
-            <div id="MiddlePanelMoreOptionsSelectFile" class="MiddlePanelMoreOptionsSelectFile" style="display:none">
-                <fieldset>
-                    <legend>SELECT FILE FROM:</legend>
-                    <form action="">
-                        <div class="item">
-                            <p>Local File System</p>
-                        </div>
-                        <div class="item">
-                            <p>DropBox</p>
-                        </div>
-                        <div class="item">
-                            <p>Google Drive</p>
-                        </div>
-                        <div class="item">
-                            <p>iCloud</p>
-                        </div>
-                    </form>
-                </fieldset>
-                <button id="LocalFileSystemBtn" type="button" class="SelectFileButton">
-                    <img id="RequestCoordButtonImg" src="../Images/MiddleSection/Button_File.png"class="PresentationButtonImage" alt="LocalFileSystem">
-                </button>
-                <button id="DropBoxBtn" type="button" class="SelectFileButton">
-                    <img id="DropBoxButtonImg" src="../Images/MiddleSection/Button_Dropbox.png"class="PresentationButtonImage" alt="DropBox">
-                </button>
-                <button id="GoogleDriveBtn" type="button" class="SelectFileButton">
-                    <img id="GoogleDriveButtonImg" src="../Images/MiddleSection/Button_GoogleDrive.png"class="PresentationButtonImage" alt="GoogleDrive">
-                </button>
-                <button id="iCloudBtn" type="button" class="SelectFileButton">
-                    <img id="iCloudButtonImg" src="../Images/MiddleSection/Button_ICloud.png"class="PresentationButtonImage" alt="iCloud">
-                </button>
-
-                <button id="ExitFileSystemBtn" type="button" class="ExitFileSystemButton">
-                    <img id="ExitFileSystemButtonImg" src="../Images/Notification/Button_Exit.png"class="NotificationsOptionsButtonImage" alt="ExitFileSystem">
-                </button>
-            </div>
-
             <div id="MiddlePanelTakeNotes" class="MiddlePanelTakeNotes"style="display:none">
 
                 <fieldset>
@@ -221,31 +106,6 @@
                 <button id="ExitNotes" type="button" class="ExitNotesButton">
                     <img id="ExitNotesButtonImg" src="../Images/Notification/Button_Exit.png"class="NotificationsOptionsButtonImage" alt="ExitNotes">
                 </button>
-            </div>
-
-            <div id="MiddlePanelRemoteParticipants" class="MiddlePanelRemoteParticipants" style="display:none">
-                <div id="RemoteUserIcon" class="RemoteUserIcon">
-                    <button id="RemoteUserZikasButton" type="button" class="RemoteUserButton">
-                        <img src="../Images/Users/User_Paul.jpg" class="RemoteUserImage">
-                    </button>
-                    <span class="RemoteUserDot"></span>
-                    <h1 class="RemoteUserName">Paul Zikas</h1>  
-                </div>
-                <div id="RemoteUserIcon" class="RemoteUserIcon">
-                    <button id="RemoteUserSteveButton" type="button" class="RemoteUserButton">
-                        <img src="../Images/Users/User_Steve.jpg" class="RemoteUserImage">
-                    </button>
-                    <span class="RemoteUserDot"></span>
-                    <h1 class="RemoteUserName">Steve Ens</h1>  
-                </div>
-                <div id="RemoteUserIcon" class="RemoteUserIcon">
-                    <button id="RemoteUserStratosButton" type="button" class="RemoteUserButton">
-                        <img src="../Images/Users/User_Stratos.jpg" class="RemoteUserImage">
-                    </button>
-                    <span class="RemoteUserDot"></span>
-                    <h1 class="RemoteUserName">Stratos W.</h1>  
-                </div>
-
             </div>
 
         </div>
@@ -299,8 +159,6 @@
         </div>        
         
     </div>
-
-
 
     <div id="MainPanel" class="MainPanel">
 
@@ -398,7 +256,7 @@
                 <div id="MUserIcon" class="MUserIcon" >
                 <img src="../Images/Users/User_Stratos.jpg" class="MUserImage">
                 <span class="Mdot"></span>
-                <p class="MRequestInfoText" >Stratos Geronimakis</p>  
+                <p class="MRequestInfoText" >Stratos W.</p>  
                 <p class="MTime" >11:07</p>  
                 </div>
                 <div class="ActualMessage">
@@ -413,7 +271,7 @@
                 <div id="MUserIcon" class="MUserIcon" >
                 <img src="../Images/Users/User_Steve.jpg" class="MUserImage">
                 <span class="Mdot"></span>
-                <p class="MRequestInfoText">Steve Kateros</p> 
+                <p class="MRequestInfoText">Steve Ens</p> 
                 <p class="MTime" >11:09</p>  
                 </div>
                 <div class="ActualMessage">
@@ -457,6 +315,182 @@
         </div> 
     </div>
 
+    <div id="ParticipantsPanel" class="MainPanel" style="display:none">
+
+            <div id="MiddlePanelRemoteParticipants" class="MiddlePanelRemoteParticipants" >
+                    <div id="RemoteUserIcon" class="RemoteUserIcon">
+                        <button id="RemoteUserStratosButton" type="button" class="RemoteUserButton">
+                            <img src="../Images/Users/User_Stratos.jpg" class="RemoteUserImage">
+                        </button>
+                        <span class="RemoteUserDot"></span>
+                        <h1 class="RemoteUserName">Stratos W.</h1>  
+                    </div>
+    
+            </div>
+
+            <div id="MiddlePanelLocalParticipants" class="MiddlePanelLocalParticipants" style="display:none">
+                        <div id="RemoteUserIcon" class="RemoteUserIcon">
+                            <button id="RemoteUserZikasButton" type="button" class="RemoteUserButton">
+                                <img src="../Images/Users/User_Paul.jpg" class="RemoteUserImage">
+                            </button>
+                            <span class="RemoteUserDot"></span>
+                            <h1 class="RemoteUserName">Paul Zikas</h1>  
+                        </div>
+                        <div id="RemoteUserIcon" class="RemoteUserIcon">
+                            <button id="RemoteUserSteveButton" type="button" class="RemoteUserButton">
+                                <img src="../Images/Users/User_Steve.jpg" class="RemoteUserImage">
+                            </button>
+                            <span class="RemoteUserDot"></span>
+                            <h1 class="RemoteUserName">Steve Ens</h1>  
+                        </div>
+        
+            </div>
+
+            <div class="tab_wrapper" style="top: 268px">
+                <div id="ParticipantsExtraButtons" class="ParticipantsExtraButtons" >
+                    <button class="tablink" onclick="openChat('Group Chat', this,)" id="RemoteUsersBtn">Remote Users</button>
+                    <script>
+                        document.getElementById("MiddlePanelRemoteParticipants").click();
+                        $('#MiddlePanelRemoteParticipants').show();
+                        $('#MiddlePanelLocalParticipants').hide();
+                    </script>
+                    <button class="tablink" onclick="openChat('Private Chat', this)"id="LocalUsersBtn">Local Users</button>
+                </div>
+            </div> 
+        </div>
+    
+
+    <div id="SettingsPanel" class="MainPanel" style="display:none">
+            <div id="MiddlePanelPresentationOptions" class="MiddlePanelPresentationOptions" style="display:none">
+                    <fieldset>
+                        <legend>TV MONITOR:</legend>
+                        <form action="">
+                            <div class="item">
+                                <p>Presentation</p>
+                                <input type="checkbox" id="toggle_presentation" name="" value="">
+                                <div class="toggle">
+                                    <label for="toggle_presentation"><i></i></label>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <p>Participants</p>
+                                <input type="checkbox" id="toggle_participants" name="" value="">
+                                <div class="toggle">
+                                    <label for="toggle_participants"><i></i></label>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <p>Chat</p>
+                                <input type="checkbox" id="toggle_chat" name="" value="">
+                                <div class="toggle">
+                                    <label for="toggle_chat"><i></i></label>
+                                </div>
+                            </div>
+                        </form>
+                    </fieldset>
+                    <fieldset>
+                        <legend>PRESENTATION:</legend>
+                        <form action="">
+                            <div class="item">
+                                <p>Select PowerPoint</p>
+                            </div>
+                        </form>
+                    </fieldset>
+                    <button id="SettingsSelectPPTBtn" type="button" class="PresentationButton">
+                        <img id="SelectPPTButtonImg" src="../Images/MiddleSection/Button_File.png"class="PresentationButtonImage" alt="SelectPPT">
+                    </button>
+            </div>
+
+            <div id="MiddlePanelMoreOptionsParticipant" class="MiddlePanelMoreOptionsParticipant">
+                    <fieldset>
+                        <legend>OPTIONS:</legend>
+                        <form action="">
+                            <div class="item">
+                                <p>Microphone</p>
+                                <input type="checkbox" id="toggle_microphonePart" name="" value="">
+                                <div class="toggle">
+                                    <label for="toggle_microphonePart"><i></i></label>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <p>Camera</p>
+                                <input type="checkbox" id="toggle_cameraPart" name="" value="">
+                                <div class="toggle">
+                                    <label for="toggle_cameraPart"><i></i></label>
+                                </div>
+                            </div>
+                        </form>
+                    </fieldset>
+                    <fieldset>
+                        <legend>SESSION:</legend>
+                        <form action="">
+                            <div class="item">
+                                <p>Terminate Session</p>
+                            </div>
+                            <div class="item">
+                                <p>Log Out</p>
+                            </div>
+                        </form>
+                    </fieldset>
+                    <button id="TerminateSessionBtn" type="button" class="ReuestCoordButton">
+                        <img id="RequestCoordButtonImg" src="../Images/Notification/Button_RemoveUser.png"class="PresentationButtonImage" >
+                    </button>
+                    <button id="LogOutBtn" type="button" class="LogOutButton" onclick="window.location.href='../Html/LoginScreen.html'">
+                        <img id="LogOutButtonImg" src="../Images/MiddleSection/Button_LogOut.png"class="PresentationButtonImage">
+                    </button>
+            </div>
+
+            <div id="MiddlePanelMoreOptionsSelectFile" class="MiddlePanelMoreOptionsSelectFile" style="display:none">
+                    <fieldset>
+                        <legend>SELECT FILE FROM:</legend>
+                        <form action="">
+                            <div class="item">
+                                <p>Local File System</p>
+                            </div>
+                            <div class="item">
+                                <p>DropBox</p>
+                            </div>
+                            <div class="item">
+                                <p>Google Drive</p>
+                            </div>
+                            <div class="item">
+                                <p>iCloud</p>
+                            </div>
+                        </form>
+                    </fieldset>
+                    <button id="LocalFileSystemBtn" type="button" class="SelectFileButton">
+                        <img id="RequestCoordButtonImg" src="../Images/MiddleSection/Button_File.png"class="PresentationButtonImage" alt="LocalFileSystem">
+                    </button>
+                    <button id="DropBoxBtn" type="button" class="SelectFileButton">
+                        <img id="DropBoxButtonImg" src="../Images/MiddleSection/Button_Dropbox.png"class="PresentationButtonImage" alt="DropBox">
+                    </button>
+                    <button id="GoogleDriveBtn" type="button" class="SelectFileButton">
+                        <img id="GoogleDriveButtonImg" src="../Images/MiddleSection/Button_GoogleDrive.png"class="PresentationButtonImage" alt="GoogleDrive">
+                    </button>
+                    <button id="iCloudBtn" type="button" class="SelectFileButton">
+                        <img id="iCloudButtonImg" src="../Images/MiddleSection/Button_ICloud.png"class="PresentationButtonImage" alt="iCloud">
+                    </button>
+    
+                    <button id="SettingsExitFileSystemBtn" type="button" class="ExitFileSystemButton">
+                        <img id="ExitFileSystemButtonImg" src="../Images/Notification/Button_Exit.png"class="NotificationsOptionsButtonImage" alt="ExitFileSystem">
+                    </button>
+            </div>
+
+            <div class="tab_wrapper" style="top: -58px">
+                <div id="SettingsExtraButtons" class="SettingsExtraButtons" >
+                    <button class="tablink" onclick="openChat('Presentation Options', this,)" id="PresentationOptionsBtn">Presentation Options</button>
+                    <script>
+                        document.getElementById("PresentationOptionsBtn").click();
+                        $('#MiddlePanelPresentationOptions').show();
+                        $('#MiddlePanelMoreOptionsParticipant').hide();
+                    </script>
+                    <button class="tablink" onclick="openChat('More Options', this)" id="MoreOptionsBtn">More Options</button>
+                </div>
+            </div> 
+    </div>
+
+
+    
 
 
     <div id="Footer" class="Footer">
@@ -478,8 +512,6 @@
             <img src="../Images/Buttons/Button_Settings.png" class="btn SettingsbuttonImage" id="settB" alt="Settings">
         </button>
         
-
-
 
     </div>
 

@@ -17,21 +17,26 @@
 <body>
     <div class="DefaultPanel">
         <div class="LeftBarPanel">
-            <button class="buttonUserLaptop">
+            <button id="UserLaptopBtn" class="buttonUserLaptop">
                 <img class="buttonUserLaptopImage" src="../Images/Buttons/Button_Laptop_User.png">
             </button>
 
             <button class="buttonLaptop">
-                <img class="buttonLaptopImage" src="../Images/Buttons/Button_Annotation.png">
+                <img id="AnnotationLaptopBtn" class="buttonLaptopImage" src="../Images/Buttons/Button_Annotation.png">
             </button>
             <h1 class="BottomButtonExp">Annotation</h1>
 
-            <button class="buttonLaptop">
+            <button id="NotesLaptopBtn" class="buttonLaptop">
                 <img class="buttonLaptopImage" src="../Images/Buttons/Button_Notes.png">
             </button>
             <h1 class="BottomButtonExp">Take Notes</h1>
 
-            <button class="buttonLaptop">
+            <button id="PPTChangeLaptopBtn" class="buttonLaptop">
+                <img class="buttonLaptopImage" src="../Images/Buttons/Button_ChangePPT.png">
+            </button>
+            <h1 class="BottomButtonExp">File Change Request</h1>
+
+            <button id="CoordRequestLaptopBtn" class="buttonLaptop">
                 <img class="buttonLaptopImage" src="../Images/Buttons/Button_Coord.png">
             </button>
             <h1 class="BottomButtonExp">Coordinator Request</h1>
@@ -53,7 +58,39 @@
                 <img id="LaptopUserCamera" style="position:relative; top:8px;" src="../Images/VideoPresentation/UserCamera.png">
             </div>
             <div class="AllOptionPanelsLowerLeftPanel">
+                <div id="AnnotationLaptopPanel" class="PerOptionsPanel">
+                    <h1 class="NextSlideText" style="margin: 40px 0px">Annotation Controls</h1>
+
+                    <button type="button" class="buttonLaptop">
+                        <img src="../Images/Buttons/Button_Color_Black.png" class="buttonLaptopImage" alt="BlackColor">
+                    </button>
+            
+                    <button type="button" class="buttonLaptop">
+                        <img src="../Images/Buttons/Button_Color_Green.png" class="buttonLaptopImage" alt="GreenColor">
+                    </button>
+            
+                    <button type="button" class="buttonLaptop">
+                        <img src="../Images/Buttons/Button_Color_Red.png" class="buttonLaptopImage" alt="RedColor">
+                    </button>
         
+                    <div class="slidecontainer">
+                        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                    </div>
+                </div>
+
+                <div id="NotificationLaptopPanel" class="PerOptionsPanel" style="display:none">
+                    <!-- 3 images = 3 diff IDs = 3 diff notifications -->
+                    <img class="NotificationImage" id="AnnotationNotificationImg" style="display:none;position:absolute;left:0px" src="../Images/VideoPresentation/LaptopSize/Popup_AnnotationPending.png">
+                    <img class="NotificationImage" id="CoordinatorNotificationImg" style="display:none;position:absolute; left:0px" src="../Images/VideoPresentation/LaptopSize/Popup_CoordinatorPending.png">
+                    <img class="NotificationImage" id="FileChangeNotificationImg" style="display:none;position:absolute; left:0px" src="../Images/VideoPresentation/LaptopSize/Popup_FileChangePending.png">
+
+                    <!-- Small Button Hack -->
+                    <button id="ExitNotificationBtn" type="button" class="buttonLaptop" 
+                    style="float:right;
+                    background-color:transparent;
+                    width:40px;height:40px">
+                    </button>
+                </div>
             </div>
             <div class="GroupChatLowerMiddlePanel">
         

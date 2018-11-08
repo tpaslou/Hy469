@@ -15,6 +15,20 @@ $(document).ready(function(){
     });
 
     //-----------------File System----------------
+    $('#SettingsExitFileSystemBtn').click(function(){
+        $('#ExitFileSystemButtonImg').attr('src', '../Images/Notification/Button_Exit.png'); 
+        $('#MiddlePanelPresentationOptions').show();
+        $('#MiddlePanelMoreOptionsSelectFile').hide();
+    });
+
+    $("#SettingsExitFileSystemBtn").mousedown(function(){
+        $('#ExitFileSystemButtonImg').attr('src', '../Images/Notification/Button_Decline.png'); 
+    });
+
+    $("#SettingsExitFileSystemBtn").mouseleave(function(){
+        $('#ExitFileSystemButtonImg').attr('src', '../Images/Notification/Button_Exit.png'); 
+    });
+
     $('#ExitFileSystemBtn').click(function(){
         $('#ExitFileSystemButtonImg').attr('src', '../Images/Notification/Button_Exit.png'); 
         $('#MiddlePanelMoreOptionsSelectFile').hide();
@@ -45,6 +59,37 @@ $(document).ready(function(){
         $('#UserIconNoticicationButtonImg').attr('src', '../Images/Users/User_Stratos.jpg'); 
         document.getElementById("RequestInfoTextNotification").innerHTML = 'Stratos W.';
         $('#ParticipantOptionsNotification').show();
+    });
+    //-----------------Settings Buttons----------------
+    $('#MoreOptionsBtn').click(function(){
+        $('#MiddlePanelPresentationOptions').hide();
+        $('#MiddlePanelMoreOptionsParticipant').show();
+    });
+    
+    $('#PresentationOptionsBtn').click(function(){
+      $('#MiddlePanelPresentationOptions').show();
+      $('#MiddlePanelMoreOptionsParticipant').hide();
+    });
+    
+    $('#SettingsSelectPPTBtn').click(function(){
+      $('#MiddlePanelMoreOptionsSelectFile').show();
+      $('#MiddlePanelPresentationOptions').hide();
+    });
+
+    $('#LogOutBtn').click(function(){
+        $('#MiddlePanelMoreOptionsSelectFile').show();
+        $('#MiddlePanelPresentationOptions').hide();
+      });
+
+    //-----------------Participants Buttons----------------
+    $('#RemoteUsersBtn').click(function(){
+        $('#MiddlePanelRemoteParticipants').show();
+        $('#MiddlePanelLocalParticipants').hide();
+    });
+
+    $('#LocalUsersBtn').click(function(){
+        $('#MiddlePanelRemoteParticipants').hide();
+        $('#MiddlePanelLocalParticipants').show();
     });
 
 });

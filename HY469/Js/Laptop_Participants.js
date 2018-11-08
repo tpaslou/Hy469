@@ -1,5 +1,4 @@
 $(document).ready(function(){
-    var currPPTSlide = 0;
 
     /* Video Controls: Mute / Unmute Button */
     $('#SwapMuteBtn').click(function () {
@@ -11,53 +10,45 @@ $(document).ready(function(){
         }
     });
 
-    /* Side Panel: Previous Button */
-    $('#PreviousBtn').click(function(){
-        if(currPPTSlide == 0){
-            /* Do Nothing */
-        }
-        else if(currPPTSlide == 1){
-            --currPPTSlide;
-            $('#PPTVideoImg').attr('src', '../Images/VideoPresentation/PV_1.png'); 
-            $('#NextSlideImg').attr('src', '../Images/VideoPresentation/PV_2.png'); 
-        }  
-        else if(currPPTSlide == 2){
-            --currPPTSlide;
-            $('#PPTVideoImg').attr('src', '../Images/VideoPresentation/PV_2.png'); 
-            $('#NextSlideImg').attr('src', '../Images/VideoPresentation/PV_3.png'); 
-        }
-        else if(currPPTSlide == 3){
-            --currPPTSlide;
-            $('#PPTVideoImg').attr('src', '../Images/VideoPresentation/PV_3.png'); 
-            $('#NextSlideImg').attr('src', '../Images/VideoPresentation/PV_4.png'); 
-
-            $('#VideoControlsDiv').hide();
-        }
+    $('#NotesLaptopBtn').click(function () {
+        $('.PerOptionsPanel').hide();
+        $('#NotificationLaptopPanel').show();
     });
 
-    /* Side Panel: Next Button */
-    $('#NextBtn').click(function(){
-        if(currPPTSlide == 0){
-            ++currPPTSlide;
-            $('#PPTVideoImg').attr('src', '../Images/VideoPresentation/PV_2.png'); 
-            $('#NextSlideImg').attr('src', '../Images/VideoPresentation/PV_3.png'); 
+    $('#AnnotationLaptopBtn').click(function () {
+        /* hide all panels excpet the one pressed */
+        $('.PerOptionsPanel').hide();
+        $('#NotificationLaptopPanel').show();
+        /* hide all notifications excpet the one pressed */
+        $('.NotificationImage').hide();
+        $('#AnnotationNotificationImg').show();
+    });
 
-        }
-        else if(currPPTSlide == 1){
-            ++currPPTSlide;
-            $('#PPTVideoImg').attr('src', '../Images/VideoPresentation/PV_3.png'); 
-            $('#NextSlideImg').attr('src', '../Images/VideoPresentation/PV_4.png'); 
-        }  
-        else if(currPPTSlide == 2){
-            ++currPPTSlide;
-            $('#PPTVideoImg').attr('src', '../Images/VideoPresentation/PV_4.png'); 
-            $('#NextSlideImg').attr('src', '../Images/VideoPresentation/PV_5.png'); 
-            
-            $('#VideoControlsDiv').show();
-        }  
-        else if(currPPTSlide == 3){
-            /* Do Nothing */ 
-        }  
+    $('#PPTChangeLaptopBtn').click(function () {
+        /* hide all panels excpet the one pressed */
+        $('.PerOptionsPanel').hide();
+        $('#NotificationLaptopPanel').show();
+        /* hide all notifications excpet the one pressed */
+        $('.NotificationImage').hide();
+        $('#FileChangeNotificationImg').show();
+    });
+
+    $('#CoordRequestLaptopBtn').click(function () {
+        /* hide all panels excpet the one pressed */
+        $('.PerOptionsPanel').hide();
+        $('#NotificationLaptopPanel').show();
+        /* hide all notifications excpet the one pressed */
+        $('.NotificationImage').hide();
+        $('#CoordinatorNotificationImg').show();
+    });
+
+    $('#ExitNotificationBtn').click(function () {
+        /* hide all panels excpet the one pressed */
+        $('.PerOptionsPanel').hide();
+        $('#AnnotationLaptopPanel').show();
+        /* hide all notifications excpet the one pressed */
+        $('.NotificationImage').hide();
+
     });
     
 });
