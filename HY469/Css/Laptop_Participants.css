@@ -1,0 +1,125 @@
+html,body,blockquote,code,h1,h2,h3,h4,h5,h6,p,pre{margin:0;padding:0}
+div{margin:0px;padding:0;background-color:transparent;text-align:left}
+
+/* --- PANELS --- */
+
+.DefaultPanel {
+  position: absolute;
+  width: 1270px;
+  height: 940px;
+}
+
+.LeftBarPanel {
+  float:left;
+  width: 120px;
+  height: 940px;
+  background-color: rgb(28, 103, 160);
+}
+
+.RightPanel {
+  float:left;
+  width: 1150px;
+  height: 940px;
+  background-color: #c8c8c8;
+}
+
+.PresentationRightPanel {
+  display: inline-block;
+  width: 825px;
+  height: 575px;
+  background-color:red;
+}
+
+.NextSlideVideoRightPanel {
+  float:right;
+  width: 325px;
+  height: 575px;
+  background-color:orange;
+}
+
+.AllOptionPanelsLowerLeftPanel {
+  float:left;
+  width: 310px;
+  height: 365px;
+  background-color:blue;
+}
+
+.GroupChatLowerMiddlePanel{
+  float:left;
+  width: 420px;
+  height: 365px;
+  background-color:green;
+}
+
+.GroupChatLowerRightPanel{
+  float:left;
+  width: 420px;
+  height: 365px;
+  background-color:yellow;
+}
+
+
+
+/* --- BUTTONS --- */
+
+.buttonLaptop {
+  position: relative;
+
+  background-color:white;
+  background-size: cover;
+  display: inline-block;
+
+  border-radius: 6px;
+  border: none;
+  outline: 0;
+
+  width: 45px;
+  height: 45px;
+  margin: 4px 0px;
+
+  cursor: pointer;
+}
+
+.buttonLaptop:active {
+  background-color: rgb(28, 103, 160);
+}
+
+.buttonImage {
+  position: relative;
+  left: -5px;
+  top: -1px;
+
+  width:45px;
+  height:45px;
+}
+
+/* --- SLIDER --- */
+
+.slidecontainer {
+  width: 100%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 80%;
+  height: 12px;
+  align-content: center;
+  background: white;
+  outline: none;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+
+  top: 10px;
+  margin: 15px auto;
+  display: block;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgb(28, 103, 160);
+  cursor: pointer;
+}

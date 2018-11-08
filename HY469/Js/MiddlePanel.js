@@ -28,4 +28,23 @@ $(document).ready(function(){
         $('#ExitFileSystemButtonImg').attr('src', '../Images/Notification/Button_Exit.png'); 
     });
 
+    //-----------------Remote Users----------------
+    $('#RemoteUserZikasButton').click(function(){
+        $('#ParticipantOptionsNotification').show();
+        $('#UserIconNoticicationButtonImg').attr('src', '../Images/Users/User_Paul.jpg'); 
+        document.getElementById("RequestInfoTextNotification").innerHTML = 'Paul Zikas';
+    });
+
+    $('#RemoteUserSteveButton').click(function(){
+        $('#UserIconNoticicationButtonImg').attr('src', '../Images/Users/User_Steve.jpg'); 
+        document.getElementById("RequestInfoTextNotification").innerHTML = 'Steve Ens';
+        $('#ParticipantOptionsNotification').show();
+    });
+
+    $('#RemoteUserStratosButton').click(function(){
+        $('#UserIconNoticicationButtonImg').attr('src', '../Images/Users/User_Stratos.jpg'); 
+        document.getElementById("RequestInfoTextNotification").innerHTML = 'Stratos W.';
+        $('#ParticipantOptionsNotification').show();
+    });
+
 });
