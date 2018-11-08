@@ -325,13 +325,14 @@
 
 
         <div class="tab_wrapper">
-            <button class="tablink" onclick="openChat('Group Chat', this,)" id="defaultOpen">Group Chat</button>
-            <script>
-                document.getElementById("defaultOpen").click();
-            </script>
-            <button class="tablink" onclick="openChat('Private Chat', this)">Private Chat</button>
-        </div>
-        
+            <div id="ChatExtraButtons" class="ChatExtraButtons" >
+                <button class="tablink" onclick="openChat('Group Chat', this,)" id="defaultOpen">Group Chat</button>
+                <script>
+                    document.getElementById("defaultOpen").click();
+                </script>
+                <button class="tablink" onclick="openChat('Private Chat', this)">Private Chat</button>
+            </div>
+        </div> 
     </div>
 
 
