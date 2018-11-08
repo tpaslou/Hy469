@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="user-scalable=no,width=device-width" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css">
+    <link rel="stylesheet"
+    href="../Css/Header.css">
+    <link rel="stylesheet" href="../Css/Footer.css">
+    <link rel="stylesheet" href="../Css/Notification.css">
+    <link rel="stylesheet" href="../Css/MiddlePanel.css">
+    <script  type="text/javascript"  src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script  type="text/javascript"  src="../Js/Header.js"></script>
+    <script  type="text/javascript"  src="../Js/footer.js"></script>
+    <script  type="text/javascript"  src="../Js/Notification.js"></script>
+    <script  type="text/javascript"  src="../Js/MiddlePanel.js"></script>
+
+    <title>Coord.ME</title>
+</head>
+
+<body>
+
+    <div class="TopPanel">       
+        <div class="VideoPresentationPanel">
+            <img id="PPTVideoImg" src="../Images/VideoPresentation/PV_1.png" alt="PPT" style="width:520px;height:354px;">
+
+            <div id="VideoControlsDiv" class="VideoControls" style="display:none">
+                <button type="button" class="buttonHeader"  style="margin: 3px 4px;">
+                    <img src="../Images/Buttons/Button_PlayPause.png" class="buttonImage" alt="PlayPause">
+                </button>
+    
+                <button id="SwapMuteBtn" type="button" class="buttonHeader" style="margin: 3px 4px;">
+                    <img id="MuteUnmuteImg" src="../Images/Buttons/Button_Mute.png" class="buttonImage" alt="Mute">
+                </button>
+
+                <img src="../Images/VideoPresentation/VideoSlider.png" alt="Slider" style="position:relative;width:375px;height:14.5px;">
+            </div>
+
+            <div id="MiddlePanelPresentationOptions" class="MiddlePanelPresentationOptions" style="display:none">
+                <fieldset>
+                    <legend>TV MONITOR:</legend>
+                    <form action="">
+                        <div class="item">
+                            <p>Presentation</p>
+                            <input type="checkbox" id="toggle_presentation" name="" value="">
+                            <div class="toggle">
+                                <label for="toggle_presentation"><i></i></label>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <p>Participants</p>
+                            <input type="checkbox" id="toggle_participants" name="" value="">
+                            <div class="toggle">
+                                <label for="toggle_participants"><i></i></label>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <p>Chat</p>
+                            <input type="checkbox" id="toggle_chat" name="" value="">
+                            <div class="toggle">
+                                <label for="toggle_chat"><i></i></label>
+                            </div>
+                        </div>
+                    </form>
+                </fieldset>
+                <fieldset>
+                    <legend>PRESENTATION:</legend>
+                    <form action="">
+                        <div class="item">
+                            <p>Select PowerPoint</p>
+                        </div>
+                    </form>
+                </fieldset>
+                <button id="SelectPPTBtn" type="button" class="PresentationButton">
+                    <img id="SelectPPTButtonImg" src="../Images/MiddleSection/Button_File.png"class="PresentationButtonImage" alt="SelectPPT">
+                </button>
+            </div>
+
+            <div id="MiddlePanelMoreOptions" class="MiddlePanelMoreOptions" style="display:none">
+                <fieldset>
+                    <legend>OPTIONS:</legend>
+                    <form action="">
+                        <div class="item">
+                            <p>Microphone</p>
+                            <input type="checkbox" id="toggle_microphone" name="" value="">
+                            <div class="toggle">
+                                <label for="toggle_microphone"><i></i></label>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <p>Camera</p>
+                            <input type="checkbox" id="toggle_camera" name="" value="">
+                            <div class="toggle">
+                                <label for="toggle_camera"><i></i></label>
+                            </div>
+                        </div>
+                    </form>
+                </fieldset>
+                <fieldset>
+                    <legend>SESSION:</legend>
+                    <form action="">
+                        <div class="item">
+                            <p>Terminate Session</p>
+                        </div>
+                    </form>
+                </fieldset>
+                <button id="TerminateSessionBtn" type="button" class="PresentationButton">
+                    <img id="TerminateSessionButtonImg" src="../Images/Notification/Button_RemoveUser.png"class="PresentationButtonImage" alt="TerminateSession">
+                </button>
+            </div>
+
+            <div id="MiddlePanelMoreOptionsParticipant" class="MiddlePanelMoreOptionsParticipant" style="display:none">
+                <fieldset>
+                    <legend>OPTIONS:</legend>
+                    <form action="">
+                        <div class="item">
+                            <p>Microphone</p>
+                            <input type="checkbox" id="toggle_microphonePart" name="" value="">
+                            <div class="toggle">
+                                <label for="toggle_microphonePart"><i></i></label>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <p>Camera</p>
+                            <input type="checkbox" id="toggle_cameraPart" name="" value="">
+                            <div class="toggle">
+                                <label for="toggle_cameraPart"><i></i></label>
+                            </div>
+                        </div>
+                    </form>
+                </fieldset>
+                <fieldset>
+                    <legend>SESSION:</legend>
+                    <form action="">
+                        <div class="item">
+                            <p>Request Coordinator Privileges</p>
+                        </div>
+                        <div class="item">
+                            <p>Log Out</p>
+                        </div>
+                    </form>
+                </fieldset>
+                <button id="RequestCoordBtn" type="button" class="ReuestCoordButton">
+                    <img id="RequestCoordButtonImg" src="../Images/MiddleSection/Button_Coordinator.png"class="PresentationButtonImage" alt="RequestCoord">
+                </button>
+                <button id="LogOutBtn" type="button" class="LogOutButton">
+                    <img id="LogOutButtonImg" src="../Images/MiddleSection/Button_LogOut.png"class="PresentationButtonImage" alt="LogOut">
+                </button>
+            </div>
+
+            <div id="MiddlePanelMoreOptionsSelectFile" class="MiddlePanelMoreOptionsSelectFile" style="display:none">
+                <fieldset>
+                    <legend>SELECT FILE FROM:</legend>
+                    <form action="">
+                        <div class="item">
+                            <p>Local File System</p>
+                        </div>
+                        <div class="item">
+                            <p>DropBox</p>
+                        </div>
+                        <div class="item">
+                            <p>Google Drive</p>
+                        </div>
+                        <div class="item">
+                            <p>iCloud</p>
+                        </div>
+                    </form>
+                </fieldset>
+                <button id="LocalFileSystemBtn" type="button" class="SelectFileButton">
+                    <img id="RequestCoordButtonImg" src="../Images/MiddleSection/Button_File.png"class="PresentationButtonImage" alt="LocalFileSystem">
+                </button>
+                <button id="DropBoxBtn" type="button" class="SelectFileButton">
+                    <img id="DropBoxButtonImg" src="../Images/MiddleSection/Button_Dropbox.png"class="PresentationButtonImage" alt="DropBox">
+                </button>
+                <button id="GoogleDriveBtn" type="button" class="SelectFileButton">
+                    <img id="GoogleDriveButtonImg" src="../Images/MiddleSection/Button_GoogleDrive.png"class="PresentationButtonImage" alt="GoogleDrive">
+                </button>
+                <button id="iCloudBtn" type="button" class="SelectFileButton">
+                    <img id="iCloudButtonImg" src="../Images/MiddleSection/Button_ICloud.png"class="PresentationButtonImage" alt="iCloud">
+                </button>
+
+                <button id="ExitFileSystemBtn" type="button" class="ExitFileSystemButton">
+                    <img id="ExitFileSystemButtonImg" src="../Images/Notification/Button_Exit.png"class="NotificationsOptionsButtonImage" alt="ExitFileSystem">
+                </button>
+            </div>
+
+            <div id="MiddlePanelTakeNotes" class="MiddlePanelTakeNotes"style="display:none">
+
+                <fieldset>
+                    <legend>NOTEBOOK:</legend>
+                    <form action="">
+                        <div class="item">
+                            <p>Remember to ask George about analytics</p>
+                        </div>
+                        <div class="item">
+                            <p>Where the next physical meeting?</p>
+                        </div>
+                        <div class="item">
+                            <p>Next presentation this Friday</p>
+                        </div>
+                        <div class="item">
+                            <p></p>
+                        </div>
+                        <div class="item">
+                            <p></p>
+                        </div>
+                        <div class="item">
+                            <p></p>
+                        </div>
+                    </form>
+                </fieldset>
+                <button id="ExitNotes" type="button" class="ExitNotesButton">
+                    <img id="ExitNotesButtonImg" src="../Images/Notification/Button_Exit.png"class="NotificationsOptionsButtonImage" alt="ExitNotes">
+                </button>
+            </div>
+
+        </div>
+
+        <div class="SidePanel">
+            <div class="NextSlidePanel">                  
+                <h1 class="NextSlideText">Next Slide</h1>               
+                <img id="NextSlideImg" src="../Images/VideoPresentation/PV_2.png" alt="PPT" style="width:248px;height:152px;">
+                <img src="../Images/VideoPresentation/PV_3.png" alt="PPT" style="width:248px;height:152px; display: none;">
+            </div>
+    
+            <div class="PresentationControlsPanel">
+                <button id="PreviousBtn" type="button" class="buttonHeader">
+                    <img src="../Images/Buttons/Button_Previous.png" class="buttonImage" alt="Previous">
+                </button>
+    
+                <button id="NextBtn" type="button" class="buttonHeader">
+                    <img src="../Images/Buttons/Button_Next.png" class="buttonImage" alt="Next">
+                </button>
+    
+                <button type="button" class="buttonHeader">
+                    <img src="../Images/Buttons/Button_Annotation.png" class="buttonImage" alt="Annotation">
+                </button>
+    
+                <button type="button" class="buttonHeader">
+                    <img src="../Images/Buttons/Button_Notes.png" class="buttonImage" alt="TakeNotes">
+                </button>
+    
+                <button type="button" class="buttonHeader">
+                    <img src="../Images/Buttons/Button_ChangePPT.png" class="buttonImage" alt="FileChange">
+                </button>
+    
+                <h1 class="NextSlideText">Annotation Controls</h1>
+    
+                <button type="button" class="buttonHeader">
+                    <img src="../Images/Buttons/Button_Color_Black.png" class="buttonImage" alt="BlackColor">
+                </button>
+        
+                <button type="button" class="buttonHeader">
+                    <img src="../Images/Buttons/Button_Color_Green.png" class="buttonImage" alt="GreenColor">
+                </button>
+        
+                <button type="button" class="buttonHeader">
+                    <img src="../Images/Buttons/Button_Color_Red.png" class="buttonImage" alt="RedColor">
+                </button>
+    
+                <div class="slidecontainer">
+                    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                </div>
+            </div>
+        </div>        
+        
+    </div>
+
+    <div id="Footer" class="Footer">
+        
+        <button type="button" class="FooterbuttonHeader">
+            <img src="../Images/Buttons/Button_Chat.png" class="btn ChatbuttonImage" id="b1" alt="Chat">
+        </button>
+        
+
+        <button type="button" class="FooterbuttonHeader">
+            <img src="../Images/Buttons/Button_Participants.png" class="btn ParticipantsbuttonImage" id="b2" alt="Participants">
+        </button>
+
+
+        <button type="button" class="FooterbuttonHeader">
+            <img src="../Images/Buttons/Button_Settings.png" class="btn SettingsbuttonImage" id="b3" alt="Settings">
+        </button>
+        
+
+
+
+    </div>
+
+
+
+    <div id="AnnotationsNotification" class="Notification" style="display:none">
+        <button id="ExitBtn" type="button" class="NotificationsExitButton">
+            <img id="ExitButtonImg" src="../Images/Notification/Button_Exit.png"class="NotificationsOptionsButtonImage" alt="Exit">
+        </button>
+        <h1 class="RequestText">New Request</h1>
+
+        <div id="UserIcon" class="UserIcon" style="text-align:center">
+            <img src="../Images/Users/User_Paul.jpg" class="UserImage">
+            <span class="dot"></span>
+            <h1 class="RequestInfoText" style="top:10px">Paul Zikas</h1>  
+        </div>
+            
+        <div class="NotificationsOptions" >
+            <h1 class="RequestInfoText" style="top:130px">Wants to make an Annotation</h1>  
+
+            <button id="AcceptBtn" type="button" class="NotificationsOptionsButton">
+                <img src="../Images/Notification/Button_Accept.png" class="NotificationsOptionsButtonImage" alt="Accept">
+                <h1 class="NotificationsOptionsText">Accept</h1>   
+            </button>
+            <button id="DeclineBtn" type="button" class="NotificationsOptionsButton">
+                <img src="../Images/Notification/Button_Decline.png" class="NotificationsOptionsButtonImage" alt="Decline">
+                <h1 class="NotificationsOptionsText">Decline</h1>   
+            </button>
+        </div>
+    </div>
+
+    <div id="CoordinatorNotification" class="Notification" style="display:none">
+            <button id="ExitBtn" type="button" class="NotificationsExitButton">
+                <img id="ExitButtonImg" src="../Images/Notification/Button_Exit.png"class="NotificationsOptionsButtonImage" alt="Exit">
+            </button>
+            <h1 class="RequestText">New Request</h1>
+    
+            <div id="UserIcon" class="UserIcon" style="text-align:center">
+                <img src="../Images/Users/User_Paul.jpg" class="UserImage">
+                <span class="dot"></span>
+                <h1 class="RequestInfoText" style="top:10px">Paul Zikas</h1>  
+            </div>
+                
+            <div class="NotificationsOptions" >
+                <h1 class="RequestInfoText" style="top:130px">Wants to become Coordinator</h1>  
+    
+                <button id="AcceptBtn" type="button" class="NotificationsOptionsButton">
+                    <img src="../Images/Notification/Button_Accept.png" class="NotificationsOptionsButtonImage" alt="Accept">
+                    <h1 class="NotificationsOptionsText">Accept</h1>   
+                </button>
+                <button id="DeclineBtn" type="button" class="NotificationsOptionsButton">
+                    <img src="../Images/Notification/Button_Decline.png" class="NotificationsOptionsButtonImage" alt="Decline">
+                    <h1 class="NotificationsOptionsText">Decline</h1>   
+                </button>
+            </div>
+    </div>
+
+    <div id="PresentationNotification" class="Notification" style="display:none">
+            <button id="ExitBtn" type="button" class="NotificationsExitButton">
+                <img id="ExitButtonImg" src="../Images/Notification/Button_Exit.png"class="NotificationsOptionsButtonImage" alt="Exit">
+            </button>
+            <h1 class="RequestText">New Request</h1>
+    
+            <div id="UserIcon" class="UserIcon" style="text-align:center">
+                <img src="../Images/Users/User_Paul.jpg" class="UserImage">
+                <span class="dot"></span>
+                <h1 class="RequestInfoText" style="top:10px">Paul Zikas</h1>  
+            </div>
+                
+            <div class="NotificationsOptions" >
+                <h1 class="RequestInfoText" style="top:130px">Wants to present a PowerPoint</h1>  
+    
+                <button id="AcceptBtn" type="button" class="NotificationsOptionsButton">
+                    <img src="../Images/Notification/Button_Accept.png" class="NotificationsOptionsButtonImage" alt="Accept">
+                    <h1 class="NotificationsOptionsText">Accept</h1>   
+                </button>
+                <button id="DeclineBtn" type="button" class="NotificationsOptionsButton">
+                    <img src="../Images/Notification/Button_Decline.png" class="NotificationsOptionsButtonImage" alt="Decline">
+                    <h1 class="NotificationsOptionsText">Decline</h1>   
+                </button>
+            </div>
+    </div>
+
+    <div id="JoinNotification" class="Notification" style="display:none">
+            <button id="ExitBtn" type="button" class="NotificationsExitButton">
+                <img id="ExitButtonImg" src="../Images/Notification/Button_Exit.png"class="NotificationsOptionsButtonImage" alt="Exit">
+            </button>
+            <h1 class="RequestText">New Request</h1>
+    
+            <div id="UserIcon" class="UserIcon" style="text-align:center">
+                <img src="../Images/Users/User_Paul.jpg" class="UserImage">
+                <span class="dot"></span>
+                <h1 class="RequestInfoText" style="top:10px">Paul Zikas</h1>  
+            </div>
+                
+            <div class="NotificationsOptions" >
+                <h1 class="RequestInfoText" style="top:130px">Wants to join the meeting</h1>  
+    
+                <button id="AcceptBtn" type="button" class="NotificationsOptionsButton">
+                    <img src="../Images/Notification/Button_Accept.png" class="NotificationsOptionsButtonImage" alt="Accept">
+                    <h1 class="NotificationsOptionsText">Accept</h1>   
+                </button>
+                <button id="DeclineBtn" type="button" class="NotificationsOptionsButton">
+                    <img src="../Images/Notification/Button_Decline.png" class="NotificationsOptionsButtonImage" alt="Decline">
+                    <h1 class="NotificationsOptionsText">Decline</h1>   
+                </button>
+            </div>
+    </div>
+
+    <div id="ParticipantOptionsNotification" class="Notification" style="display:none">
+        <button id="ExitParticipantOptionsBtn" type="button" class="NotificationsExitButton">
+            <img id="ExitParticipantOptionsButtonImg" src="../Images/Notification/Button_Exit.png"class="NotificationsOptionsButtonImage" alt="Exit">
+        </button>
+
+        <div id="UserIcon" class="UserIcon" style="text-align:center">
+            <img src="../Images/Users/User_Paul.jpg" class="UserImage">
+            <span class="dot"></span>
+            <h1 class="RequestInfoText" style="top:10px">Paul Zikas</h1>  
+        </div>
+        
+        <div class="NotificationsOptions" >
+            <button id="ProjectOnTVBtn" type="button" class="NotificationsOptionsButton" >
+                <img src="../Images/Notification/Button_Project.png" class="NotificationsOptionsButtonImage" alt="ProjectOnTV">
+                <h1 class="NotificationsOptionsText">Project_On_TV</h1>   
+            </button>
+
+            <button id="MakeCoordinatorBtn" type="button" class="NotificationsOptionsButton">
+                    <img src="../Images/Notification/Button_Coordinator.png" class="NotificationsOptionsButtonImage" alt="MakeCoordinator">
+                    <h1 class="NotificationsOptionsText">Make_Coordinator</h1>   
+            </button>
+
+            <button id="MuteUserBtn" type="button" class="NotificationsOptionsButton">
+                <img id="MuteUserButtonImage" src="../Images/Notification/Button_UnMute.png" class="NotificationsOptionsButtonImage" alt="MuteUser">
+                <h1 id="MuteTxt" class="NotificationsOptionsText">Mute</h1>   
+            </button>
+
+            <button id="RemoveUserBtn" type="button" class="NotificationsOptionsButton">
+                <img src="../Images/Notification/Button_RemoveUser.png" class="NotificationsOptionsButtonImage" alt="RemoveUser">
+                <h1 class="NotificationsOptionsText">Remove</h1>   
+            </button>
+
+        </div>
+    </div>
+</body>
+
+</html>

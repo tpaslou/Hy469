@@ -46,7 +46,10 @@ div{margin:0;padding:0;background-color:transparent;text-align:left}
     width: 768px;
     height: 85px;
     top:5px;
+
 }
+
+
 
 .tab_wrapper{ 
     position: relative;
@@ -65,7 +68,7 @@ div{margin:0;padding:0;background-color:transparent;text-align:left}
     left:8px;
     width:65px;
     height: 65px;
-    top:-10px;
+    top:-13px;
     background-color:#FFFFFF;
 }
 
@@ -78,6 +81,8 @@ div{margin:0;padding:0;background-color:transparent;text-align:left}
     top:15px;
     width: 580px;
     height: 60px;
+    resize: none;
+
 
 }
 .SendMessage{
@@ -88,7 +93,7 @@ div{margin:0;padding:0;background-color:transparent;text-align:left}
     left:35px;
     width:65px;
     height: 65px;
-    top:-10px;
+    top:-13px;
     background-color:#FFFFFF;
 }
 
