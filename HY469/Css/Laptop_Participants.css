@@ -24,9 +24,17 @@ div{margin:0px;padding:0;background-color:transparent;text-align:left}
 }
 
 .PresentationRightPanel {
-  width: 1150px;
+  display: inline-block;
+  width: 825px;
   height: 575px;
   background-color:red;
+}
+
+.NextSlideVideoRightPanel {
+  float:right;
+  width: 325px;
+  height: 575px;
+  background-color:orange;
 }
 
 .AllOptionPanelsLowerLeftPanel {
