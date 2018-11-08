@@ -33,6 +33,8 @@
         <div class="VideoPresentationPanel">
             <img id="PPTVideoImg" src="../Images/VideoPresentation/PV_1.png" alt="PPT" style="width:520px;height:354px;">
 
+            <img id="VideoAnnotation" src="../Images/VideoPresentation/Video_Annotation.png" style="display:none; width:420px; height:200px; top:-320px; left:100px; position: relative;">
+
             <div id="VideoControlsDiv" class="VideoControls" style="display:none">
                 <button type="button" class="buttonHeader"  style="margin: 3px 4px;">
                     <img src="../Images/Buttons/Button_PlayPause.png" class="buttonImage" alt="PlayPause">
@@ -156,7 +158,7 @@
                     <img src="../Images/Buttons/Button_Next.png" class="buttonImage" alt="Next">
                 </button>
     
-                <button type="button" class="buttonHeader">
+                <button type="button" class="buttonHeader" id="TakeAnnotationBtn">
                     <img src="../Images/Buttons/Button_Annotation.png" class="buttonImage" alt="Annotation">
                 </button>
     
@@ -323,15 +325,6 @@
                 <img src="../Images/Buttons/Tick.png" class="btn SendMessageImage" id="si" alt="Chat">
             </button>
         </div>   
-
-
-
-       
-
-
-
-
-
 
         <div class="tab_wrapper">
             <div id="ChatExtraButtons" class="ChatExtraButtons" >
