@@ -45,7 +45,14 @@ div{margin:0px;padding:0;background-color:transparent;text-align:left}
   float:left;
   width: 310px;
   height: 365px;
-  background-color:white;
+  background-color:darkgrey;
+}
+
+.PerOptionsPanel{
+  position: relative;
+  display: none;
+  text-align:center;
+  margin: 0 auto;
 }
 
 .GroupChatLowerMiddlePanel{
@@ -131,7 +138,7 @@ h1.BottomButtonExp{
 
   width: 56px;
   height: 56px;
-  margin: 15px 30px;
+  margin: 5px 5px;
 
   cursor: pointer;
 }

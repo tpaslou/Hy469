@@ -17,21 +17,21 @@
 <body>
     <div class="DefaultPanel">
         <div class="LeftBarPanel">
-            <button class="buttonUserLaptop">
+            <button id="UserLaptopBtn" class="buttonUserLaptop">
                 <img class="buttonUserLaptopImage" src="../Images/Buttons/Button_Laptop_User.png">
             </button>
 
             <button class="buttonLaptop">
-                <img class="buttonLaptopImage" src="../Images/Buttons/Button_Annotation.png">
+                <img id="AnnotationLaptopBtn" class="buttonLaptopImage" src="../Images/Buttons/Button_Annotation.png">
             </button>
             <h1 class="BottomButtonExp">Annotation</h1>
 
-            <button class="buttonLaptop">
+            <button id="NotesLaptopBtn" class="buttonLaptop">
                 <img class="buttonLaptopImage" src="../Images/Buttons/Button_Notes.png">
             </button>
             <h1 class="BottomButtonExp">Take Notes</h1>
 
-            <button class="buttonLaptop">
+            <button id="CoordRequestLaptopBtn" class="buttonLaptop">
                 <img class="buttonLaptopImage" src="../Images/Buttons/Button_Coord.png">
             </button>
             <h1 class="BottomButtonExp">Coordinator Request</h1>
@@ -53,7 +53,25 @@
                 <img id="LaptopUserCamera" style="position:relative; top:8px;" src="../Images/VideoPresentation/UserCamera.png">
             </div>
             <div class="AllOptionPanelsLowerLeftPanel">
+                <div id="AnnotationLaptopPanel" class="PerOptionsPanel">
+                    <h1 class="NextSlideText">Annotation Controls</h1>
+
+                    <button type="button" class="buttonLaptop">
+                        <img src="../Images/Buttons/Button_Color_Black.png" class="buttonLaptopImage" alt="BlackColor">
+                    </button>
+            
+                    <button type="button" class="buttonLaptop">
+                        <img src="../Images/Buttons/Button_Color_Green.png" class="buttonLaptopImage" alt="GreenColor">
+                    </button>
+            
+                    <button type="button" class="buttonLaptop">
+                        <img src="../Images/Buttons/Button_Color_Red.png" class="buttonLaptopImage" alt="RedColor">
+                    </button>
         
+                    <div class="slidecontainer">
+                        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                    </div>
+                </div>
             </div>
             <div class="GroupChatLowerMiddlePanel">
         

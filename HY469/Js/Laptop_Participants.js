@@ -1,5 +1,4 @@
 $(document).ready(function(){
-    var currPPTSlide = 0;
 
     /* Video Controls: Mute / Unmute Button */
     $('#SwapMuteBtn').click(function () {
@@ -11,53 +10,19 @@ $(document).ready(function(){
         }
     });
 
-    /* Side Panel: Previous Button */
-    $('#PreviousBtn').click(function(){
-        if(currPPTSlide == 0){
-            /* Do Nothing */
-        }
-        else if(currPPTSlide == 1){
-            --currPPTSlide;
-            $('#PPTVideoImg').attr('src', '../Images/VideoPresentation/PV_1.png'); 
-            $('#NextSlideImg').attr('src', '../Images/VideoPresentation/PV_2.png'); 
-        }  
-        else if(currPPTSlide == 2){
-            --currPPTSlide;
-            $('#PPTVideoImg').attr('src', '../Images/VideoPresentation/PV_2.png'); 
-            $('#NextSlideImg').attr('src', '../Images/VideoPresentation/PV_3.png'); 
-        }
-        else if(currPPTSlide == 3){
-            --currPPTSlide;
-            $('#PPTVideoImg').attr('src', '../Images/VideoPresentation/PV_3.png'); 
-            $('#NextSlideImg').attr('src', '../Images/VideoPresentation/PV_4.png'); 
-
-            $('#VideoControlsDiv').hide();
-        }
+    $('#AnnotationLaptopBtn').click(function () {
+        $('.PerOptionsPanel').hide();
+        $('#AnnotationLaptopPanel').show();
     });
 
-    /* Side Panel: Next Button */
-    $('#NextBtn').click(function(){
-        if(currPPTSlide == 0){
-            ++currPPTSlide;
-            $('#PPTVideoImg').attr('src', '../Images/VideoPresentation/PV_2.png'); 
-            $('#NextSlideImg').attr('src', '../Images/VideoPresentation/PV_3.png'); 
+    $('#NotesLaptopBtn').click(function () {
+        $('.PerOptionsPanel').hide();
+        $('#NotesLaptopPanel').show();
+    });
 
-        }
-        else if(currPPTSlide == 1){
-            ++currPPTSlide;
-            $('#PPTVideoImg').attr('src', '../Images/VideoPresentation/PV_3.png'); 
-            $('#NextSlideImg').attr('src', '../Images/VideoPresentation/PV_4.png'); 
-        }  
-        else if(currPPTSlide == 2){
-            ++currPPTSlide;
-            $('#PPTVideoImg').attr('src', '../Images/VideoPresentation/PV_4.png'); 
-            $('#NextSlideImg').attr('src', '../Images/VideoPresentation/PV_5.png'); 
-            
-            $('#VideoControlsDiv').show();
-        }  
-        else if(currPPTSlide == 3){
-            /* Do Nothing */ 
-        }  
+    $('#CoordRequestLaptopBtn').click(function () {
+        $('.PerOptionsPanel').hide();
+        $('#RequestCoordPanel').show();
     });
     
 });
