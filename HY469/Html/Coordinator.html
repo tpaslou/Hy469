@@ -108,31 +108,6 @@
                 </button>
             </div>
 
-            <div id="MiddlePanelRemoteParticipants" class="MiddlePanelRemoteParticipants" style="display:none">
-                <div id="RemoteUserIcon" class="RemoteUserIcon">
-                    <button id="RemoteUserZikasButton" type="button" class="RemoteUserButton">
-                        <img src="../Images/Users/User_Paul.jpg" class="RemoteUserImage">
-                    </button>
-                    <span class="RemoteUserDot"></span>
-                    <h1 class="RemoteUserName">Paul Zikas</h1>  
-                </div>
-                <div id="RemoteUserIcon" class="RemoteUserIcon">
-                    <button id="RemoteUserSteveButton" type="button" class="RemoteUserButton">
-                        <img src="../Images/Users/User_Steve.jpg" class="RemoteUserImage">
-                    </button>
-                    <span class="RemoteUserDot"></span>
-                    <h1 class="RemoteUserName">Steve Ens</h1>  
-                </div>
-                <div id="RemoteUserIcon" class="RemoteUserIcon">
-                    <button id="RemoteUserStratosButton" type="button" class="RemoteUserButton">
-                        <img src="../Images/Users/User_Stratos.jpg" class="RemoteUserImage">
-                    </button>
-                    <span class="RemoteUserDot"></span>
-                    <h1 class="RemoteUserName">Stratos W.</h1>  
-                </div>
-
-            </div>
-
         </div>
 
         <div class="SidePanel">
@@ -258,6 +233,51 @@
             </div>
         </div> 
     </div>
+
+    <div id="ParticipantsPanel" class="MainPanel" style="display:none">
+
+            <div id="MiddlePanelRemoteParticipants" class="MiddlePanelRemoteParticipants" >
+                    <div id="RemoteUserIcon" class="RemoteUserIcon">
+                        <button id="RemoteUserStratosButton" type="button" class="RemoteUserButton">
+                            <img src="../Images/Users/User_Stratos.jpg" class="RemoteUserImage">
+                        </button>
+                        <span class="RemoteUserDot"></span>
+                        <h1 class="RemoteUserName">Stratos W.</h1>  
+                    </div>
+    
+            </div>
+
+            <div id="MiddlePanelLocalParticipants" class="MiddlePanelLocalParticipants" style="display:none">
+                        <div id="RemoteUserIcon" class="RemoteUserIcon">
+                            <button id="RemoteUserZikasButton" type="button" class="RemoteUserButton">
+                                <img src="../Images/Users/User_Paul.jpg" class="RemoteUserImage">
+                            </button>
+                            <span class="RemoteUserDot"></span>
+                            <h1 class="RemoteUserName">Paul Zikas</h1>  
+                        </div>
+                        <div id="RemoteUserIcon" class="RemoteUserIcon">
+                            <button id="RemoteUserSteveButton" type="button" class="RemoteUserButton">
+                                <img src="../Images/Users/User_Steve.jpg" class="RemoteUserImage">
+                            </button>
+                            <span class="RemoteUserDot"></span>
+                            <h1 class="RemoteUserName">Steve Ens</h1>  
+                        </div>
+        
+            </div>
+
+            <div class="tab_wrapper" style="top: 268px">
+                <div id="ParticipantsExtraButtons" class="ParticipantsExtraButtons" >
+                    <button class="tablink" onclick="openChat('Group Chat', this,)" id="RemoteUsersBtn">Remote Users</button>
+                    <script>
+                        document.getElementById("MiddlePanelRemoteParticipants").click();
+                        $('#MiddlePanelRemoteParticipants').show();
+                        $('#MiddlePanelLocalParticipants').hide();
+                    </script>
+                    <button class="tablink" onclick="openChat('Private Chat', this)"id="LocalUsersBtn">Local Users</button>
+                </div>
+            </div> 
+        </div>
+    
 
     <div id="SettingsPanel" class="MainPanel" style="display:none">
             <div id="MiddlePanelPresentationOptions" class="MiddlePanelPresentationOptions" style="display:none">
@@ -387,6 +407,10 @@
                 </div>
             </div> 
     </div>
+
+
+    
+
 
     <div id="Footer" class="Footer">
         
