@@ -47,7 +47,7 @@ $(document).ready(function(){
     $('#ExitNotificationBtn').click(function () {
         /* hide all panels excpet the one pressed */
         $('.PerOptionsPanel').hide();
-        $('#TakeNotesLaptopPanel').show();
+        $('#AnnotationLaptopPanel').show();
         /* hide all notifications excpet the one pressed */
         $('.NotificationImage').hide();
 
