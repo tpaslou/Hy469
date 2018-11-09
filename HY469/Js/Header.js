@@ -1,6 +1,6 @@
 $(document).ready(function(){
     var currPPTSlide = 0;
-
+    var annBoolean = 0;
     /* Video Controls: Mute / Unmute Button */
     $('#SwapMuteBtn').click(function () {
         if ($('#MuteUnmuteImg').attr('src') == "../Images/Buttons/Button_Mute.png") {
@@ -67,5 +67,17 @@ $(document).ready(function(){
         $('#ParticipantsPanel').hide();
         $('#SettingsPanel').hide();
     });
+
+        //-------------Take Notes-------------------
+        $('#TakeAnnotationBtn').click(function(){
+            if(annBoolean==0){
+                $('#VideoAnnotation').show();
+                annBoolean = 1;
+            }else{
+                $('#VideoAnnotation').hide();
+                annBoolean = 0;
+            }
+            
+        });
     
 });
