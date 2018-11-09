@@ -22,7 +22,8 @@
     <script  type="text/javascript"  src="../Js/Notification.js"></script>
     <script  type="text/javascript"  src="../Js/MiddlePanel.js"></script>
     <script  type="text/javascript"  src="../Js/Chat.js"></script>
-
+    <script  type="text/javascript"  src="../Js/Participants.js"></script>
+    <script  type="text/javascript"  src="../Js/Settings.js"></script>
 
     <title>Coord.ME</title>
 </head>
@@ -330,7 +331,7 @@
 
         <div class="ChatTab_wrapper">
             <div id="ChatExtraButtons" class="ChatExtraButtons" >
-                <button class="tablink" onclick="openChat('Group Chat', this,)" id="GroupChat">Group Chat</button>
+                <button class="tablink" onclick="openChat('Group Chat', this)" id="GroupChat">Group Chat</button>
                 <script>
                     document.getElementById("GroupChat").click();
                 </script>
@@ -372,13 +373,8 @@
 
             <div class="tab_wrapper" style="top: 268px">
                 <div id="ParticipantsExtraButtons" class="ParticipantsExtraButtons" >
-                    <button class="tablink" onclick="openChat('Group Chat', this,)" id="RemoteUsersBtn">Remote Users</button>
-                    <script>
-                        document.getElementById("MiddlePanelRemoteParticipants").click();
-                        $('#MiddlePanelRemoteParticipants').show();
-                        $('#MiddlePanelLocalParticipants').hide();
-                    </script>
-                    <button class="tablink" onclick="openChat('Private Chat', this)"id="LocalUsersBtn">Local Users</button>
+                    <button class="tablinkParticipants" onclick="openPanel(this)" id="RemoteUsersBtn">Remote Users</button>
+                    <button class="tablinkParticipants" onclick="openPanel(this)"id="LocalUsersBtn">Local Users</button>
                 </div>
             </div> 
     </div>
@@ -499,15 +495,10 @@
                     </button>
             </div>
 
-            <div class="tab_wrapper" style="top: -58px">
+            <div class="tab_wrapper" style="top: -59px">
                 <div id="SettingsExtraButtons" class="SettingsExtraButtons" >
-                    <button class="tablink" onclick="openChat('Presentation Options', this,)" id="PresentationOptionsBtn">Presentation Options</button>
-                    <script>
-                        document.getElementById("PresentationOptionsBtn").click();
-                        $('#MiddlePanelPresentationOptions').show();
-                        $('#MiddlePanelMoreOptionsParticipant').hide();
-                    </script>
-                    <button class="tablink" onclick="openChat('More Options', this)" id="MoreOptionsBtn">More Options</button>
+                    <button class="tablinkSettings" onclick="openPanelSettings(this)" id="PresentationOptionsBtn">Presentation Options</button>
+                    <button class="tablinkSettings" onclick="openPanelSettings(this)" id="MoreOptionsBtn">More Options</button>
                 </div>
             </div> 
     </div>

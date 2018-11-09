@@ -94,16 +94,4 @@ $(document).ready(function(){
         $('#MiddlePanelMoreOptionsSelectFile').show();
         $('#MiddlePanelPresentationOptions').hide();
       });
-
-    //-----------------Participants Buttons----------------
-    $('#RemoteUsersBtn').click(function(){
-        $('#MiddlePanelRemoteParticipants').show();
-        $('#MiddlePanelLocalParticipants').hide();
-    });
-
-    $('#LocalUsersBtn').click(function(){
-        $('#MiddlePanelRemoteParticipants').hide();
-        $('#MiddlePanelLocalParticipants').show();
-    });
-
 });
