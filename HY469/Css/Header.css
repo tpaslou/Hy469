@@ -21,10 +21,9 @@ div{margin:0px;padding:0;background-color:transparent;text-align:left}
 
 .VideoControls{
   position: relative;
-  width: 500px;
-  height: 51px;
-  top: -60px;
-  left: 10px;
+  width: 520px;
+  height: 61px;
+  top:-4px;
   align-content: center;
   background-color: #c8c8c8
 }
