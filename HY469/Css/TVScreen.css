@@ -1,0 +1,37 @@
+html,body,blockquote,code,h1,h2,h3,h4,h5,h6,p,pre{margin:0;padding:0}
+div{margin:0px;padding:0;background-color:transparent;text-align:left}
+
+/* --- PANELS --- */
+
+.DefaultPanel {
+  position: absolute;
+  width: 1920px;
+  height: 1080px;
+  background-color: rgb(33, 33, 33);
+}
+
+#Panel_2_PPT{
+  position: absolute;
+  width: 1614px;
+  height: 1080px;
+}
+
+#Panel_2_Chat{
+  position: absolute;
+  left: 1614px;
+  width: 306px;
+  height: 1080px;
+}
+
+#Panel_2_Users{
+  position: absolute;
+  top: 908px;
+  width: 1920px;
+  height: 203px;
+}
+
+#PPT_Panel12_Img{
+  position: relative;
+  max-width: 100%;
+  height: auto;
+}
