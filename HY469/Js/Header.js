@@ -3,12 +3,23 @@ $(document).ready(function(){
     var annBoolean = 0;
     /* Video Controls: Mute / Unmute Button */
     $('#SwapMuteBtn').click(function () {
+        var myVideo = document.getElementById("PPTVideo");
         if ($('#MuteUnmuteImg').attr('src') == "../Images/Buttons/Button_Mute.png") {
             $('#MuteUnmuteImg').attr('src', '../Images/Buttons/Button_Unmute.png'); 
+            myVideo.muted = true;
         }
         else{
             $('#MuteUnmuteImg').attr('src', '../Images/Buttons/Button_Mute.png'); 
+            myVideo.muted = false;
         }
+    });
+
+    $('#PlayPauseBtn').click(function () {
+        var myVideo = document.getElementById("PPTVideo"); 
+        if (myVideo.paused) 
+            myVideo.play(); 
+        else 
+            myVideo.pause();
     });
 
     /* Side Panel: Previous Button */
@@ -28,6 +39,8 @@ $(document).ready(function(){
         }
         else if(currPPTSlide == 3){
             --currPPTSlide;
+            $('#PPTVideoImg').show();           
+            $('#PPTVideo').hide(); 
             $('#PPTVideoImg').attr('src', '../Images/VideoPresentation/PV_3.png'); 
             $('#NextSlideImg').attr('src', '../Images/VideoPresentation/PV_4.png'); 
 
@@ -50,7 +63,9 @@ $(document).ready(function(){
         }  
         else if(currPPTSlide == 2){
             ++currPPTSlide;
-            $('#PPTVideoImg').attr('src', '../Images/VideoPresentation/PV_4.png'); 
+            /*$('#PPTVideoImg').attr('src', '../Images/VideoPresentation/PV_4.png');*/ 
+            $('#PPTVideoImg').hide(); 
+            $('#PPTVideo').show(); 
             $('#NextSlideImg').attr('src', '../Images/VideoPresentation/PV_5.png'); 
             
             $('#VideoControlsDiv').show();

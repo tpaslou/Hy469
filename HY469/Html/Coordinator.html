@@ -32,11 +32,14 @@
     <div class="TopPanel">       
         <div class="VideoPresentationPanel">
             <img id="PPTVideoImg" src="../Images/VideoPresentation/PV_1.png" alt="PPT" style="width:520px;height:354px;">
+            <video id="PPTVideo" width="520px;" style="display:none">
+                <source src="../Images/VideoPresentation/PV_4.mp4" type="video/mp4">
+            </video>
 
             <img id="VideoAnnotation" src="../Images/VideoPresentation/Video_Annotation.png" style="display:none; width:420px; height:200px; top:-320px; left:100px; position: relative;">
 
             <div id="VideoControlsDiv" class="VideoControls" style="display:none">
-                <button type="button" class="buttonHeader"  style="margin: 3px 4px;">
+                <button id="PlayPauseBtn" type="button" class="buttonHeader"  style="margin: 3px 4px;">
                     <img src="../Images/Buttons/Button_PlayPause.png" class="buttonImage" alt="PlayPause">
                 </button>
     
@@ -145,8 +148,7 @@
         <div class="SidePanel">
             <div class="NextSlidePanel">                  
                 <h1 class="NextSlideText">Next Slide</h1>               
-                <img id="NextSlideImg" src="../Images/VideoPresentation/PV_2.png" alt="PPT" style="width:248px;height:152px;">
-                <img src="../Images/VideoPresentation/PV_3.png" alt="PPT" style="width:248px;height:152px; display: none;">
+                <img id="NextSlideImg" src="../Images/VideoPresentation/PV_2.png" alt="PPT" style="width:248px;height:152px;">               
             </div>
     
             <div class="PresentationControlsPanel">
@@ -294,8 +296,8 @@
                 <div class="ActualMessage">
                     
                         <p class="FileText">Shared a file</p>
-                        <i class="fa fa-file-pdf-o" style="font-size:24px;color:red;position: relative;top:10; left:30px;font-color:black;
-                        text-decoration: underline ;"> Logistics.pdf</i>
+                        <a class="fa fa-file-pdf-o" href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" style="font-size:24px;color:blue;position: relative;top:10; left:30px;
+                        text-decoration: underline ;"> Logistics.pdf</a>
 
                 </div>
             </div>
