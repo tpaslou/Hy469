@@ -320,3 +320,13 @@ input[type="checkbox"]:checked:active + .toggle i {
     font-size: 22px;
     width: 50%;
 }
+
+.NotesPanel{
+    position: absolute;
+    display:inline-block;
+    width: 768px;
+    height: 510px;
+    left: 0px;
+    top: 360px;
+    background-color:transparent;
+}
