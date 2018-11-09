@@ -12,7 +12,9 @@ $(document).ready(function(){
 
     $('#NotesLaptopBtn').click(function () {
         $('.PerOptionsPanel').hide();
-        $('#NotificationLaptopPanel').show();
+        $('.NotificationImage').hide();
+        $('#NotificationLaptopPanel').hide();
+        $('#TakeNotesLaptopPanel').show();
     });
 
     $('#AnnotationLaptopBtn').click(function () {
@@ -45,7 +47,7 @@ $(document).ready(function(){
     $('#ExitNotificationBtn').click(function () {
         /* hide all panels excpet the one pressed */
         $('.PerOptionsPanel').hide();
-        $('#AnnotationLaptopPanel').show();
+        $('#TakeNotesLaptopPanel').show();
         /* hide all notifications excpet the one pressed */
         $('.NotificationImage').hide();
 
