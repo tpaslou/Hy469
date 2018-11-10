@@ -1,6 +1,6 @@
 $(document).ready(function(){
     var currPPTSlide = 0;
-    var annBoolean = 0;
+    var annotations = 0;
     /* Video Controls: Mute / Unmute Button */
     $('#SwapMuteBtn').click(function () {
         var myVideo = document.getElementById("PPTVideo");
@@ -81,18 +81,54 @@ $(document).ready(function(){
         $('#MainPanel').hide();
         $('#ParticipantsPanel').hide();
         $('#SettingsPanel').hide();
+        $('#FileSystemPanel').hide();
+    });
+    $('#ChangePPTBtn').click(function(){
+        $('#FileSystemPanel').show();
+        $('#MainPanel').hide();
+        $('#ParticipantsPanel').hide();
+        $('#SettingsPanel').hide();
+        $('#NotesPanel').hide();
     });
 
         //-------------Take Notes-------------------
         $('#TakeAnnotationBtn').click(function(){
-            if(annBoolean==0){
-                $('#VideoAnnotation').show();
-                annBoolean = 1;
+            if(annotations==0){
+                $('#VideoAnnotationRed').show();
+                $('#VideoAnnotationGreen').hide();
+                $('#VideoAnnotationBlack').hide();
+                annotations = 1;
             }else{
-                $('#VideoAnnotation').hide();
-                annBoolean = 0;
+                $('#VideoAnnotationRed').hide();
+                $('#VideoAnnotationGreen').hide();
+                $('#VideoAnnotationBlack').hide();
+                annotations = 0;
             }
-            
+
+        });
+
+        $('#ColorRedBtn').click(function(){
+            if(annotations==1){
+                $('#VideoAnnotationRed').show();
+                $('#VideoAnnotationGreen').hide();
+                $('#VideoAnnotationBlack').hide();
+            }
+        });
+
+        $('#ColorGreenBtn').click(function(){
+            if(annotations==1){
+                $('#VideoAnnotationRed').hide();
+                $('#VideoAnnotationGreen').show();
+                $('#VideoAnnotationBlack').hide();
+            }
+        });
+
+        $('#ColorBlackBtn').click(function(){
+            if(annotations==1){
+                $('#VideoAnnotationRed').hide();
+                $('#VideoAnnotationGreen').hide();
+                $('#VideoAnnotationBlack').show();
+            }
         });
     
 });

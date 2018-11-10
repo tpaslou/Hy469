@@ -56,6 +56,21 @@ $(document).ready(function(){
         $('#ExitFileSystemButtonImg').attr('src', '../Images/Notification/Button_Exit.png'); 
     });
 
+    //---------------------------------------------
+    $('#ExitChangePPTBtn').click(function(){
+        $('#ExitFileSystemButtonImg').attr('src', '../Images/Notification/Button_Exit.png'); 
+        $('#FileSystemPanel').hide();
+        $('#MainPanel').show();
+    });
+
+    $("#ExitChangePPTBtn").mousedown(function(){
+        $('#ExitFileSystemButtonImg').attr('src', '../Images/Notification/Button_Decline.png'); 
+    });
+
+    $("#ExitChangePPTBtn").mouseleave(function(){
+        $('#ExitFileSystemButtonImg').attr('src', '../Images/Notification/Button_Exit.png'); 
+    });
+
     //-----------------Remote Users----------------
     $('#RemoteUserZikasButton').click(function(){
         $('#ParticipantOptionsNotification').show();
