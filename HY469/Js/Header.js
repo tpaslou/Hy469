@@ -77,7 +77,7 @@ $(document).ready(function(){
 
     //-------------Take Notes-------------------
     $('#TakeNotesBtn').click(function(){
-        $('#MiddlePanelTakeNotes').show();
+        $('#NotesPanel').show();
         $('#MainPanel').hide();
         $('#ParticipantsPanel').hide();
         $('#SettingsPanel').hide();

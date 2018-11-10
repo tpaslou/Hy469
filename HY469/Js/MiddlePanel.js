@@ -16,7 +16,7 @@ $(document).ready(function(){
 
     $('#ExitNotesBtn').click(function(){
         $('#ExitNotesButtonImg').attr('src', '../Images/Notification/Button_Exit.png'); 
-        $('#MiddlePanelTakeNotes').hide();
+        $('#NotesPanel').hide();
         $('#MainPanel').show();
     });
 
