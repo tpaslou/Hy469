@@ -61,6 +61,10 @@ $(document).ready(function(){
         $('#ExitFileSystemButtonImg').attr('src', '../Images/Notification/Button_Exit.png'); 
         $('#FileSystemPanel').hide();
         $('#MainPanel').show();
+        $('#PPTFileSystemLocal').hide();
+        $('#PPTFileSystemDropbox').hide();
+        $('#PPTFileSystemGoogleDrive').hide();
+        $('#PPTFileSystemiCloud').hide();
     });
 
     $("#ExitChangePPTBtn").mousedown(function(){
@@ -101,12 +105,38 @@ $(document).ready(function(){
     });
     
     $('#SettingsSelectPPTBtn').click(function(){
-      $('#MiddlePanelMoreOptionsSelectFile').show();
-      $('#MiddlePanelPresentationOptions').hide();
+
     });
 
     $('#LogOutBtn').click(function(){
         $('#MiddlePanelMoreOptionsSelectFile').show();
         $('#MiddlePanelPresentationOptions').hide();
       });
+
+    //---------File System------------
+    $('#LocalFileSystemBtn').click(function(){
+        $('#PPTFileSystemLocal').show();
+        $('#PPTFileSystemDropbox').hide();
+        $('#PPTFileSystemGoogleDrive').hide();
+        $('#PPTFileSystemiCloud').hide();
+      });
+      $('#DropBoxBtn').click(function(){
+        $('#PPTFileSystemLocal').hide();
+        $('#PPTFileSystemDropbox').show();
+        $('#PPTFileSystemGoogleDrive').hide();
+        $('#PPTFileSystemiCloud').hide();
+      });
+      $('#GoogleDriveBtn').click(function(){
+        $('#PPTFileSystemLocal').hide();
+        $('#PPTFileSystemDropbox').hide();
+        $('#PPTFileSystemGoogleDrive').show();
+        $('#PPTFileSystemiCloud').hide();
+      });
+      $('#iCloudBtn').click(function(){
+        $('#PPTFileSystemLocal').hide();
+        $('#PPTFileSystemDropbox').hide();
+        $('#PPTFileSystemGoogleDrive').hide();
+        $('#PPTFileSystemiCloud').show();
+      });
+
 });
