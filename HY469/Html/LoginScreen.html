@@ -63,7 +63,7 @@
     </div>
 
     <div id="LoginPart3" class="MidBottomControls" style="display:none">
-        <div id="MiddlePanelMoreOptionsSelectFile" class="MiddlePanelMoreOptionsSelectFile" style="margin-top: 190px">
+        <div id="MiddlePanelMoreOptionsSelectFile" class="MiddlePanelMoreOptionsSelectFile" style="margin-top: 70px">
             <fieldset>
                 <legend>SELECT FILE FROM:</legend>
                 <form action="">
@@ -81,22 +81,73 @@
                     </div>
                 </form>
             </fieldset>
-            <button id="LocalFileSystemBtn" type="button" class="SelectFileButton">
+            <button id="LoginLocalFileSystemBtn" type="button" class="SelectFileButton">
                 <img id="RequestCoordButtonImg" src="../Images/MiddleSection/Button_File.png"class="PresentationButtonImage" alt="LocalFileSystem">
             </button>
-            <button id="DropBoxBtn" type="button" class="SelectFileButton">
+            <button id="LoginDropBoxBtn" type="button" class="SelectFileButton">
                 <img id="DropBoxButtonImg" src="../Images/MiddleSection/Button_Dropbox.png"class="PresentationButtonImage" alt="DropBox">
             </button>
-            <button id="GoogleDriveBtn" type="button" class="SelectFileButton">
+            <button id="LoginGoogleDriveBtn" type="button" class="SelectFileButton">
                 <img id="GoogleDriveButtonImg" src="../Images/MiddleSection/Button_GoogleDrive.png"class="PresentationButtonImage" alt="GoogleDrive">
             </button>
-            <button id="iCloudBtn" type="button" class="SelectFileButton">
+            <button id="LoginiCloudBtn" type="button" class="SelectFileButton">
                 <img id="iCloudButtonImg" src="../Images/MiddleSection/Button_ICloud.png"class="PresentationButtonImage" alt="iCloud">
             </button>
 
-            <button id="ExitFileSystemBtn" type="button" class="ExitFileSystemButton">
+            <button id="LoginExitFileSystemBtn" type="button" class="ExitFileSystemButton">
                 <img id="ExitFileSystemButtonImg" src="../Images/Notification/Button_Exit.png"class="NotificationsOptionsButtonImage" alt="ExitFileSystem">
             </button>
+        </div>
+
+        <div id="PPTFileSystem" class="MiddlePanelMoreOptionsSelectFile">
+            <div id="PPTFileSystemLocal" class="PPTFiles" style="display:none">
+                <h1 id = "PPTFileSystemName" style="font-size:25px; position: relative; left:10px">Local File System</h1>
+                <button id="PPTButton1" type="button" class="SelectPPTFileButton">
+                    <img id="RequestCoordButtonImg" src="../Images/MiddleSection/Button_PPTFile.png"class="PPTFileButtonImage">
+                    <b style="font-size:15px; position: relative; left:-10px">Analytics.ppt</b>
+                </button>
+                <button id="PPTButton2" type="button" class="SelectPPTFileButton">
+                    <img id="RequestCoordButtonImg" src="../Images/MiddleSection/Button_PPTFile.png"class="PPTFileButtonImage">
+                    <b style="font-size:15px; position: relative; left:-10px">Application.ppt</b>
+                </button>
+                <button id="PPTButton3" type="button" class="SelectPPTFileButton">
+                    <img id="RequestCoordButtonImg" src="../Images/MiddleSection/Button_PPTFile.png"class="PPTFileButtonImage">
+                    <b style="font-size:15px; position: relative; left:-10px">ProposalQ2.ppt</b>
+                </button>
+            </div>
+            <div id="PPTFileSystemDropbox" class="PPTFiles" style="display:none">
+                    <h1 id = "PPTFileSystemName" style="font-size:25px; position: relative; left:10px">DropBox</h1>
+                    <button id="PPTButton4" type="button" class="SelectPPTFileButton">
+                        <img id="RequestCoordButtonImg" src="../Images/MiddleSection/Button_PDFFile.png"class="PPTFileButtonImage">
+                        <b style="font-size:15px;">PaulZik.pdf</b>
+                    </button>
+            </div>
+            <div id="PPTFileSystemGoogleDrive" class="PPTFiles" style="display:none">
+                        <h1 id = "PPTFileSystemName" style="font-size:25px; position: relative; left:10px">Google Drive</h1>
+                        <button id="PPTButton5" type="button" class="SelectPPTFileButton">
+                            <img id="RequestCoordButtonImg" src="../Images/MiddleSection/Button_PPTFile.png"class="PPTFileButtonImage">
+                            <b style="font-size:15px; position: relative; left:-10px">Diagram.ppt</b>
+                        </button>
+                        <button id="PPTButton6" type="button" class="SelectPPTFileButton">
+                            <img id="RequestCoordButtonImg" src="../Images/MiddleSection/Button_PPTFile.png"class="PPTFileButtonImage">
+                            <b style="font-size:15px; position: relative; left:-10px">Assign_1.ppt</b>
+                        </button>
+            </div>
+            <div id="PPTFileSystemiCloud" class="PPTFiles" style="display:none">
+                            <h1 id = "PPTFileSystemName" style="font-size:25px; position: relative; left:10px">iCloud</h1>
+                            <button id="PPTButton7" type="button" class="SelectPPTFileButton">
+                                <img id="RequestCoordButtonImg" src="../Images/MiddleSection/Button_PPTFile.png"class="PPTFileButtonImage">
+                                <b style="font-size:15px; position: relative; left:-10px">Present1.ppt</b>
+                            </button>
+                            <button id="PPTButton8" type="button" class="SelectPPTFileButton">
+                                <img id="RequestCoordButtonImg" src="../Images/MiddleSection/Button_PDFFile.png"class="PPTFileButtonImage">
+                                <b style="font-size:15px;">Story.pdf</b>
+                            </button>
+                            <button id="PPTButton9" type="button" class="SelectPPTFileButton">
+                                <img id="RequestCoordButtonImg" src="../Images/MiddleSection/Button_PDFFile.png"class="PPTFileButtonImage">
+                                <b style="font-size:15px;">Report.pdf</b>
+                            </button>
+            </div>
         </div>
     </div>
 

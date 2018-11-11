@@ -49,14 +49,69 @@ $(document).ready(function(){
     });  
 
     /* FILE SYSTEM */
-    
-    $("#LocalFileSystemBtn").click( function () {
+    function PPTSelected(){
         $('#LoginPart4').show();
         $('#LoginPart3').hide();
+    }
+    $("#PPTButton1").click( function () {
+        PPTSelected();
+    }); 
+    $("#PPTButton2").click( function () {
+        PPTSelected();
+    }); 
+    $("#PPTButton3").click( function () {
+        PPTSelected();
+    }); 
+    $("#PPTButton4").click( function () {
+        PPTSelected();
+    }); 
+    $("#PPTButton5").click( function () {
+        PPTSelected();
+    }); 
+    $("#PPTButton6").click( function () {
+        PPTSelected();
+    }); 
+    $("#PPTButton7").click( function () {
+        PPTSelected();
+    }); 
+    $("#PPTButton8").click( function () {
+        PPTSelected();
+    }); 
+    $("#PPTButton9").click( function () {
+        PPTSelected();
     }); 
     
-    $("#ExitFileSystemBtn").click( function () {
+    
+    $("#LoginExitFileSystemBtn").click( function () {
         $('#LoginPart2').show();
         $('#LoginPart3').hide();
     }); 
+    
+
+    //---------File System------------
+    $('#LoginLocalFileSystemBtn').click(function(){
+        $('#PPTFileSystemLocal').show();
+        $('#PPTFileSystemDropbox').hide();
+        $('#PPTFileSystemGoogleDrive').hide();
+        $('#PPTFileSystemiCloud').hide();
+      });
+      $('#LoginDropBoxBtn').click(function(){
+        $('#PPTFileSystemLocal').hide();
+        $('#PPTFileSystemDropbox').show();
+        $('#PPTFileSystemGoogleDrive').hide();
+        $('#PPTFileSystemiCloud').hide();
+      });
+      $('#LoginGoogleDriveBtn').click(function(){
+        $('#PPTFileSystemLocal').hide();
+        $('#PPTFileSystemDropbox').hide();
+        $('#PPTFileSystemGoogleDrive').show();
+        $('#PPTFileSystemiCloud').hide();
+      });
+      $('#LoginiCloudBtn').click(function(){
+        $('#PPTFileSystemLocal').hide();
+        $('#PPTFileSystemDropbox').hide();
+        $('#PPTFileSystemGoogleDrive').hide();
+        $('#PPTFileSystemiCloud').show();
+      });
+
 });
