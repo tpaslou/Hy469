@@ -27,6 +27,7 @@ $(document).ready(function() {
         $("#Chat").hide();
         $("#SendWrapper").hide();
         $("#PrivateChatPanel").show();
+        
        $(".ChatTab_wrapper").css("top","425px");
       }
   

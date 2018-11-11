@@ -8,8 +8,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css">
     <link rel="stylesheet" href="../Css/Laptop_Participants.css">
+    <link rel="stylesheet" href="../Css/LaptopChat.css">
+
+    
     <script  type="text/javascript"  src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script  type="text/javascript"  src="../Js/Laptop_Participants.js"></script>
+    <script  type="text/javascript"  src="../Js/LaptopChat.js"></script>
+
+    
 
     <title>Coord.ME</title>
 </head>
@@ -117,6 +123,233 @@
             </div> 
             <div class="GrouPrivateChatLowerRightPanel">
                 <!-- THANOS HERE -->
+
+
+                <div class="PChatPanel" id="PChatPanel">
+
+                    <div class="PChat" id="PChat">
+            
+                        <div class="Message">
+                            <div id="MUserIcon" class="MUserIcon" >
+                            <img src="../Images/Users/User_Paul.jpg" class="MUserImage2">
+                            <span class="Mdot"></span>
+                            <p class="MRequestInfoText" >Paul Zikas</p>
+                            <p class="MTime" >11:05</p>  
+              
+                            </div>
+                            <div class="ActualMessage">
+                                <p class="MessageText">Hello ?</p>
+                            </div>
+                        </div>
+                       
+                        <div class="Message">
+                            <div id="MUserIcon" class="MUserIcon" >
+                            <img src="../Images/Users/User_Steve.jpg" class="MUserImage2">
+                            <span class="Mdot"></span>
+                            <p class="MRequestInfoText">Me</p> 
+                            <p class="MTime" >11:09</p>  
+                            </div>
+                            <div class="ActualMessage">
+                                <p class="MessageText">How u doing paul ? </p>
+                            </div>
+                        </div>
+                        <div class="Message">
+                            <div id="MUserIcon" class="MUserIcon" >
+                            <img src="../Images/Users/User_Steve.jpg" class="MUserImage2">
+                            <span class="Mdot"></span>
+                            <p class="MRequestInfoText">Me</p> 
+                            <p class="MTime" >11:09</p>  
+                            </div>
+                            <div class="ActualMessage">
+                                <p class="MessageText">Havent seen u for a while now </p>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="PChat" id="PChat2" style="display:none">
+            
+                            <div class="Message">
+                                <div id="MUserIcon" class="MUserIcon" >
+                                <img src="../Images/Users/User_Stratos.jpg" class="MUserImage2">
+                                <span class="Mdot"></span>
+                                <p class="MRequestInfoText" >Stratos G.</p>
+                                <p class="MTime" >11:05</p>  
+                  
+                                </div>
+                                <div class="ActualMessage">
+                                    <p class="MessageText">You there ?</p>
+                                </div>
+                            </div>
+                           
+                            <div class="Message">
+                                <div id="MUserIcon" class="MUserIcon" >
+                                <img src="../Images/Users/User_Steve.jpg" class="MUserImage2">
+                                <span class="Mdot"></span>
+                                <p class="MRequestInfoText">Me</p> 
+                                <p class="MTime" >11:09</p>  
+                                </div>
+                                <div class="ActualMessage">
+                                    <p class="MessageText">Yeah apparently </p>
+                                </div>
+                            </div>
+                            
+                            </div>
+
+                            <div class="PChat" id="PChat3" style="display:none">
+            
+                                <div class="Message">
+                                    <div id="MUserIcon" class="MUserIcon" >
+                                    <img src="../Images/Users/User_Sally.jpg" class="MUserImage2">
+                                    <span class="Mdot"></span>
+                                    <p class="MRequestInfoText" >Sally </p>
+                                    <p class="MTime" >11:05</p>  
+                      
+                                    </div>
+                                    <div class="ActualMessage">
+                                        <p class="MessageText">Wanna go for a drink after session ?</p>
+                                    </div>
+                                </div>
+                               
+                                <div class="Message">
+                                    <div id="MUserIcon" class="MUserIcon" >
+                                    <img src="../Images/Users/User_Steve.jpg" class="MUserImage2">
+                                    <span class="Mdot"></span>
+                                    <p class="MRequestInfoText">Me</p> 
+                                    <p class="MTime" >11:09</p>  
+                                    </div>
+                                    <div class="ActualMessage">
+                                        <p class="MessageText">Your place ? </p>
+                                    </div>
+                                </div>
+                                
+                                </div>
+                        <div class="SendWrapper2" id="SendWrapper2">
+                            <button type="button" class="OpenFile2" >
+                                <img src="../Images/Buttons/file.png" class="btn OpenFileImage" style="width:30px" id="fi" alt="Chat">
+                            </button>
+                            <textarea name="message-to-send" id="message-to-send" class="message-to-send" placeholder ="Type your message" rows="3"></textarea>
+                            <button type="button" class="SendMessage2" >
+                                <img src="../Images/Buttons/Tick.png" class="btn SendMessageImage2" id="si" style="width:30px" alt="Chat">
+                            </button>
+                        </div>   
+                        
+                        <div class="PrivateChatPeople">
+                            <div id="M3UserIcon 1" class="M3UserIcon" onclick="openPrivateChat(this)">
+                            <img src="../Images/Users/User_Paul.jpg" class="M2UserImage">
+                            <span class="M2dot"></span>
+                            </div>
+            
+                            <div id="M3UserIcon 2" class="M3UserIcon" onclick="openPrivateChat(this)" >
+                                <img src="../Images/Users/User_Steve.jpg" class="M2UserImage">
+                                <span class="M2dot"></span>
+                            </div>
+            
+                            <div id="M3UserIcon 3" class="M3UserIcon"  onclick="openPrivateChat(this)">
+                                <img src="../Images/Users/User_Sally.jpg" class="M2UserImage">
+                                <span class="M2dot"></span>
+                            </div>
+            
+                            <div id="M3UserIcon Add" class="M3UserIcon"  onclick="openPrivateChat(this)"  >
+                                <button type="button" class="AddUser" id="AddUser"  >
+                                <img src="../Images/Buttons/Button_AddUser.png" class="M2UserImage" >
+                                </button>
+                            </div>
+            
+            
+                    </div>
+
+
+
+                </div>
+           
+           
+              
+                   <div class="Chat" id="Chat">
+                       
+                       <div class="Message">
+                           <div id="MUserIcon" class="MUserIcon" >
+                           <img src="../Images/Users/User_Paul.jpg" class="MUserImage">
+                           <span class="Mdot"></span>
+                           <p class="MRequestInfoText" >Paul Zikas</p>
+                           <p class="MTime" >11:05</p>  
+             
+                           </div>
+                           <div class="ActualMessage">
+                               <p class="MessageText">Stratos send me please the logistics pdf!</p>
+                           </div>
+                       </div>
+                       <div class="Message">
+                           <div id="MUserIcon" class="MUserIcon" >
+                           <img src="../Images/Users/User_Stratos.jpg" class="MUserImage">
+                           <span class="Mdot"></span>
+                           <p class="MRequestInfoText" >Stratos W.</p>  
+                           <p class="MTime" >11:07</p>  
+                           </div>
+                           <div class="ActualMessage">
+                               
+                                   <p class="FileText">Shared a file</p>
+                                   <a class="fa fa-file-pdf-o" href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" style="font-size:24px;color:blue;position: relative;top:10; left:30px;
+                                   text-decoration: underline ;"> Logistics.pdf</a>
+           
+                           </div>
+                       </div>
+                       <div class="Message">
+                           <div id="MUserIcon" class="MUserIcon" >
+                           <img src="../Images/Users/User_Steve.jpg" class="MUserImage">
+                           <span class="Mdot"></span>
+                           <p class="MRequestInfoText">Steve Ens</p> 
+                           <p class="MTime" >11:09</p>  
+                           </div>
+                           <div class="ActualMessage">
+                               <p class="MessageText">Hello fellas! I am now at San Diego, cu
+                                   in 3 days! We should really meet there sometime </p>
+                           </div>
+                       </div>
+
+                       
+                       </div>
+
+
+                    
+           
+                   <div class="SendWrapper" id="SendWrapper">
+                       <button type="button" class="OpenFile" >
+                           <img src="../Images/Buttons/file.png" class="btn OpenFileImage" id="fi" alt="Chat">
+                       </button>
+                       <textarea name="message-to-send" id="message-to-send" class="message-to-send" placeholder ="Type your message" rows="3"></textarea>
+                       <button type="button" class="SendMessage" >
+                           <img src="../Images/Buttons/Tick.png" class="btn SendMessageImage" id="si" alt="Chat">
+                       </button>
+                   </div>   
+           
+                   <div class="ChatTab_wrapper">
+                       <div id="ChatExtraButtons" class="ChatExtraButtons" >
+                           <button class="tablink" onclick="openChat('Group Chat', this)" id="GroupChat">Group Chat</button>
+                           <script>
+                               document.getElementById("GroupChat").click();
+                           </script>
+                           <button class="tablink" onclick="openChat('Private Chat', this)" id="PrivateChat">Private Chat</button>
+                       </div>
+                   </div>  <div class="PrivateChatPanel" id="PrivateChatPanel">
+
+         <script>        $("#PrivateChatPanel").hide(); </script>   
+
+
+        
+
+        <div class="ChatTab_wrapper">
+            <div id="ChatExtraButtons" class="ChatExtraButtons" >
+                <button class="tablink" onclick="openChat('Group Chat', this)" id="GroupChat">Group Chat</button>
+                <script>
+                    document.getElementById("GroupChat").click();
+                </script>
+                <button class="tablink" onclick="openChat('Private Chat', this)" id="PrivateChat">Private Chat</button>
+            </div>
+        </div> 
+
+
+
+
+
             </div> 
         </div>  
     </div>
