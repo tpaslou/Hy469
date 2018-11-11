@@ -19,11 +19,11 @@
     <script  type="text/javascript"  src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script  type="text/javascript"  src="../Js/Header.js"></script>
     <script  type="text/javascript"  src="../Js/footer.js"></script>
-    <script  type="text/javascript"  src="../Js/Notification.js"></script>
     <script  type="text/javascript"  src="../Js/MiddlePanel.js"></script>
     <script  type="text/javascript"  src="../Js/Chat.js"></script>
     <script  type="text/javascript"  src="../Js/Participants.js"></script>
     <script  type="text/javascript"  src="../Js/Settings.js"></script>
+    <script  type="text/javascript"  src="../Js/iPad_Participants.js"></script>
 
     <title>Coord.ME</title>
 </head>
@@ -97,15 +97,7 @@
             </div>
     
             <div class="PresentationControlsPanel">
-                <button id="PreviousBtn" type="button" class="buttonHeader">
-                    <img src="../Images/Buttons/Button_Previous.png" class="buttonImage" alt="Previous">
-                </button>
-    
-                <button id="NextBtn" type="button" class="buttonHeader">
-                    <img src="../Images/Buttons/Button_Next.png" class="buttonImage" alt="Next">
-                </button>
-    
-                <button type="button" class="buttonHeader" id="TakeAnnotationBtn">
+                <button type="button" class="buttonHeader" id="RequestAnnotationBtn">
                     <img src="../Images/Buttons/Button_Annotation.png" class="buttonImage" alt="Annotation">
                 </button>
     
@@ -113,7 +105,7 @@
                     <img src="../Images/Buttons/Button_Notes.png" class="buttonImage" alt="TakeNotes">
                 </button>
     
-                <button type="button" class="buttonHeader" id="ChangePPTBtn">
+                <button type="button" class="buttonHeader" id="RequestChangePPTBtn">
                     <img src="../Images/Buttons/Button_ChangePPT.png" class="buttonImage" alt="FileChange">
                 </button>
     
@@ -156,7 +148,7 @@
   
                 </div>
                 <div class="ActualMessage">
-                    <p class="MessageText">How you doin ?</p>
+                    <p class="MessageText">How you doin Bitch ?</p>
                 </div>
             </div>
            
@@ -168,7 +160,7 @@
                 <p class="MTime" >11:09</p>  
                 </div>
                 <div class="ActualMessage">
-                    <p class="MessageText">Having some fun with my new rtx2080ti ! #NOT hy469 took my life </p>
+                    <p class="MessageText">Blazing all day and fucking hores ! #NOT hy469 took my life </p>
                 </div>
             </div>
         </div>
@@ -474,33 +466,19 @@
 
     
     <div id="SettingsPanel" class="MainPanel" style="display:none">
-            <div id="MiddlePanelPresentationOptions" class="MiddlePanelPresentationOptions" style="display:none; margin-bottom: 230px;">
+            <div id="MiddlePanelPresentationOptions" class="MiddlePanelPresentationOptions" style="display:none; margin-bottom: 255px;">
                     <fieldset>
                         <legend>TV MONITOR:</legend>
                         <form action="">
                             <div class="item">
-                                <p>Presentation</p>
+                                <p>Ask for coordinator privileges</p>
                                 <input type="checkbox" id="toggle_presentation" name="" value="">
-                                <div class="toggle">
-                                    <label for="toggle_presentation"><i></i></label>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <p>Participants</p>
-                                <input type="checkbox" id="toggle_participants" name="" value="">
-                                <div class="toggle">
-                                    <label for="toggle_participants"><i></i></label>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <p>Chat</p>
-                                <input type="checkbox" id="toggle_chat" name="" value="">
-                                <div class="toggle">
-                                    <label for="toggle_chat"><i></i></label>
-                                </div>
                             </div>
                         </form>
                     </fieldset>
+                    <button id="CoordPrivBtn" type="button" style="left: 675px;" class="LogOutButton">
+                        <img id="LogOutButtonImg" src="../Images/Buttons/Button_Coord.png"class="PresentationButtonImage">
+                    </button>
             </div>
 
             <div id="MiddlePanelMoreOptionsParticipant" class="MiddlePanelMoreOptionsParticipant">
@@ -527,17 +505,11 @@
                         <legend>SESSION:</legend>
                         <form action="">
                             <div class="item">
-                                <p>Terminate Session</p>
-                            </div>
-                            <div class="item">
                                 <p>Log Out</p>
                             </div>
                         </form>
                     </fieldset>
-                    <button id="TerminateSessionBtn" type="button" class="ReuestCoordButton" onclick="window.location.href='../Html/LoginScreen.html'">
-                        <img id="RequestCoordButtonImg" src="../Images/Notification/Button_RemoveUser.png"class="PresentationButtonImage" >
-                    </button>
-                    <button id="LogOutBtn" type="button" class="LogOutButton" onclick="window.location.href='../Html/LoginScreen.html'">
+                    <button id="LogOutBtn" type="button" style="margin-bottom: 76px; left: 675px;" class="LogOutButton" onclick="window.location.href='../Html/LoginScreen.html'">
                         <img id="LogOutButtonImg" src="../Images/MiddleSection/Button_LogOut.png"class="PresentationButtonImage">
                     </button>
             </div>
@@ -670,110 +642,94 @@
 
     </div>
 
-
-
     <div id="AnnotationsNotification" class="Notification" style="display:none">
         <button id="ExitBtn" type="button" class="NotificationsExitButton">
             <img id="ExitButtonImg" src="../Images/Notification/Button_Exit.png"class="NotificationsOptionsButtonImage" alt="Exit">
         </button>
-        <h1 class="RequestText">New Request</h1>
+        <h1 class="RequestText">Pending Request</h1>
 
-        <div id="UserIcon" class="UserIcon" style="text-align:center">
+        <div id="UserIcon" class="UserIcon" style="text-align:center; top:90px">
             <img src="../Images/Users/User_Paul.jpg" class="UserImage">
             <span class="dot"></span>
             <h1 class="RequestInfoText" style="top:10px">Paul Zikas</h1>  
         </div>
             
         <div class="NotificationsOptions" >
-            <h1 class="RequestInfoText" style="top:130px">Wants to make an Annotation</h1>  
+            <h1 class="RequestInfoText" style="top:130px">Must accept your Annotation Request </h1>  
+        </div>
+    </div>
 
-            <button id="AcceptBtn" type="button" class="NotificationsOptionsButton">
+    <div id="CoordinatorPrivilegesNotification" class="Notification" style="display:none">
+        <button id="ExitBtn" type="button" class="NotificationsExitButton">
+            <img id="ExitButtonImg" src="../Images/Notification/Button_Exit.png"class="NotificationsOptionsButtonImage" alt="Exit">
+        </button>
+        <h1 class="RequestText">Pending Request</h1>
+
+        <div id="UserIcon" class="UserIcon" style="text-align:center; top:90px">
+            <img src="../Images/Users/User_Paul.jpg" class="UserImage">
+            <span class="dot"></span>
+            <h1 class="RequestInfoText" style="top:10px">Paul Zikas</h1>  
+        </div>
+            
+        <div class="NotificationsOptions" >
+            <h1 class="RequestInfoText" style="top:130px">Must accept your coordinator privileges Request </h1>  
+        </div>
+    </div>
+
+    <div id="AnnotationsIndirectNotification" class="Notification" style="display:none">
+        <button id="ExitBtn" type="button" class="NotificationsExitButton">
+            <img id="ExitButtonImg" src="../Images/Notification/Button_Exit.png"class="NotificationsOptionsButtonImage" alt="Exit">
+        </button>
+        <h1 class="RequestText">New Request?</h1>
+
+        <div id="UserIcon" class="UserIcon" style="text-align:center; top:90px">
+            <img src="../Images/Users/User_Paul.jpg" class="UserImage">
+            <span class="dot"></span>
+            <h1 class="RequestInfoText" style="top:10px">Paul Zikas</h1>  
+        </div>
+            
+        <div class="NotificationsOptions" >
+            <h1 class="RequestInfoText" style="top:130px">Must first allow for an Annotaion</h1>  
+
+            <button id="AcceptAnnotationRequestBtn" type="button" class="NotificationsOptionsButton">
                 <img src="../Images/Notification/Button_Accept.png" class="NotificationsOptionsButtonImage" alt="Accept">
-                <h1 class="NotificationsOptionsText">Accept</h1>   
-            </button>
-            <button id="DeclineBtn" type="button" class="NotificationsOptionsButton">
-                <img src="../Images/Notification/Button_Decline.png" class="NotificationsOptionsButtonImage" alt="Decline">
-                <h1 class="NotificationsOptionsText">Decline</h1>   
+                <h1 class="NotificationsOptionsText">Send_Request</h1>   
             </button>
         </div>
     </div>
 
     <div id="CoordinatorNotification" class="Notification" style="display:none">
-            <button id="ExitBtn" type="button" class="NotificationsExitButton">
-                <img id="ExitButtonImg" src="../Images/Notification/Button_Exit.png"class="NotificationsOptionsButtonImage" alt="Exit">
-            </button>
-            <h1 class="RequestText">New Request</h1>
-    
-            <div id="UserIcon" class="UserIcon" style="text-align:center">
-                <img src="../Images/Users/User_Paul.jpg" class="UserImage">
-                <span class="dot"></span>
-                <h1 class="RequestInfoText" style="top:10px">Paul Zikas</h1>  
-            </div>
-                
-            <div class="NotificationsOptions" >
-                <h1 class="RequestInfoText" style="top:130px">Wants to become Coordinator</h1>  
-    
-                <button id="AcceptBtn" type="button" class="NotificationsOptionsButton">
-                    <img src="../Images/Notification/Button_Accept.png" class="NotificationsOptionsButtonImage" alt="Accept">
-                    <h1 class="NotificationsOptionsText">Accept</h1>   
-                </button>
-                <button id="DeclineBtn" type="button" class="NotificationsOptionsButton">
-                    <img src="../Images/Notification/Button_Decline.png" class="NotificationsOptionsButtonImage" alt="Decline">
-                    <h1 class="NotificationsOptionsText">Decline</h1>   
-                </button>
-            </div>
+        <button id="ExitBtn" type="button" class="NotificationsExitButton">
+            <img id="ExitButtonImg" src="../Images/Notification/Button_Exit.png"class="NotificationsOptionsButtonImage" alt="Exit">
+        </button>
+        <h1 class="RequestText">Pending Request</h1>
+
+        <div id="UserIcon" class="UserIcon" style="text-align:center; top:90px">
+            <img src="../Images/Users/User_Paul.jpg" class="UserImage">
+            <span class="dot"></span>
+            <h1 class="RequestInfoText" style="top:10px">Paul Zikas</h1>  
+        </div>
+            
+        <div class="NotificationsOptions" >
+            <h1 class="RequestInfoText" style="top:130px">Must accept your Coordinator Request (lets hope so!)</h1>  
+        </div>
     </div>
 
     <div id="PresentationNotification" class="Notification" style="display:none">
-            <button id="ExitBtn" type="button" class="NotificationsExitButton">
-                <img id="ExitButtonImg" src="../Images/Notification/Button_Exit.png"class="NotificationsOptionsButtonImage" alt="Exit">
-            </button>
-            <h1 class="RequestText">New Request</h1>
-    
-            <div id="UserIcon" class="UserIcon" style="text-align:center">
-                <img src="../Images/Users/User_Paul.jpg" class="UserImage">
-                <span class="dot"></span>
-                <h1 class="RequestInfoText" style="top:10px">Paul Zikas</h1>  
-            </div>
-                
-            <div class="NotificationsOptions" >
-                <h1 class="RequestInfoText" style="top:130px">Wants to present a PowerPoint</h1>  
-    
-                <button id="AcceptBtn" type="button" class="NotificationsOptionsButton">
-                    <img src="../Images/Notification/Button_Accept.png" class="NotificationsOptionsButtonImage" alt="Accept">
-                    <h1 class="NotificationsOptionsText">Accept</h1>   
-                </button>
-                <button id="DeclineBtn" type="button" class="NotificationsOptionsButton">
-                    <img src="../Images/Notification/Button_Decline.png" class="NotificationsOptionsButtonImage" alt="Decline">
-                    <h1 class="NotificationsOptionsText">Decline</h1>   
-                </button>
-            </div>
-    </div>
+        <button id="ExitBtn" type="button" class="NotificationsExitButton">
+            <img id="ExitButtonImg" src="../Images/Notification/Button_Exit.png"class="NotificationsOptionsButtonImage" alt="Exit">
+        </button>
+        <h1 class="RequestText">Pending Request</h1>
 
-    <div id="JoinNotification" class="Notification" style="display:none">
-            <button id="ExitBtn" type="button" class="NotificationsExitButton">
-                <img id="ExitButtonImg" src="../Images/Notification/Button_Exit.png"class="NotificationsOptionsButtonImage" alt="Exit">
-            </button>
-            <h1 class="RequestText">New Request</h1>
-    
-            <div id="UserIcon" class="UserIcon" style="text-align:center">
-                <img src="../Images/Users/User_Paul.jpg" class="UserImage">
-                <span class="dot"></span>
-                <h1 class="RequestInfoText" style="top:10px">Paul Zikas</h1>  
-            </div>
-                
-            <div class="NotificationsOptions" >
-                <h1 class="RequestInfoText" style="top:130px">Wants to join the meeting</h1>  
-    
-                <button id="AcceptBtn" type="button" class="NotificationsOptionsButton">
-                    <img src="../Images/Notification/Button_Accept.png" class="NotificationsOptionsButtonImage" alt="Accept">
-                    <h1 class="NotificationsOptionsText">Accept</h1>   
-                </button>
-                <button id="DeclineBtn" type="button" class="NotificationsOptionsButton">
-                    <img src="../Images/Notification/Button_Decline.png" class="NotificationsOptionsButtonImage" alt="Decline">
-                    <h1 class="NotificationsOptionsText">Decline</h1>   
-                </button>
-            </div>
+        <div id="UserIcon" class="UserIcon" style="text-align:center; top:90px">
+            <img src="../Images/Users/User_Paul.jpg" class="UserImage">
+            <span class="dot"></span>
+            <h1 class="RequestInfoText" style="top:10px">Paul Zikas</h1>  
+        </div>
+            
+        <div class="NotificationsOptions" >
+            <h1 class="RequestInfoText" style="top:130px">Must accept your Request for Presentation File Change</h1>  
+        </div>
     </div>
 
     <div id="ParticipantOptionsNotification" class="Notification" style="display:none">

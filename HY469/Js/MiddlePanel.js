@@ -103,15 +103,6 @@ $(document).ready(function(){
       $('#MiddlePanelPresentationOptions').show();
       $('#MiddlePanelMoreOptionsParticipant').hide();
     });
-    
-    $('#SettingsSelectPPTBtn').click(function(){
-
-    });
-
-    $('#LogOutBtn').click(function(){
-        $('#MiddlePanelMoreOptionsSelectFile').show();
-        $('#MiddlePanelPresentationOptions').hide();
-      });
 
     //---------File System------------
     $('#LocalFileSystemBtn').click(function(){
