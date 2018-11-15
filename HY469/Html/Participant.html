@@ -21,8 +21,6 @@
     <script  type="text/javascript"  src="../Js/footer.js"></script>
     <script  type="text/javascript"  src="../Js/MiddlePanel.js"></script>
     <script  type="text/javascript"  src="../Js/Chat.js"></script>
-    <script  type="text/javascript"  src="../Js/Participants.js"></script>
-    <script  type="text/javascript"  src="../Js/Settings.js"></script>
     <script  type="text/javascript"  src="../Js/iPad_Participants.js"></script>
 
     <title>Coord.ME</title>
@@ -337,42 +335,47 @@
     </div>
 
     <div id="ParticipantsPanel" class="MainPanel" style="display:none">
-
-            <div id="MiddlePanelRemoteParticipants" class="MiddlePanelRemoteParticipants" >
-                    <div id="RemoteUserIcon" class="RemoteUserIcon">
-                        <button id="RemoteUserStratosButton" type="button" class="RemoteUserButton">
-                            <img src="../Images/Users/User_Stratos.jpg" class="RemoteUserImage">
-                        </button>
-                        <span class="RemoteUserDot"></span>
-                        <h1 class="RemoteUserName">Stratos W.</h1>  
+            <div id="MiddlePanelMoreOptionsParticipant" class="MiddlePanelParticipants">
+                    <fieldset>
+                            <legend>REMOTE PARTICIPANTS:</legend>
+                            <div id="MiddlePanelRemoteParticipants" class="MiddlePanelRemoteParticipants">
+                                    <div id="RemoteUserIcon" class="RemoteUserIcon">
+                                        <button id="RemoteUserStratosButton" type="button" class="RemoteUserButton">
+                                            <img src="../Images/Users/User_Stratos.jpg" class="RemoteUserImage">
+                                        </button>
+                                        <span class="RemoteUserDot"></span>
+                                        <h1 class="RemoteUserName">Stratos W.</h1>  
+                                    </div>
+                            </div>
+                        </fieldset>
+                    <fieldset>
+                        <legend>LOCAL PARTICIPANTS:</legend>
+                        <div id="MiddlePanelLocalParticipants" class="MiddlePanelLocalParticipants">
+                                <div id="RemoteUserIcon" class="RemoteUserIcon">
+                                    <button id="RemoteUserZikasButton" type="button" class="RemoteUserButton">
+                                        <img src="../Images/Users/User_Paul.jpg" class="RemoteUserImage">
+                                    </button>
+                                    <span class="RemoteUserDot"></span>
+                                    <h1 class="RemoteUserName">Paul Zikas</h1>  
+                                </div>
+                                <div id="RemoteUserIcon" class="RemoteUserIcon">
+                                    <button id="RemoteUserSteveButton" type="button" class="RemoteUserButton">
+                                        <img src="../Images/Users/User_Steve.jpg" class="RemoteUserImage">
+                                    </button>
+                                    <span class="RemoteUserDot"></span>
+                                    <h1 class="RemoteUserName">Steve Ens</h1>  
+                                </div>
+                                <div id="RemoteUserIcon" class="RemoteUserIcon">
+                                        <button id="RemoteUserSallyButton" type="button" class="RemoteUserButton">
+                                            <img src="../Images/Users/User_Sally.jpg" class="RemoteUserImage">
+                                        </button>
+                                        <span class="RemoteUserDot"></span>
+                                        <h1 class="RemoteUserName">Sally Fitz</h1>  
+                                    </div>
+                
                     </div>
-    
+                    </fieldset>
             </div>
-
-            <div id="MiddlePanelLocalParticipants" class="MiddlePanelLocalParticipants" style="display:none">
-                        <div id="RemoteUserIcon" class="RemoteUserIcon">
-                            <button id="RemoteUserZikasButton" type="button" class="RemoteUserButton">
-                                <img src="../Images/Users/User_Paul.jpg" class="RemoteUserImage">
-                            </button>
-                            <span class="RemoteUserDot"></span>
-                            <h1 class="RemoteUserName">Paul Zikas</h1>  
-                        </div>
-                        <div id="RemoteUserIcon" class="RemoteUserIcon">
-                            <button id="RemoteUserSteveButton" type="button" class="RemoteUserButton">
-                                <img src="../Images/Users/User_Steve.jpg" class="RemoteUserImage">
-                            </button>
-                            <span class="RemoteUserDot"></span>
-                            <h1 class="RemoteUserName">Steve Ens</h1>  
-                        </div>
-        
-            </div>
-
-            <div class="tab_wrapper" style="top: 268px">
-                <div id="ParticipantsExtraButtons" class="ParticipantsExtraButtons" >
-                    <button class="tablinkParticipants" onclick="openPanel(this)" id="RemoteUsersBtn">Remote Users</button>
-                    <button class="tablinkParticipants" onclick="openPanel(this)"id="LocalUsersBtn">Local Users</button>
-                </div>
-            </div> 
     </div>
 
     <div id="FileSystemPanel" class="MainPanel" style="display:none">
@@ -466,22 +469,8 @@
 
     
     <div id="SettingsPanel" class="MainPanel" style="display:none">
-            <div id="MiddlePanelPresentationOptions" class="MiddlePanelPresentationOptions" style="display:none; margin-bottom: 255px;">
-                    <fieldset>
-                        <legend>TV MONITOR:</legend>
-                        <form action="">
-                            <div class="item">
-                                <p>Ask for coordinator privileges</p>
-                                <input type="checkbox" id="toggle_presentation" name="" value="">
-                            </div>
-                        </form>
-                    </fieldset>
-                    <button id="CoordPrivBtn" type="button" style="left: 675px;" class="LogOutButton">
-                        <img id="LogOutButtonImg" src="../Images/Buttons/Button_Coord.png"class="PresentationButtonImage">
-                    </button>
-            </div>
+            <div id="MiddlePanelMoreOptionsParticipant" class="MiddlePanelSettingsNoScrl" style="top:-10px;">
 
-            <div id="MiddlePanelMoreOptionsParticipant" class="MiddlePanelMoreOptionsParticipant">
                     <fieldset>
                         <legend>OPTIONS:</legend>
                         <form action="">
@@ -512,6 +501,18 @@
                     <button id="LogOutBtn" type="button" style="margin-bottom: 76px; left: 675px;" class="LogOutButton" onclick="window.location.href='../Html/LoginScreen.html'">
                         <img id="LogOutButtonImg" src="../Images/MiddleSection/Button_LogOut.png"class="PresentationButtonImage">
                     </button>
+                    <fieldset style="position:relative; top:-140px;">
+                            <legend>TV MONITOR:</legend>
+                            <form action="">
+                                <div class="item">
+                                    <p>Ask for coordinator privileges</p>
+                                    <input type="checkbox" id="toggle_presentation" name="" value="">
+                                </div>
+                            </form>
+                        </fieldset>
+                        <button id="CoordPrivBtn" type="button" style="left: 675px;position:relative; top:-224px;" class="LogOutButton">
+                            <img id="LogOutButtonImg" src="../Images/Buttons/Button_Coord.png"class="PresentationButtonImage">
+                        </button>
             </div>
 
             <div id="MiddlePanelMoreOptionsSelectFile" class="MiddlePanelMoreOptionsSelectFile" style="display:none">
@@ -549,13 +550,6 @@
                         <img id="ExitFileSystemButtonImg" src="../Images/Notification/Button_Exit.png"class="NotificationsOptionsButtonImage" alt="ExitFileSystem">
                     </button>
             </div>
-
-            <div class="tab_wrapper" style="top: -59px">
-                <div id="SettingsExtraButtons" class="SettingsExtraButtons" >
-                    <button class="tablinkSettings" onclick="openPanelSettings(this)" id="PresentationOptionsBtn">Presentation Options</button>
-                    <button class="tablinkSettings" onclick="openPanelSettings(this)" id="MoreOptionsBtn">More Options</button>
-                </div>
-            </div> 
     </div>
     <div id="NotesPanel" class="NotesPanel" style="display:none;">
             <div id="MiddlePanelTakeNotes" class="MiddlePanelTakeNotes" >

@@ -116,6 +116,29 @@ input[type="checkbox"]:checked:active + .toggle i {
 	left: 14px;
 }
 
+.MiddlePanelMoreOptionsParticipant{
+    position: relative;
+    width: 768px;
+    height: 510px;
+    top:0px;
+    overflow-y: scroll;
+}
+
+.MiddlePanelSettingsNoScrl{
+    position: relative;
+    width: 768px;
+    height: 510px;
+    top:0px;
+}
+
+.MiddlePanelParticipants{
+    position: relative;
+    width: 768px;
+    height: 510px;
+    top:0px;
+    overflow-x: scroll;
+}
+
 .PresentationButton {
     position: relative;
     background-color:rgba(155, 155, 155, 0.534);
@@ -282,7 +305,6 @@ input[type="checkbox"]:checked:active + .toggle i {
 .RemoteUserIcon {
     position: relative;
     display: inline-block;
-    top: 25px;
     left: 20px;
 }
 

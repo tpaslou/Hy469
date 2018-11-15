@@ -22,8 +22,6 @@
     <script  type="text/javascript"  src="../Js/Notification.js"></script>
     <script  type="text/javascript"  src="../Js/MiddlePanel.js"></script>
     <script  type="text/javascript"  src="../Js/Chat.js"></script>
-    <script  type="text/javascript"  src="../Js/Participants.js"></script>
-    <script  type="text/javascript"  src="../Js/Settings.js"></script>
 
     <title>Coord.ME</title>
 </head>
@@ -345,42 +343,47 @@
     </div>
 
     <div id="ParticipantsPanel" class="MainPanel" style="display:none">
-
-            <div id="MiddlePanelRemoteParticipants" class="MiddlePanelRemoteParticipants" >
-                    <div id="RemoteUserIcon" class="RemoteUserIcon">
-                        <button id="RemoteUserStratosButton" type="button" class="RemoteUserButton">
-                            <img src="../Images/Users/User_Stratos.jpg" class="RemoteUserImage">
-                        </button>
-                        <span class="RemoteUserDot"></span>
-                        <h1 class="RemoteUserName">Stratos W.</h1>  
+            <div id="MiddlePanelMoreOptionsParticipant" class="MiddlePanelParticipants">
+                    <fieldset>
+                            <legend>REMOTE PARTICIPANTS:</legend>
+                            <div id="MiddlePanelRemoteParticipants" class="MiddlePanelRemoteParticipants">
+                                    <div id="RemoteUserIcon" class="RemoteUserIcon">
+                                        <button id="RemoteUserStratosButton" type="button" class="RemoteUserButton">
+                                            <img src="../Images/Users/User_Stratos.jpg" class="RemoteUserImage">
+                                        </button>
+                                        <span class="RemoteUserDot"></span>
+                                        <h1 class="RemoteUserName">Stratos W.</h1>  
+                                    </div>
+                            </div>
+                        </fieldset>
+                    <fieldset>
+                        <legend>LOCAL PARTICIPANTS:</legend>
+                        <div id="MiddlePanelLocalParticipants" class="MiddlePanelLocalParticipants">
+                                <div id="RemoteUserIcon" class="RemoteUserIcon">
+                                    <button id="RemoteUserZikasButton" type="button" class="RemoteUserButton">
+                                        <img src="../Images/Users/User_Paul.jpg" class="RemoteUserImage">
+                                    </button>
+                                    <span class="RemoteUserDot"></span>
+                                    <h1 class="RemoteUserName">Paul Zikas</h1>  
+                                </div>
+                                <div id="RemoteUserIcon" class="RemoteUserIcon">
+                                    <button id="RemoteUserSteveButton" type="button" class="RemoteUserButton">
+                                        <img src="../Images/Users/User_Steve.jpg" class="RemoteUserImage">
+                                    </button>
+                                    <span class="RemoteUserDot"></span>
+                                    <h1 class="RemoteUserName">Steve Ens</h1>  
+                                </div>
+                                <div id="RemoteUserIcon" class="RemoteUserIcon">
+                                        <button id="RemoteUserSallyButton" type="button" class="RemoteUserButton">
+                                            <img src="../Images/Users/User_Sally.jpg" class="RemoteUserImage">
+                                        </button>
+                                        <span class="RemoteUserDot"></span>
+                                        <h1 class="RemoteUserName">Sally Fitz</h1>  
+                                    </div>
+                
                     </div>
-    
+                    </fieldset>
             </div>
-
-            <div id="MiddlePanelLocalParticipants" class="MiddlePanelLocalParticipants" style="display:none">
-                        <div id="RemoteUserIcon" class="RemoteUserIcon">
-                            <button id="RemoteUserZikasButton" type="button" class="RemoteUserButton">
-                                <img src="../Images/Users/User_Paul.jpg" class="RemoteUserImage">
-                            </button>
-                            <span class="RemoteUserDot"></span>
-                            <h1 class="RemoteUserName">Paul Zikas</h1>  
-                        </div>
-                        <div id="RemoteUserIcon" class="RemoteUserIcon">
-                            <button id="RemoteUserSteveButton" type="button" class="RemoteUserButton">
-                                <img src="../Images/Users/User_Steve.jpg" class="RemoteUserImage">
-                            </button>
-                            <span class="RemoteUserDot"></span>
-                            <h1 class="RemoteUserName">Steve Ens</h1>  
-                        </div>
-        
-            </div>
-
-            <div class="tab_wrapper" style="top: 268px">
-                <div id="ParticipantsExtraButtons" class="ParticipantsExtraButtons" >
-                    <button class="tablinkParticipants" onclick="openPanel(this)" id="RemoteUsersBtn">Remote Users</button>
-                    <button class="tablinkParticipants" onclick="openPanel(this)"id="LocalUsersBtn">Local Users</button>
-                </div>
-            </div> 
     </div>
 
     <div id="FileSystemPanel" class="MainPanel" style="display:none">
@@ -474,36 +477,33 @@
 
     
     <div id="SettingsPanel" class="MainPanel" style="display:none">
-            <div id="MiddlePanelPresentationOptions" class="MiddlePanelPresentationOptions" style="display:none; margin-bottom: 230px;">
-                    <fieldset>
-                        <legend>TV MONITOR:</legend>
-                        <form action="">
-                            <div class="item">
-                                <p>Presentation</p>
-                                <input type="checkbox" id="toggle_presentation" name="" value="">
-                                <div class="toggle">
-                                    <label for="toggle_presentation"><i></i></label>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <p>Participants</p>
-                                <input type="checkbox" id="toggle_participants" name="" value="">
-                                <div class="toggle">
-                                    <label for="toggle_participants"><i></i></label>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <p>Chat</p>
-                                <input type="checkbox" id="toggle_chat" name="" value="">
-                                <div class="toggle">
-                                    <label for="toggle_chat"><i></i></label>
-                                </div>
-                            </div>
-                        </form>
-                    </fieldset>
-            </div>
-
             <div id="MiddlePanelMoreOptionsParticipant" class="MiddlePanelMoreOptionsParticipant">
+                    <fieldset>
+                            <legend>TV MONITOR:</legend>
+                            <form action="">
+                                <div class="item">
+                                    <p>Presentation</p>
+                                    <input type="checkbox" id="toggle_presentation" name="" value="">
+                                    <div class="toggle">
+                                        <label for="toggle_presentation"><i></i></label>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <p>Participants</p>
+                                    <input type="checkbox" id="toggle_participants" name="" value="">
+                                    <div class="toggle">
+                                        <label for="toggle_participants"><i></i></label>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <p>Chat</p>
+                                    <input type="checkbox" id="toggle_chat" name="" value="">
+                                    <div class="toggle">
+                                        <label for="toggle_chat"><i></i></label>
+                                    </div>
+                                </div>
+                            </form>
+                        </fieldset>
                     <fieldset>
                         <legend>OPTIONS:</legend>
                         <form action="">
@@ -577,13 +577,6 @@
                         <img id="ExitFileSystemButtonImg" src="../Images/Notification/Button_Exit.png"class="NotificationsOptionsButtonImage" alt="ExitFileSystem">
                     </button>
             </div>
-
-            <div class="tab_wrapper" style="top: -59px">
-                <div id="SettingsExtraButtons" class="SettingsExtraButtons" >
-                    <button class="tablinkSettings" onclick="openPanelSettings(this)" id="PresentationOptionsBtn">Presentation Options</button>
-                    <button class="tablinkSettings" onclick="openPanelSettings(this)" id="MoreOptionsBtn">More Options</button>
-                </div>
-            </div> 
     </div>
     <div id="NotesPanel" class="NotesPanel" style="display:none;">
             <div id="MiddlePanelTakeNotes" class="MiddlePanelTakeNotes" >
