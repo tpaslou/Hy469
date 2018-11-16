@@ -1,32 +1,9 @@
 $(document).ready(function() {
 
-    $("#PChatPanel").hide();
+    
 
 
-    $(".tablink").click(function(e) {
-        var id = e.target.id;
-        console.log(id);
-        if (id == "GroupChat") {
-          //$(".ChatTab_wrapper").css("top","10px");
-  
-          $("#PChatPanel").hide();
-  
-          $("#Chat").show();
-          $("#SendWrapper").show();
     
-    
-    
-        } else if (id == "PrivateChat") {
-    
-          $("#Chat").hide();
-          $("#SendWrapper").hide();
-          $("#PChatPanel").show();
-          
-         //$(".ChatTab_wrapper").css("top","425px");
-        }
-    
-        
-      });
 
 
 });
@@ -50,7 +27,9 @@ function openChat(ChatName,elmnt) {
 
 
 function openPrivateChat(elmnt){
-    if(elmnt.id=="M3UserIcon 1"){
+    
+  
+  /*if(elmnt.id=="M3UserIcon 1"){
         $("#PChat2").hide();
         $("#PChat3").hide();
         $("#PChat").show();
@@ -63,7 +42,7 @@ function openPrivateChat(elmnt){
         $("#PChat").hide();
         $("#PChat2").hide();
         $("#PChat3").show();
-      }
+      }*/
     color="#C8C8C8";
 
     if(elmnt.id!="M3UserIcon Add" ){
