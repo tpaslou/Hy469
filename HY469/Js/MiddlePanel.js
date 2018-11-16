@@ -93,6 +93,12 @@ $(document).ready(function(){
         document.getElementById("RequestInfoTextNotification").innerHTML = 'Stratos W.';
         $('#ParticipantOptionsNotification').show();
     });
+
+    $('#RemoteUserSallyButton').click(function(){
+        $('#UserIconNoticicationButtonImg').attr('src', '../Images/Users/User_Sally.jpg'); 
+        document.getElementById("RequestInfoTextNotification").innerHTML = 'Sally Fitz.';
+        $('#ParticipantOptionsNotification').show();
+    });
     //-----------------Settings Buttons----------------
     $('#MoreOptionsBtn').click(function(){
         $('#MiddlePanelPresentationOptions').hide();
