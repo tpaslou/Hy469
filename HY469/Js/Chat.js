@@ -2,14 +2,22 @@
 
 $(document).ready(function() {
 
-    document.getElementById("GroupChat").click();
-    document.getElementById("M3UserIcon 1").click();
-    
+
+    $("#PChat").hide();
     $("#PChat2").hide();
+    $("#PChat3").hide();
+    
+    document.getElementById("GroupChat").click();
+    //document.getElementById("M3UserIcon 1").click();
+    document.getElementById("GChat").click();
+
+
     
 
     
-    $(".tablink").click(function(e) {
+
+    
+    /*$(".tablink").click(function(e) {
       var id = e.target.id;
       console.log(id);
       if (id == "GroupChat") {
@@ -32,7 +40,7 @@ $(document).ready(function() {
       }
   
       
-    });
+    });*/
   });
   
 
@@ -53,16 +61,31 @@ function openChat(ChatName,elmnt) {
 function openPrivateChat(elmnt){
   
   console.log(elmnt.id);
+
+  if(elmnt.id=="GroupChat"){
+
+    $("#PChat2").hide();
+    $("#PChat3").hide();
+    $("#PChat").hide();
+    $("#GChat").show();
+
+  }
   if(elmnt.id=="M3UserIcon 1"){
+    $("#GChat").hide();
+
     $("#PChat2").hide();
     $("#PChat3").hide();
     $("#PChat").show();
 
   }else if (elmnt.id=="M3UserIcon 2"){
+    $("#GChat").hide();
+
     $("#PChat").hide();
     $("#PChat3").hide();
     $("#PChat2").show();
   }else if (elmnt.id=="M3UserIcon 3"){
+    $("#GChat").hide();
+
     $("#PChat").hide();
     $("#PChat2").hide();
     $("#PChat3").show();

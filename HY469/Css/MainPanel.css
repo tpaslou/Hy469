@@ -170,11 +170,14 @@ div{margin:0;padding:0;background-color:transparent;text-align:left}
 }
 
 .MessageText{
+    /*font-family: Roboto, sans-serif;
+    font-style: normal; */
     font-family: Roboto, sans-serif;
-    font-style: normal; 
+    font-style: normal;
+    font-weight: 550;
+    font-size: 24px;
     position: relative;
     color: black;
-    font-weight: 500;
 
 
     font-size: 25px;
@@ -197,11 +200,14 @@ div{margin:0;padding:0;background-color:transparent;text-align:left}
 }
 
 .PChat{
+
     position: relative;
     width: 768px;
-    height: 250px;
+    height: 340px;
     top:0px;
     overflow-y: scroll;
+    border-bottom: 4px solid #C8C8C8;
+
 
 }
 .PSendWrapper{
@@ -210,8 +216,8 @@ div{margin:0;padding:0;background-color:transparent;text-align:left}
     border-radius: 15px;
 
     width: 768px;
-    height: 85px;
-    top:5px;
+    height: 80px;
+    top:10px;
 
 }
 
@@ -221,7 +227,6 @@ div{margin:0;padding:0;background-color:transparent;text-align:left}
     top: 8px;
     width: 100%;
     height:78px;
-    overflow-x: scroll;
 
     
 }
@@ -261,7 +266,7 @@ div{margin:0;padding:0;background-color:transparent;text-align:left}
   .M3UserIcon {
     display: inline-block;
     position: relative;
-    top: -5px;
+    top: -8px;
     width: 75px;
     height: 75px;
     left:10px ;
