@@ -1,5 +1,6 @@
 $(document).ready(function(){
     var currPressedButton ="#MobileBarPresentationBtn"; 
+    var isAnnotaionControlOpen = false;
 
     function UnPressAllLeftBarButtons(){
         $('#MobileBarPresentationBtn').attr('src', '../Images/Mobile/Bar/Presentation.png'); 
@@ -40,4 +41,12 @@ $(document).ready(function(){
         currPressedButton ="#MobileBarSettingsBtn";
     });
     
+    $('.topButtonHeader').click(function () {
+        isAnnotaionControlOpen = !isAnnotaionControlOpen;
+        if(isAnnotaionControlOpen)
+            $('#SideAnnotationPanel').show();
+        else
+            $('#SideAnnotationPanel').hide();
+        
+    });
 });
