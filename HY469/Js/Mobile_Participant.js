@@ -1,6 +1,5 @@
 $(document).ready(function(){
     var currPressedButton ="#MobileBarPresentationBtn"; 
-    var isAnnotaionControlOpen = false;
 
     function UnPressAllLeftBarButtons(){
         $('#MobileBarPresentationBtn').attr('src', '../Images/Mobile/Bar/Presentation.png'); 
@@ -15,6 +14,8 @@ $(document).ready(function(){
         UnPressAllLeftBarButtons();
         $(this).attr('src', '../Images/Mobile/Bar/PresentationPRESSED.png'); 
         currPressedButton ="#MobileBarPresentationBtn";
+
+        $('#PresentationTabMobile').show();
     });
 
     $('#MobileBarChatBtn').click(function () {
@@ -23,6 +24,8 @@ $(document).ready(function(){
         UnPressAllLeftBarButtons();
         $(this).attr('src', '../Images/Mobile/Bar/ChatPRESSED.png'); 
         currPressedButton ="#MobileBarChatBtn";
+
+        $('#PresentationTabMobile').hide();
     });
 
     $('#MobileBarParticipantsBtn').click(function () {
@@ -31,6 +34,8 @@ $(document).ready(function(){
         UnPressAllLeftBarButtons();
         $(this).attr('src', '../Images/Mobile/Bar/ParticipantsPRESSED.png'); 
         currPressedButton ="#MobileBarParticipantsBtn";
+
+        $('#PresentationTabMobile').hide();
     });
 
     $('#MobileBarSettingsBtn').click(function () {
@@ -39,14 +44,11 @@ $(document).ready(function(){
         UnPressAllLeftBarButtons();
         $(this).attr('src', '../Images/Mobile/Bar/SettingsPRESSED.png'); 
         currPressedButton ="#MobileBarSettingsBtn";
+
+        $('#PresentationTabMobile').hide();
     });
     
     $('.topButtonHeader').click(function () {
-        isAnnotaionControlOpen = !isAnnotaionControlOpen;
-        if(isAnnotaionControlOpen)
-            $('#SideAnnotationPanel').show();
-        else
-            $('#SideAnnotationPanel').hide();
-        
+        $('.SideAnnotationPanel').toggle("slide");      
     });
 });
