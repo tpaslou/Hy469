@@ -81,9 +81,9 @@ h1.NextSlideText {
   border: none;
   outline: 0;
 
-  width: 45px;
-  height: 45px;
-  margin: 4px 0px;
+  width: 40px;
+  height: 40px;
+  margin: 4px 1px;
 
   cursor: pointer;
 }
@@ -95,8 +95,8 @@ h1.NextSlideText {
 .buttonImage {
   position: relative;
 
-  width:45px;
-  height:45px;
+  width:40px;
+  height:40px;
 }
 
 /*Leave as 
