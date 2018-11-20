@@ -78,8 +78,13 @@ h1.NextSlideText {
   color: #383838;
 }
 
-#LaptopCurrentPPTScreen, #LaptopNextPPTScreen, #LaptopUserCamera{
+#LaptopCurrentPPTScreen{
   max-width: 100%;
+  height: auto;
+}
+
+#LaptopNextPPTScreen, #LaptopUserCamera{
+  max-width: 95%;
   height: auto;
 }
 
