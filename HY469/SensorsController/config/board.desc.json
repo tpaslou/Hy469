@@ -1,0 +1,48 @@
+{
+    "board": {
+        "sensors": [
+            {
+                "id": 65464,
+                "type": "TOUCH_SLIDE"
+            },
+            {
+                "id": 65462,
+                "type": "TOUCH_SLIDE"
+            },
+            {
+                "id": 27791,
+                "type": "ROTATION"
+            }
+        ],
+        "hub": {
+            "id": 315555,
+            "sensors": [
+                {
+                    "id": 0,
+                    "type": "TOUCH_REVERSED"
+                },
+                {
+                    "id": 6,
+                    "type": "TOUCH_REVERSED"
+                },
+                {
+                    "id": 7,
+                    "type": "TOUCH_REVERSED"
+                },
+                {
+                    "id": 3,
+                    "type": "LIGHT"
+                }
+            ]
+        }
+    },
+    "Sensor Types": {
+        "DISTANCE": "the distance sensor",
+        "LIGHT": "the light sensor",
+        "TOUCH_SLIDE": "the touch slider",
+        "TOUCH": "touch sensor that gives >900 when pressed",
+        "TOUCH_REVESED": "touch sensor that gives <100 when pressed",
+        "ROTATION": "the rotation sensor",
+        "LINEAR": "the linear sensor"
+    }
+}
