@@ -28,12 +28,27 @@
     <script language="javascript" type="text/javascript" src="../DemoApp/js/libs/leap-0.6.4.min.js"></script>
     <!-- END JAVASCRIPT LIBRARIES -->
 
+    <!-- BEGIN CONFIG -->
+    <script language="javascript" type="text/javascript" src="../DemoApp/js/src/config/config.js"></script>
+    <!-- END CONFIG -->
+
     <!-- BEGIN AMILIBS -->
     <script language="javascript" type="text/javascript" src="../DemoApp/js/ami_libs/extensions.js"></script>
     <script language="javascript" type="text/javascript" src="../DemoApp/js/ami_libs/cursor.js"></script>
     <script language="javascript" type="text/javascript" src="../DemoApp/js/ami_libs/hover.js"></script>
     <script language="javascript" type="text/javascript" src="../DemoApp/js/ami_libs/LeapHandler.js"></script>
     <!-- END AMILIBS -->  
+
+    <!-- BEGIN APPLICATION SCRIPTS -->
+    <!-- ***************************************************************** -->
+    <!-- DO NOT FORGET TO ADD HERE ANY NEW JS FILES YOU ADD TO THE PROJECT -->
+    <!-- ***************************************************************** -->
+    <script language="javascript" type="text/javascript" src="../DemoApp/js/src/gestures/gesture.controller.js"></script>
+    <script language="javascript" type="text/javascript" src="../DemoApp/js/src/helloWorld/helloWorld.manager.js"></script>
+    <script language="javascript" type="text/javascript" src="../DemoApp/js/src/communication/sockets.controller.js"></script>
+    <script language="javascript" type="text/javascript" src="../DemoApp/js/src/communication/http.controller.js"></script>
+    <script language="javascript" type="text/javascript" src="../DemoApp/js/src/app.js"></script>
+    <!-- END APPLICATION SCRIPTS -->
 
     <!-- OUR CSS -->
     <link rel="stylesheet" href="../Css/Laptop_Participants.css">
@@ -49,9 +64,17 @@
 </head>
 
 <body>
+    
     <div class="DefaultPanel">
+        <!-- BEGIN CURSOR -->
+        <div id="cursor" style="top: 250px; left: 715px;display: none">
+            <span class="cursor right"></span>
+            <div class="progressLoading"></div>
+        </div>
+        <!-- END CURSOR -->
+
         <div class="LeftBarPanel">
-            <button id="UserLaptopBtn" class="buttonUserLaptop">
+            <button id="UserLaptopBtn" class="clickableElement buttonUserLaptop">
                 <img class="buttonUserLaptopImage" src="../Images/Buttons/Button_Laptop_User.png">
             </button>
 
@@ -72,6 +95,7 @@
 
             <img src="../Images/Static/FooterLogo.png" style="position: absolute;bottom:4px;left:-4px">
         </div>
+        
     
         <div class="RightPanel">
             <div class="PresentationRightPanel">

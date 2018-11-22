@@ -25,7 +25,7 @@ var Hover = (function () {
    * @returns All clickable elemets on current page
    */
   function GetActiveClickableElements() {
-    var selector = '.pt-page-current .clickableElement:visible';
+    var selector = '.clickableElement:visible';
     return $(selector);
   }
 
