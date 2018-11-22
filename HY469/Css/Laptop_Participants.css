@@ -72,8 +72,8 @@ div{margin:0px;padding:0;background-color:transparent;text-align:left}
 /* -- IMAGES , BUTTONS , TEXTS -- */
 
 h1.NextSlideText {
-  font-family: SegoeUI;
-  font-weight: bold;
+  
+  font-weight:500;
   font-size: 36px;
   color: #383838;
 }
@@ -201,7 +201,7 @@ h1.UserButtonExp{
 
 
 
-/* --- PAUL & THANOS --- */
+/* PAUL & THANOS --- */
 
 
 
