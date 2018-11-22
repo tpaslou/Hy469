@@ -3,6 +3,8 @@
 
 if (!GlobalConfig.DebugMode) {
 
+    var myVideo = document.getElementById("PPTPanelVideo");
+
     var leapController = new Leap.Controller();
 
     var leftSwipeTimes = 0;
@@ -12,6 +14,7 @@ if (!GlobalConfig.DebugMode) {
     var waitGestureUpdate = false;
 
     var currPPTImage = 1;
+
 
     var controller = Leap.loop({enableGestures: true}, function(frame){
         if(frame.valid && frame.gestures.length > 0){
@@ -54,14 +57,21 @@ if (!GlobalConfig.DebugMode) {
 
 }
 
+function PlayPauseVideo(){
+    if(currPPTImage == 4){
+        if (myVideo.paused) 
+            myVideo.play(); 
+        else 
+            myVideo.pause();
+    }
+}
+
 function ChangePPTImage(newValue){
     currPPTImage += newValue;
     
     var name = '../Images/TVScreen/PV_' + currPPTImage.toString() +'.png';
 
     console.log(name);
-
-    var myVideo = document.getElementById("PPTPanelVideo");
 
     var elements = document.getElementsByClassName("PPTPanelImage");
 
@@ -70,12 +80,9 @@ function ChangePPTImage(newValue){
         if(currPPTImage == 4){
             elements[i].hidden = true;
             $('.PPTPanelVideo').show();          
-            //myVideo.play();
-
         }
         else{
             elements[i].hidden = false;
-            //myVideo.pause();
             $('.PPTPanelVideo').hide();
         }
     }
