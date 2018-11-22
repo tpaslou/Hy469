@@ -172,13 +172,12 @@ h1.UserButtonExp{
 /* --- SLIDER --- */
 
 .slidecontainer {
-  width: 100%;
+  width: 90%;
 }
 
-.slider {
+.sliderLaptop {
   -webkit-appearance: none;
   width: 80%;
-  height: 12px;
   align-content: center;
   background: white;
   outline: none;
@@ -186,11 +185,11 @@ h1.UserButtonExp{
   transition: opacity .2s;
 
   top: 10px;
-  margin: 15px auto;
+  margin: 15px 15px;
   display: block;
 }
 
-.slider::-webkit-slider-thumb {
+.sliderLaptop::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
   width: 20px;
@@ -202,7 +201,7 @@ h1.UserButtonExp{
 
 
 
-
+/* --- PAUL & THANOS --- */
 
 
 

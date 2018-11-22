@@ -7,15 +7,43 @@
     <meta name="viewport" content="user-scalable=no,width=device-width" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css">
+
+    <!-- BEGIN CSS LIBRARIES -->
+    <link rel="stylesheet" type="text/css" href="../DemoApp/css/libs/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../DemoApp/css/libs/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../DemoApp/css/libs/animations.css">
+    <link rel="stylesheet" type="text/css" href="../DemoApp/css/libs/page_transitions.css">
+    <!-- END CSS LIBRARIES -->
+
+    <!-- BEGIN APPLICATION CSS -->
+    <link rel="stylesheet" type="text/css" href="../DemoApp/css/app.css">
+    <!-- END APPLICATION CSS -->
+
+    <!-- BEGIN JAVASCRIPT LIBRARIES -->
+    <script language="javascript" type="text/javascript" src="../DemoApp/js/libs/jquery-1.11.3.min.js"></script>
+    <script language="javascript" type="text/javascript" src="../DemoApp/js/libs/modernizr.custom.js"></script>
+    <script language="javascript" type="text/javascript" src="../DemoApp/js/libs/bootstrap.min.js"></script>
+    <script language="javascript" type="text/javascript" src="../DemoApp/js/libs/progressbar.js"></script>
+    <script language="javascript" type="text/javascript" src="../DemoApp/js/libs/jquery.nearest.min.js"></script>
+    <script language="javascript" type="text/javascript" src="../DemoApp/js/libs/leap-0.6.4.min.js"></script>
+    <!-- END JAVASCRIPT LIBRARIES -->
+
+    <!-- BEGIN AMILIBS -->
+    <script language="javascript" type="text/javascript" src="../DemoApp/js/ami_libs/extensions.js"></script>
+    <script language="javascript" type="text/javascript" src="../DemoApp/js/ami_libs/cursor.js"></script>
+    <script language="javascript" type="text/javascript" src="../DemoApp/js/ami_libs/hover.js"></script>
+    <script language="javascript" type="text/javascript" src="../DemoApp/js/ami_libs/LeapHandler.js"></script>
+    <!-- END AMILIBS -->  
+
+    <!-- OUR CSS -->
     <link rel="stylesheet" href="../Css/Laptop_Participants.css">
     <link rel="stylesheet" href="../Css/LaptopChat.css">
-
+    <!-- OUR CSS -->
     
-    <script  type="text/javascript"  src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- OUR JS -->
     <script  type="text/javascript"  src="../Js/Laptop_Participants.js"></script>
     <script  type="text/javascript"  src="../Js/LaptopChat.js"></script>
-
-    
+    <!-- OUR JS -->
 
     <title>Coord.ME</title>
 </head>
@@ -75,7 +103,7 @@
                     </button>
         
                     <div class="slidecontainer">
-                        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                        <input type="range" min="1" max="100" value="50" class="sliderLaptop" id="myRange">
                     </div>
                 </div>
 
@@ -145,7 +173,7 @@
                     <div class="SendWrapper" style="top:-28px; height: 60px;">
                             <textarea name="message-to-send" id="message-to-send" class="message-to-send" placeholder ="Type your message" rows="3"></textarea>
                             <button type="button" class="SendMessage" style="left:100px;">
-                                <img style="width:40px;height:40px;" src="../Images/Buttons/Tick.png" class="btn SendMessageImage" id="si" alt="Chat">
+                                <img style="width:40px;height:40px;" src="../Images/Buttons/Tick.png" class="SendMessageImage" id="si" alt="Chat">
                             </button>
                         </div>  
                 </div>
@@ -271,20 +299,15 @@
                                 <span class="M2dot"></span>
                             </div>
             
-                           
-            
-            
-
-
 
                 </div>
                 <div class="SendWrapper2" id="SendWrapper2">
                     <button type="button" class="OpenFile2" >
-                        <img src="../Images/Buttons/file.png" class="btn OpenFileImage" style="width:30px" id="fi" alt="Chat">
+                        <img src="../Images/Buttons/file.png" class="OpenFileImage" style="width:30px" id="fi" alt="Chat">
                     </button>
                     <textarea name="message-to-send" id="message-to-send" class="message-to-send" placeholder ="Type your message" rows="3"></textarea>
                     <button type="button" class="SendMessage2" >
-                        <img src="../Images/Buttons/Tick.png" class="btn SendMessageImage2" id="si" style="width:30px" alt="Chat">
+                        <img src="../Images/Buttons/Tick.png" class="SendMessageImage2" id="si" style="width:30px" alt="Chat">
                     </button>
                 </div>   
            
