@@ -7,48 +7,92 @@
     <meta name="viewport" content="user-scalable=no,width=device-width" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css">
-    <link rel="stylesheet" href="../Css/TVScreen.css">
     <script  type="text/javascript"  src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- BEGIN CSS LIBRARIES -->
+    <link rel="stylesheet" type="text/css" href="../DemoApp/css/libs/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../DemoApp/css/libs/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../DemoApp/css/libs/animations.css">
+    <link rel="stylesheet" type="text/css" href="../DemoApp/css/libs/page_transitions.css">
+    <!-- END CSS LIBRARIES -->
+
+    <!-- BEGIN APPLICATION CSS -->
+    <link rel="stylesheet" type="text/css" href="../DemoApp/css/app.css">
+    <!-- END APPLICATION CSS -->
+
+    <!-- BEGIN JAVASCRIPT LIBRARIES -->
+    <script language="javascript" type="text/javascript" src="../DemoApp/js/libs/jquery-1.11.3.min.js"></script>
+    <script language="javascript" type="text/javascript" src="../DemoApp/js/libs/modernizr.custom.js"></script>
+    <script language="javascript" type="text/javascript" src="../DemoApp/js/libs/bootstrap.min.js"></script>
+    <script language="javascript" type="text/javascript" src="../DemoApp/js/libs/progressbar.js"></script>
+    <script language="javascript" type="text/javascript" src="../DemoApp/js/libs/jquery.nearest.min.js"></script>
+    <script language="javascript" type="text/javascript" src="../DemoApp/js/libs/leap-0.6.4.min.js"></script>
+    <!-- END JAVASCRIPT LIBRARIES -->
+
+    <!-- BEGIN CONFIG -->
+    <script language="javascript" type="text/javascript" src="../DemoApp/js/src/config/config.js"></script>
+    <!-- END CONFIG -->
+
+    <!-- BEGIN AMILIBS -->
+    <script language="javascript" type="text/javascript" src="../DemoApp/js/ami_libs/extensions.js"></script>
+    <script language="javascript" type="text/javascript" src="../DemoApp/js/ami_libs/cursor.js"></script>
+    <script language="javascript" type="text/javascript" src="../DemoApp/js/ami_libs/hover.js"></script>
+    <script language="javascript" type="text/javascript" src="../DemoApp/js/ami_libs/LeapHandlerGesturesONLYTV.js"></script>
+    <!-- END AMILIBS -->  
+
+    <!-- BEGIN APPLICATION SCRIPTS -->
+    <script language="javascript" type="text/javascript" src="../DemoApp/js/src/gestures/gesture.controller.js"></script>
+    <script language="javascript" type="text/javascript" src="../DemoApp/js/src/helloWorld/helloWorld.manager.js"></script>
+    <script language="javascript" type="text/javascript" src="../DemoApp/js/src/communication/sockets.controller.js"></script>
+    <script language="javascript" type="text/javascript" src="../DemoApp/js/src/communication/http.controller.js"></script>
+    <script language="javascript" type="text/javascript" src="../DemoApp/js/src/app.js"></script>
+    <!-- END APPLICATION SCRIPTS -->
+    
+    <link rel="stylesheet" href="../Css/TVScreen.css">
 
     <title>Coord.ME</title>
 </head>
 
 <body>
     <div class="DefaultPanel"> 
+
         <img src="../Images/TVScreen/SessionInfo.png" alt="PPT" style="position:absolute;z-index:1000">
 
         <div id="Panel_1_PPT_Only" style="display:none">
-            <img src="../Images/TVScreen/PV_1.png" alt="PPT">
+            <img class="PPTPanelImage" src="../Images/TVScreen/PV_1.png" alt="PPT">
         </div>
 
         <div id="Panel_2_PPT_Chat" style="display:none">
             <div id="Panel_2_PPT">
-                <img id="PPT_Panel12_Img" src="../Images/TVScreen/PV_1.png" alt="PPT" style="top:86px">
+                <img class="PPTPanelImage" src="../Images/TVScreen/PV_1.png" alt="PPT" style="top:86px">
             </div>
             <div id="Panel_2_Chat">
-                <img id="PPT_Panel12_Img" src="../Images/TVScreen/GroupChatRightSideBar.png">
+                <img src="../Images/TVScreen/GroupChatRightSideBar.png">
             </div>
         </div>
     
         <div id="Panel_2_PPT_Users" style="display:none">
             <div id="Panel_2_PPT">
-                <img id="PPT_Panel12_Img" src="../Images/TVScreen/PV_1.png" alt="PPT" style="left:153px">
+                <img class="PPTPanelImage" src="../Images/TVScreen/PV_1.png" alt="PPT" style="left:153px">
             </div>
             <div id="Panel_2_Users">
-                <img id="PPT_Panel12_Img" src="../Images/TVScreen/AllUsersBottomBar.png">
+                <img src="../Images/TVScreen/AllUsersBottomBar.png">
             </div>
         </div>
 
         <div id="Panel_3_PPT_Chat_Users">
             <div id="Panel_2_PPT">
-                <img id="PPT_Panel12_Img" src="../Images/TVScreen/PV_1.png" alt="PPT">
+                <img class="PPTPanelImage" src="../Images/TVScreen/PV_1.png" alt="PPT">
+                <video id="PPTPanelVideo" width="1600px;" style="display:none">
+                    <source src="../Images/VideoPresentation/PV_4.mp4" type="video/mp4">
+                </video>
             </div>
             <div id="Panel_2_Chat">
-                    <img id="PPT_Panel12_Img" src="../Images/TVScreen/GroupChatRightSideBar.png" style="top:-176px">
-                    <img id="PPT_Panel12_Img" src="../Images/TVScreen/GroupChatInfo.png" style="top:-1080px">
+                    <img src="../Images/TVScreen/GroupChatRightSideBar.png" style="top:-176px">
+                    <img src="../Images/TVScreen/GroupChatInfo.png" style="top:-1080px">
                 </div>
             <div id="Panel_2_Users">
-                <img id="PPT_Panel12_Img" src="../Images/TVScreen/AllUsersBottomBar.png">
+                <img src="../Images/TVScreen/AllUsersBottomBar.png">
             </div>
         </div>
     </div>

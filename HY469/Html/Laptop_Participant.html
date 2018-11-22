@@ -40,9 +40,6 @@
     <!-- END AMILIBS -->  
 
     <!-- BEGIN APPLICATION SCRIPTS -->
-    <!-- ***************************************************************** -->
-    <!-- DO NOT FORGET TO ADD HERE ANY NEW JS FILES YOU ADD TO THE PROJECT -->
-    <!-- ***************************************************************** -->
     <script language="javascript" type="text/javascript" src="../DemoApp/js/src/gestures/gesture.controller.js"></script>
     <script language="javascript" type="text/javascript" src="../DemoApp/js/src/helloWorld/helloWorld.manager.js"></script>
     <script language="javascript" type="text/javascript" src="../DemoApp/js/src/communication/sockets.controller.js"></script>
@@ -67,7 +64,7 @@
     
     <div class="DefaultPanel">
         <!-- BEGIN CURSOR -->
-        <div id="cursor" style="top: 250px; left: 715px;display: none">
+        <div id="cursor" style="top: 250px; left: 715px;">
             <span class="cursor right"></span>
             <div class="progressLoading"></div>
         </div>
@@ -78,17 +75,17 @@
                 <img class="buttonUserLaptopImage" src="../Images/Buttons/Button_Laptop_User.png">
             </button>
 
-            <button class="buttonLaptop">
+            <button class="clickableElement buttonLaptop">
                 <img id="AnnotationLaptopBtn" class="buttonLaptopImage" src="../Images/Buttons/Button_Annotation.png">
             </button>
             <h1 class="BottomButtonExp">Annotation</h1>
 
-            <button id="PPTChangeLaptopBtn" class="buttonLaptop">
+            <button id="PPTChangeLaptopBtn" class="clickableElement buttonLaptop">
                 <img class="buttonLaptopImage" src="../Images/Buttons/Button_ChangePPT.png">
             </button>
             <h1 class="BottomButtonExp">File Change Request</h1>
 
-            <button id="CoordRequestLaptopBtn" class="buttonLaptop">
+            <button id="CoordRequestLaptopBtn" class="clickableElement buttonLaptop">
                 <img class="buttonLaptopImage" src="../Images/Buttons/Button_Coord.png">
             </button>
             <h1 class="BottomButtonExp">Coordinator Request</h1>
@@ -115,15 +112,15 @@
                     <h1 class="NextSlideText" style="margin: 40px 0px">Annotation Controls</h1>
 
                     <button type="button" class="buttonLaptop">
-                        <img src="../Images/Buttons/Button_Color_Black.png" class="buttonLaptopImage" alt="BlackColor">
+                        <img src="../Images/Buttons/Button_Color_Black.png" class="clickableElement buttonLaptopImage" alt="BlackColor">
                     </button>
             
                     <button type="button" class="buttonLaptop">
-                        <img src="../Images/Buttons/Button_Color_Green.png" class="buttonLaptopImage" alt="GreenColor">
+                        <img src="../Images/Buttons/Button_Color_Green.png" class="clickableElement buttonLaptopImage" alt="GreenColor">
                     </button>
             
                     <button type="button" class="buttonLaptop">
-                        <img src="../Images/Buttons/Button_Color_Red.png" class="buttonLaptopImage" alt="RedColor">
+                        <img src="../Images/Buttons/Button_Color_Red.png" class="clickableElement buttonLaptopImage" alt="RedColor">
                     </button>
         
                     <div class="slidecontainer">
@@ -138,7 +135,7 @@
                     <img class="NotificationImage" id="FileChangeNotificationImg" style="display:none;position:absolute; left:0px" src="../Images/VideoPresentation/LaptopSize/Popup_FileChangePending.png">
 
                     <!-- Small Button Hack -->
-                    <button id="ExitNotificationBtn" type="button" class="buttonLaptop" 
+                    <button id="ExitNotificationBtn" type="button" class="clickableElement buttonLaptop" 
                     style="float:right;
                     background-color:transparent;
                     width:40px;height:40px">
@@ -149,24 +146,31 @@
 
                     <div style="display:inline-block;float:left;margin:10px">
                         <button class="buttonLaptop" >
-                            <img id="SwapCameraLaptopBtn" class="buttonLaptopImage" src="../Images/Buttons/Camera.png">
+                            <img id="SwapCameraLaptopBtn" class="clickableElement buttonLaptopImage" src="../Images/Buttons/Camera.png">
                         </button>
                         <h1 class="UserButtonExp" style="display:inline">Camera State</h1>
                     </div>
 
                     <div style="display:inline-block;float:left;margin:10px">
                         <button class="buttonLaptop" >
-                            <img id="SwapMicLaptopBtn" class="buttonLaptopImage" src="../Images/Buttons/Mic.png">
+                            <img id="SwapMicLaptopBtn" class="clickableElement buttonLaptopImage" src="../Images/Buttons/Mic.png">
                         </button>
                         <h1 class="UserButtonExp" style="display:inline">Microphone State</h1>
                     </div>
 
                     <div style="display:inline-block;float:left;margin:10px">
-                            <button class="buttonLaptop" >
-                                <img id="LogoutLaptopBtn" class="buttonLaptopImage" src="../Images/Buttons/Button_Logout.png" onclick="window.location.href='../Html/Laptop_LoginScreen.html'">
-                            </button>
-                            <h1 class="UserButtonExp" style="display:inline">Log Out</h1>
-                        </div>
+                        <button class="buttonLaptop" >
+                            <img id="SwapLeapLaptopBtn" class="clickableElement buttonLaptopImage" src="../Images/Buttons/Leap.png">
+                        </button>
+                        <h1 class="UserButtonExp" style="display:inline">Leap Cursor State</h1>
+                    </div>
+
+                    <div style="display:inline-block;float:left;margin:10px">
+                        <button class="buttonLaptop" >
+                            <img id="LogoutLaptopBtn" class="clickableElement buttonLaptopImage" src="../Images/Buttons/Button_Logout.png" onclick="window.location.href='../Html/Laptop_LoginScreen.html'">
+                        </button>
+                        <h1 class="UserButtonExp" style="display:inline">Log Out</h1>
+                    </div>
 
                 </div>
             </div>
@@ -196,7 +200,7 @@
             
                     <div class="SendWrapper" style="top:-28px; height: 60px;">
                             <textarea name="message-to-send" id="message-to-send" class="message-to-send" placeholder ="Type your message" rows="3"></textarea>
-                            <button type="button" class="SendMessage" style="left:100px;">
+                            <button type="button" class="clickableElement SendMessage" style="left:100px;">
                                 <img style="width:40px;height:40px;" src="../Images/Buttons/Tick.png" class="SendMessageImage" id="si" alt="Chat">
                             </button>
                         </div>  
@@ -326,11 +330,11 @@
 
                 </div>
                 <div class="SendWrapper2" id="SendWrapper2">
-                    <button type="button" class="OpenFile2" >
+                    <button type="button" class="clickableElement OpenFile2" >
                         <img src="../Images/Buttons/file.png" class="OpenFileImage" style="width:30px" id="fi" alt="Chat">
                     </button>
                     <textarea name="message-to-send" id="message-to-send" class="message-to-send" placeholder ="Type your message" rows="3"></textarea>
-                    <button type="button" class="SendMessage2" >
+                    <button type="button" class="clickableElement SendMessage2" >
                         <img src="../Images/Buttons/Tick.png" class="SendMessageImage2" id="si" style="width:30px" alt="Chat">
                     </button>
                 </div>   

@@ -78,4 +78,15 @@ $(document).ready(function(){
             $(this).attr('src', '../Images/Buttons/Mic.png'); 
         }
     });
+
+    $('#SwapLeapLaptopBtn').click(function () {
+        if ($(this).attr('src') == "../Images/Buttons/Leap.png") {
+            $(this).attr('src', '../Images/Buttons/LeapOFF.png'); 
+            $('#cursor').hide();
+        }
+        else{
+            $(this).attr('src', '../Images/Buttons/Leap.png'); 
+            $('#cursor').show();
+        }
+    });
 });
