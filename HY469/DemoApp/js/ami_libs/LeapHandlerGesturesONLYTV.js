@@ -3,8 +3,6 @@
 
 if (!GlobalConfig.DebugMode) {
 
-    var myVideo = document.getElementById("PPTPanelVideo");
-
     var leapController = new Leap.Controller();
 
     var leftSwipeTimes = 0;
@@ -50,6 +48,7 @@ if (!GlobalConfig.DebugMode) {
             }
             else if(circleTimes > 10){
                 console.log("Circle");
+                PlayPauseVideo();
                 ResetValues();
             }
         }        
@@ -58,6 +57,13 @@ if (!GlobalConfig.DebugMode) {
 }
 
 function PlayPauseVideo(){
+    var myVideo = document.getElementById("PPTPanelVideo");
+
+    if(myVideo == null){
+        console.log("Video Not Found!");
+        return;
+    }
+
     if(currPPTImage == 4){
         if (myVideo.paused) 
             myVideo.play(); 
