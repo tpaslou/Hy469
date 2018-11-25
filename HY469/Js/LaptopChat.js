@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    $("#PChat").click();
+    $("#GChat Icon").click();
 
 
 
@@ -64,6 +64,8 @@ function openPrivateChat(elmnt){
         }
         elmnt.style.backgroundColor = color;
       }
+      
+      
 
 
 }
