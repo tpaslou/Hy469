@@ -14,7 +14,7 @@ $(document).ready(function(){
         UnPressAllLeftBarButtons();
         $(this).attr('src', '../Images/Mobile/Bar/PresentationPRESSED.png'); 
         currPressedButton ="#MobileBarPresentationBtn";
-
+        $('#ChatPanel').hide();
         $('#PresentationTabMobile').show();
     });
 
@@ -26,6 +26,7 @@ $(document).ready(function(){
         currPressedButton ="#MobileBarChatBtn";
 
         $('#PresentationTabMobile').hide();
+        $('#ChatPanel').show();
     });
 
     $('#MobileBarParticipantsBtn').click(function () {
@@ -34,7 +35,7 @@ $(document).ready(function(){
         UnPressAllLeftBarButtons();
         $(this).attr('src', '../Images/Mobile/Bar/ParticipantsPRESSED.png'); 
         currPressedButton ="#MobileBarParticipantsBtn";
-
+        $('#ChatPanel').hide();
         $('#PresentationTabMobile').hide();
     });
 
@@ -44,7 +45,7 @@ $(document).ready(function(){
         UnPressAllLeftBarButtons();
         $(this).attr('src', '../Images/Mobile/Bar/SettingsPRESSED.png'); 
         currPressedButton ="#MobileBarSettingsBtn";
-
+        $('#ChatPanel').hide();
         $('#PresentationTabMobile').hide();
     });
     
