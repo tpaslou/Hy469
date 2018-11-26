@@ -49,10 +49,10 @@ if (!GlobalConfig.DebugMode) {
 
 
 function MoveCursor(x, y) {
-    Cursor.Show();
+    //Cursor.Show();
     Cursor.Move(y, x);
 }
 
 function HideCursor() {
-    Cursor.Hide();
+    //Cursor.Hide();
 }

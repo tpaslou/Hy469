@@ -2,7 +2,7 @@ $(document).ready(function () {
 
   if (!GlobalConfig.DebugMode) {
     //Disable cursor
-    $('body').css('cursor', 'none');
+    //$('body').css('cursor', 'none');
   }
 
   if (GlobalConfig.ConnectToServer) {

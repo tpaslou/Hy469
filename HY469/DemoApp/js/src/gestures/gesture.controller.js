@@ -19,7 +19,7 @@ var Gestures = (function () {
         if (cmd.contains("left")) Cursor.SetOrientation("left");
         else if (cmd.contains("right")) Cursor.SetOrientation("right");
         // show cursor
-        Cursor.Show();
+        //Cursor.Show();
       }
       else if (cmd.contains('hand:hide')) {
         Cursor.Hide();

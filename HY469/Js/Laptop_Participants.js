@@ -83,10 +83,12 @@ $(document).ready(function(){
         if ($(this).attr('src') == "../Images/Buttons/Leap.png") {
             $(this).attr('src', '../Images/Buttons/LeapOFF.png'); 
             $('#cursor').hide();
+            $('body').css('cursor', 'default');
         }
         else{
             $(this).attr('src', '../Images/Buttons/Leap.png'); 
             $('#cursor').show();
+            $('body').css('cursor', 'none');
         }
     });
 });

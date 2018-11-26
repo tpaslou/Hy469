@@ -44,6 +44,7 @@
     <script language="javascript" type="text/javascript" src="../DemoApp/js/src/helloWorld/helloWorld.manager.js"></script>
     <script language="javascript" type="text/javascript" src="../DemoApp/js/src/communication/sockets.controller.js"></script>
     <script language="javascript" type="text/javascript" src="../DemoApp/js/src/communication/http.controller.js"></script>
+    <!-- hides cursor -->
     <script language="javascript" type="text/javascript" src="../DemoApp/js/src/app.js"></script>
     <!-- END APPLICATION SCRIPTS -->
 
@@ -65,6 +66,10 @@
     <div class="DefaultPanel">
         <!-- BEGIN CURSOR -->
         <div id="cursor" style="top: 250px; left: 715px;">
+            <script type="text/javascript">
+                $('body').css('cursor', 'none');
+                Cursor.Show();
+            </script>
             <span class="cursor right"></span>
             <div class="progressLoading"></div>
         </div>
