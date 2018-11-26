@@ -35,7 +35,7 @@ div{margin:0px;padding:0;background-color:transparent;text-align:left}
   background-color: transparent;
   border: none;
   outline: 0;
-  width: 100px;
+  width: 85px;
   height: 85px;
   margin: 4px 0px;
   cursor: pointer;
@@ -48,8 +48,8 @@ div{margin:0px;padding:0;background-color:transparent;text-align:left}
 .imageLeftPanel {
   position: relative;
     top: -1px;
-    left: -2px;
-    width: 100px;
+    left: -6px;
+    width: 85x;
     height: 85px
 }
 
@@ -277,7 +277,7 @@ h1.NextSlideText {
   display: inline-block;
   width: 6%;
 }
-img {
+.MsgImg {
   vertical-align: middle;
   border-style: none;
   max-width: 100%;

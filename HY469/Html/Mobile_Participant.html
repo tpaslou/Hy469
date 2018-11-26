@@ -9,12 +9,12 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css">
     <link rel="stylesheet" href="../Css/Mobile_Participant.css">
 
-    
-    <script  type="text/javascript"  src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script  type="text/javascript"  src="../Js/Mobile_Participant.js"></script>
-    <script  type="text/javascript"  src="../Js/LaptopChat.js"></script>
 
-    
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../Js/Mobile_Participant.js"></script>
+    <script type="text/javascript" src="../Js/MobileChat.js"></script>
+
+
 
     <title>Coord.ME</title>
 </head>
@@ -35,56 +35,57 @@
                 <img class="imageLeftPanel" id="MobileBarSettingsBtn" src="../Images/Mobile/Bar/Settings.png">
             </button>
         </div>
-    
+
         <div class="RightPanel">
             <div id="PresentationTabMobile">
                 <img id="PresentationMobileImg" src="../Images/VideoPresentation/PV_1.png" style="width:100%; height:auto;">
                 <video id="PPTVideo" width="562px;" style="position: relative; top:30px;display:none;">
                     <source src="../Images/VideoPresentation/PV_4.mp4" type="video/mp4">
                 </video>
-        
+
                 <button class="topButtonHeader">
                     <img src="../Images/Mobile/Bar/MoreOptions.png" style="position:relative;width:20px;height:20px;top:-2px;left:-2px;">
                 </button>
 
                 <div class="SideAnnotationPanel" style="display:none;">
-                    <div class="NextSlidePanel">                  
-                        <h1 class="NextSlideText">Next Slide</h1>               
-                        <img id="NextSlideImg" src="../Images/VideoPresentation/PV_2.png" alt="PPT" style="width:170px;height:100px;">               
+                    <div class="NextSlidePanel">
+                        <h1 class="NextSlideText">Next Slide</h1>
+                        <img id="NextSlideImg" src="../Images/VideoPresentation/PV_2.png" alt="PPT" style="width:170px;height:100px;">
                     </div>
-            
-                    <div class="PresentationControlsPanel">          
+
+                    <div class="PresentationControlsPanel">
                         <button type="button" class="buttonAnnotation" id="TakeAnnotationBtn">
-                            <img src="../Images/Buttons/Button_Annotation.png" class="buttonAnnotationImage" alt="Annotation">
+                            <img src="../Images/Buttons/Button_Annotation.png" class="buttonAnnotationImage" alt="Annotation"
+                                style="width:25px;height:25px">
                         </button>
-            
+
                         <button type="button" class="buttonAnnotation" id="TakeNotesBtn">
                             <img src="../Images/Buttons/Button_Notes.png" class="buttonAnnotationImage" alt="TakeNotes">
                         </button>
-            
+
                         <button type="button" class="buttonAnnotation" id="ChangePPTBtn">
                             <img src="../Images/Buttons/Button_ChangePPT.png" class="buttonAnnotationImage" alt="FileChange">
                         </button>
-            
+
                         <h1 class="NextSlideText">Annotation Controls</h1>
-            
+
                         <button type="button" class="buttonAnnotation" id="ColorBlackBtn">
                             <img src="../Images/Buttons/Button_Color_Black.png" class="buttonAnnotationImage" alt="BlackColor">
                         </button>
-                
-                        <button type="button" class="buttonAnnotation"  id="ColorGreenBtn">
+
+                        <button type="button" class="buttonAnnotation" id="ColorGreenBtn">
                             <img src="../Images/Buttons/Button_Color_Green.png" class="buttonAnnotationImage" alt="GreenColor">
                         </button>
-                
-                        <button type="button" class="buttonAnnotation"  id="ColorRedBtn">
+
+                        <button type="button" class="buttonAnnotation" id="ColorRedBtn">
                             <img src="../Images/Buttons/Button_Color_Red.png" class="buttonAnnotationImage" alt="RedColor">
                         </button>
-            
+
                         <div class="slidecontainer">
                             <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
                         </div>
                     </div>
-                </div>       
+                </div>
             </div>
             <!--Paul goes here-->
 
@@ -96,133 +97,164 @@
 
 
                     <div class="PrivateChatPeople">
-                        <div id="GChat Icon" class="M3UserIcon" style="background-color:gray"onclick="openPrivateChat(this)">
-                                <img src="../Images/Buttons/GroupChat.png" class="M2UserImage">
-                                <span class="M2dot"></span>
+                        <div id="GChat Icon" class="M3UserIcon" style="background-color:gray" onclick="openPrivateChat(this)">
+                            <img src="../Images/Buttons/GroupChat.png" class="M2UserImage">
+                            <span class="M2dot"></span>
                         </div>
 
-                    <div id="M3UserIcon 1" class="M3UserIcon" onclick="openPrivateChat(this) ">
-                    <img src="../Images/Users/User_Paul.jpg" class="M2UserImage">
-                    <span class="M2dot"></span>
-                    </div>
-    
-                    <div id="M3UserIcon 2" class="M3UserIcon" onclick="openPrivateChat(this)" >
-                        <img src="../Images/Users/User_Steve.jpg" class="M2UserImage">
-                        <span class="M2dot"></span>
-                    </div>
-    
-                    <div id="M3UserIcon 3" class="M3UserIcon"  onclick="openPrivateChat(this)">
-                        <img src="../Images/Users/User_Sally.jpg" class="M2UserImage">
-                        <span class="M2dot"></span>
-                    </div>
+                        <div id="M3UserIcon 1" class="M3UserIcon" onclick="openPrivateChat(this) ">
+                            <img src="../Images/Users/User_Paul.jpg" class="M2UserImage">
+                            <span class="M2dot"></span>
+                        </div>
 
-                </div>
+                        <div id="M3UserIcon 2" class="M3UserIcon" onclick="openPrivateChat(this)">
+                            <img src="../Images/Users/User_Steve.jpg" class="M2UserImage">
+                            <span class="M2dot"></span>
+                        </div>
+
+                        <div id="M3UserIcon 3" class="M3UserIcon" onclick="openPrivateChat(this)">
+                            <img src="../Images/Users/User_Sally.jpg" class="M2UserImage">
+                            <span class="M2dot"></span>
+                        </div>
+
+                    </div>
                 </div>
                 <div class="Messages">
 
                     <div class="MessagesPanel" id="GChat">
-                    <div class="incoming_msg">
-                        <div class="incoming_msg_img"> <img src="../Images/Users/User_Steve.jpg" alt="sunil"> </div>
-                        <div class="received_msg">
-                                <div class="Name" style="display:inline-block"><p>Steve Kateros</p></div>
-
-                          <div class="received_withd_msg">
-                            <p>We work directly with our designers and suppliers,
-                              and sell direct to you, which means quality, exclusive
-                              products, at a price anyone can afford.</p>
-                            <span class="time_date"> 11:01 AM    |    Today</span></div>
-                        </div>
-                      </div>
-                      <div class="incoming_msg">
-                        <div class="incoming_msg_img"> <img src="../Images/Users/User_Stratos.jpg" alt="sunil"> </div>
-                        <div class="received_msg">
-                                <div class="Name" style="display:inline-block"><p>Stratos</p></div>
-
-                          <div class="received_withd_msg">
-                            <p>Quite interesting steve.Can u display an analytic view or companies overall funding this year ?</p>
-                            <span class="time_date"> 11:01 AM    |    Today</span></div>
-                        </div>
-                      </div>
-                      <div class="incoming_msg">
-                            <div class="incoming_msg_img"> <img src="../Images/Users/User_Stratos.jpg" alt="sunil"> </div>
+                        <div class="incoming_msg">
+                            <div class="incoming_msg_img"> <img id="msg_img" src="../Images/Users/User_Steve.jpg" class="MsgImg"
+                                    alt="sunil"> </div>
                             <div class="received_msg">
-                                    <div class="Name" style="display:inline-block"><p>Stratos</p></div>
-    
-                              <div class="received_withd_msg">
-                                <p>Quite interesting steve.Can u display an analytic view or companies overall funding this year ?</p>
-                                <span class="time_date"> 11:01 AM    |    Today</span></div>
-                            </div>
-                          </div>
-                          <div class="incoming_msg">
-                                <div class="incoming_msg_img"> <img src="../Images/Users/User_Stratos.jpg" alt="sunil"> </div>
-                                <div class="received_msg">
-                                        <div class="Name" style="display:inline-block"><p>Stratos</p></div>
-        
-                                  <div class="received_withd_msg">
-                                    <p>Quite interesting steve.Can u display an analytic view or companies overall funding this year ?</p>
-                                    <span class="time_date"> 11:01 AM    |    Today</span></div>
+                                <div class="Name" style="display:inline-block">
+                                    <p>Steve Kateros</p>
                                 </div>
-                              </div>
+
+                                <div class="received_withd_msg">
+                                    <p>We work directly with our designers and suppliers,
+                                        and sell direct to you, which means quality, exclusive
+                                        products, at a price anyone can afford.</p>
+                                    <span class="time_date"> 11:01 AM | Today</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="incoming_msg">
+                            <div class="incoming_msg_img"> <img src="../Images/Users/User_Stratos.jpg" class="MsgImg"
+                                    alt="sunil"> </div>
+                            <div class="received_msg">
+                                <div class="Name" style="display:inline-block">
+                                    <p>Stratos</p>
+                                </div>
+
+                                <div class="received_withd_msg">
+                                    <p>Quite interesting steve.Can u display an analytic view or companies overall
+                                        funding this year ?</p>
+                                    <span class="time_date"> 11:01 AM | Today</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="incoming_msg">
+                            <div class="incoming_msg_img"> <img src="../Images/Users/User_Stratos.jpg" class="MsgImg"
+                                    alt="sunil"> </div>
+                            <div class="received_msg">
+                                <div class="Name" style="display:inline-block">
+                                    <p>Stratos</p>
+                                </div>
+
+                                <div class="received_withd_msg">
+                                    <p>Quite interesting steve.Can u display an analytic view or companies overall
+                                        funding this year ?</p>
+                                    <span class="time_date"> 11:01 AM | Today</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="incoming_msg">
+                            <div class="incoming_msg_img"> <img src="../Images/Users/User_Stratos.jpg" class="MsgImg"
+                                    alt="sunil"> </div>
+                            <div class="received_msg">
+                                <div class="Name" style="display:inline-block">
+                                    <p>Stratos</p>
+                                </div>
+
+                                <div class="received_withd_msg">
+                                    <p>Quite interesting steve.Can u display an analytic view or companies overall
+                                        funding this year ?</p>
+                                    <span class="time_date"> 11:01 AM | Today</span>
+                                </div>
+                            </div>
+                        </div>
 
 
 
                     </div>
 
 
-                    <div class="MessagesPanel" id="PChat">
-                            <div class="incoming_msg">
-                                <div class="incoming_msg_img"> <img src="../Images/Users/User_Steve.jpg" alt="sunil"> </div>
-                                <div class="received_msg">
-                                        <div class="Name" style="display:inline-block"><p>Steve Kateros</p></div>
-        
-                                  <div class="received_withd_msg">
+                    <div class="MessagesPanel" id="PChat" style="display: none">
+                        <div class="incoming_msg">
+                            <div class="incoming_msg_img"> <img src="../Images/Users/User_Steve.jpg" class="MsgImg" alt="sunil">
+                            </div>
+                            <div class="received_msg">
+                                <div class="Name" style="display:inline-block">
+                                    <p>Steve Kateros</p>
+                                </div>
+
+                                <div class="received_withd_msg">
                                     <p>We work directly with our designers and suppliers,
-                                      and sell direct to you, which means quality, exclusive
-                                      products, at a price anyone can afford.</p>
-                                    <span class="time_date"> 11:01 AM    |    Today</span></div>
+                                        and sell direct to you, which means quality, exclusive
+                                        products, at a price anyone can afford.</p>
+                                    <span class="time_date"> 11:01 AM | Today</span>
                                 </div>
-                              </div>
-                              <div class="incoming_msg">
-                                <div class="incoming_msg_img"> <img src="../Images/Users/User_Stratos.jpg" alt="sunil"> </div>
-                                <div class="received_msg">
-                                        <div class="Name" style="display:inline-block"><p>Stratos</p></div>
-        
-                                  <div class="received_withd_msg">
-                                    <p>Quite interesting steve.Can u display an analytic view or companies overall funding this year ?</p>
-                                    <span class="time_date"> 11:01 AM    |    Today</span></div>
-                                </div>
-                              </div>
-                              
-        
-        
-        
+                            </div>
                         </div>
+                        <div class="incoming_msg">
+                            <div class="incoming_msg_img"> <img src="../Images/Users/User_Stratos.jpg" class="MsgImg"
+                                    alt="sunil"> </div>
+                            <div class="received_msg">
+                                <div class="Name" style="display:inline-block">
+                                    <p>Stratos</p>
+                                </div>
+
+                                <div class="received_withd_msg">
+                                    <p>Quite interesting steve.Can u display an analytic view or companies overall
+                                        funding this year ?</p>
+                                    <span class="time_date"> 11:01 AM | Today</span>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                    </div>
 
                     <div class="SendPanel">
-                            <div class="SendWrapper2" id="SendWrapper2">
-                                    <button type="button" class="clickableElement OpenFile2" >
-                                        <img src="../Images/Buttons/file.png" class="OpenFileImage" style="width:30px;border-radius:0" id="fi" alt="Chat">
-                                    </button>
-                                    <textarea name="message-to-send" id="message-to-send" class="message-to-send" placeholder ="Type your message" rows="3"></textarea>
-                                    <button type="button" class="clickableElement SendMessage2" >
-                                        <img src="../Images/Buttons/Tick.png" class="SendMessageImage2" id="si" style="width:30px;border-radius:0" alt="Chat">
-                                    </button>
-                                </div>   
+                        <div class="SendWrapper2" id="SendWrapper2">
+                            <button type="button" class="clickableElement OpenFile2">
+                                <img src="../Images/Buttons/file.png" class="OpenFileImage" style="width:30px;border-radius:0"
+                                    id="fi" alt="Chat">
+                            </button>
+                            <textarea name="message-to-send" id="message-to-send" class="message-to-send" placeholder="Type your message"
+                                rows="3"></textarea>
+                            <button type="button" class="clickableElement SendMessage2">
+                                <img src="../Images/Buttons/Tick.png" class="SendMessageImage2" id="si" style="width:30px;border-radius:0"
+                                    alt="Chat">
+                            </button>
+                        </div>
                     </div>
 
-                   
-                </div>
-
-            
-
 
                 </div>
+
 
 
 
             </div>
-            
+
+
+
         </div>
+
+    </div>
     </div>
 
 
