@@ -227,8 +227,7 @@
     top:0px;
     overflow-y: scroll;
     border-bottom: 2px solid #C8C8C8;
-    border-top: 2px solid #c8c8c8;
-    border-right: 1px solid #c8c8c8;
+     
 
 }
 
@@ -340,7 +339,7 @@
     width: 92%;
    }
    .received_withd_msg p {
-    background: #ebebeb none repeat scroll 0 0;
+    background:white none repeat scroll 0 0;
     border-radius: 3px;
     color: #646464;
     font-size: 14px;

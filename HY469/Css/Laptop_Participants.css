@@ -45,7 +45,8 @@ div{margin:0px;padding:0;background-color:transparent;text-align:left}
   float:left;
   width: 310px;
   height: 365px;
-  background-color:#c8c8c8;
+  background-color:rgb(228, 228, 228);
+  border:2px solid #c8c8c8;
 }
 
 .PerOptionsPanel{
@@ -60,13 +61,17 @@ div{margin:0px;padding:0;background-color:transparent;text-align:left}
   width: 420px;
   height: 365px;
   background-color:rgb(228, 228, 228);
+  border: 2px solid #c8c8c8;
+
 }
 
 .GrouPrivateChatLowerRightPanel{
   float:left;
   width: 420px;
   height: 365px;
-  background-color:#FFFFFF;
+  background-color: rgb(228, 228, 228);
+  border: 2px solid #c8c8c8;
+
 }
 
 /* -- IMAGES , BUTTONS , TEXTS -- */
@@ -218,8 +223,8 @@ h1.UserButtonExp{
 fieldset {
 margin: 30px auto 0;
 position: relative;
-top: -35px;
-width: 415px;
+top: -20px;
+width: 95%;
 text-align: left;
 }
 
