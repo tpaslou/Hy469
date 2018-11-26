@@ -65,10 +65,14 @@ function PlayPauseVideo(){
     }
 
     if(currPPTImage == 4){
-        if (myVideo.paused) 
+        if (myVideo.paused){
+            console.log("-- Play Video");
             myVideo.play(); 
-        else 
+        } 
+        else {
+            console.log("-- Pause Video");
             myVideo.pause();
+        }
     }
 }
 
@@ -85,7 +89,7 @@ function ChangePPTImage(newValue){
         elements[i].setAttribute('src', name); 
         if(currPPTImage == 4){
             elements[i].hidden = true;
-            $('.PPTPanelVideo').show();          
+            $('.PPTPanelVideo').show();    
         }
         else{
             elements[i].hidden = false;
