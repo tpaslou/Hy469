@@ -131,113 +131,135 @@
 
     <div id="MainPanel" class="MainPanel">
 
-       
         <div class="PrivateChatPanel" id="PrivateChatPanel">
+        
+            <div class="PChatPanel" id="PChatPanel">
 
-         <script>        $("#PrivateChatPanel").hide(); </script>   
-        <div class="PChat" id="PChat">
-            
-            <div class="Message">
-                <div id="MUserIcon" class="MUserIcon" >
-                <img src="../Images/Users/User_Paul.jpg" class="MUserImage">
-                <span class="Mdot"></span>
-                <p class="MRequestInfoText" >Paul Zikas</p>
-                <p class="MTime" >11:05</p>  
-  
-                </div>
-                <div class="ActualMessage">
-                    <p class="MessageText">How you doin Bitch ?</p>
-                </div>
-            </div>
-           
-            <div class="Message">
-                <div id="MUserIcon" class="MUserIcon" >
-                <img src="../Images/Users/User_Steve.jpg" class="MUserImage">
-                <span class="Mdot"></span>
-                <p class="MRequestInfoText">Me</p> 
-                <p class="MTime" >11:09</p>  
-                </div>
-                <div class="ActualMessage">
-                    <p class="MessageText">Blazing all day and fucking hores ! #NOT hy469 took my life </p>
-                </div>
-            </div>
-        </div>
+            <div id="GChat">
+                <div class="Messages">
 
-
-        <div class="PChat" id="PChat2">
-            
-                <div class="Message">
-                    <div id="MUserIcon" class="MUserIcon" >
-                    <img src="../Images/Users/User_Stratos.jpg" class="MUserImage">
-                    <span class="Mdot"></span>
-                    <p class="MRequestInfoText" >Stratos</p>
-                    <p class="MTime" >10:15</p>  
-      
-                    </div>
-                    <div class="ActualMessage">
-                        <p class="MessageText">Do you have the report?</p>
-                    </div>
-                </div>
-               
-                <div class="Message">
-                    <div id="MUserIcon" class="MUserIcon" >
-                    <img src="../Images/Users/User_Steve.jpg" class="MUserImage">
-                    <span class="Mdot"></span>
-                    <p class="MRequestInfoText">Me</p> 
-                    <p class="MTime" >10:19</p>  
-                    </div>
-                    <div class="ActualMessage">
-                        <p class="MessageText">Yes, I'll upload it here!</p>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="PChat" id="PChat3">
-            
-                    <div class="Message">
-                        <div id="MUserIcon" class="MUserIcon" >
-                        <img src="../Images/Users/User_Sally.jpg" class="MUserImage">
-                        <span class="Mdot"></span>
-                        <p class="MRequestInfoText" >Sally</p>
-                        <p class="MTime" >9:53</p>  
-          
-                        </div>
-                        <div class="ActualMessage">
-                            <p class="MessageText">Mark your callendar: Meeting at 15:00 ;)</p>
-                        </div>
-                    </div>
                    
-                    <div class="Message">
-                        <div id="MUserIcon" class="MUserIcon" >
-                        <img src="../Images/Users/User_Steve.jpg" class="MUserImage">
-                        <span class="Mdot"></span>
-                        <p class="MRequestInfoText">Me</p> 
-                        <p class="MTime" >9:58</p>  
+                        <div class="incoming_msg">
+                            <div class="incoming_msg_img"> <img id="msg_img" src="../Images/Users/User_Steve.jpg"
+                                    class="MsgImg" alt="sunil"> </div>
+                            <div class="received_msg">
+                                <div class="Name" style="display:inline-block">
+                                    <p>Steve Kateros</p>
+                                </div>
+
+                                <div class="received_withd_msg">
+                                    <p>We work directly with our designers and suppliers,
+                                        and sell direct to you, which means quality, exclusive
+                                        products, at a price anyone can afford.</p>
+                                    <span class="time_date"> 11:01 AM | Today</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="ActualMessage">
-                            <p class="MessageText">Thanks Sally for the update, c u there.</p>
+                        <div class="incoming_msg">
+                            <div class="incoming_msg_img"> <img src="../Images/Users/User_Stratos.jpg" class="MsgImg"
+                                    alt="sunil"> </div>
+                            <div class="received_msg">
+                                <div class="Name" style="display:inline-block">
+                                    <p>Stratos</p>
+                                </div>
+
+                                <div class="received_withd_msg">
+                                    <p>Quite interesting steve.Can u display an analytic view or companies overall
+                                        funding this year ?</p>
+                                    <span class="time_date"> 11:01 AM | Today</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="incoming_msg">
+                            <div class="incoming_msg_img"> <img src="../Images/Users/User_Stratos.jpg" class="MsgImg"
+                                    alt="sunil"> </div>
+                            <div class="received_msg">
+                                <div class="Name" style="display:inline-block">
+                                    <p>Stratos</p>
+                                </div>
+
+                                <div class="received_withd_msg">
+                                    <p>Quite interesting steve.Can u display an analytic view or companies overall
+                                        funding this year ?</p>
+                                    <span class="time_date"> 11:01 AM | Today</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="incoming_msg">
+                            <div class="incoming_msg_img"> <img src="../Images/Users/User_Stratos.jpg" class="MsgImg"
+                                    alt="sunil"> </div>
+                            <div class="received_msg">
+                                <div class="Name" style="display:inline-block">
+                                    <p>Stratos</p>
+                                </div>
+
+                                <div class="received_withd_msg">
+                                    <p>Quite interesting steve.Can u display an analytic view or companies overall
+                                        funding this year ?</p>
+                                    <span class="time_date"> 11:01 AM | Today</span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        </div>
+                  </div>  
+
+
+                  <div id="PChat" style="display:none">
+                
+                    <div class="incoming_msg">
+                        <div class="incoming_msg_img"> <img src="../Images/Users/User_Steve.jpg" class="MsgImg" alt="sunil">
+                        </div>
+                        <div class="received_msg">
+                            <div class="Name" style="display:inline-block">
+                                <p>Steve Kateros</p>
+                            </div>
+
+                            <div class="received_withd_msg">
+                                <p>We work directly with our designers and suppliers,
+                                    and sell direct to you, which means quality, exclusive
+                                    products, at a price anyone can afford.</p>
+                                <span class="time_date"> 11:01 AM | Today</span>
+                            </div>
                         </div>
                     </div>
-                </div>
+                    <div class="incoming_msg">
+                        <div class="incoming_msg_img"> <img src="../Images/Users/User_Paul.jpg" class="MsgImg"
+                                alt="sunil"> </div>
+                        <div class="received_msg">
+                            <div class="Name" style="display:inline-block">
+                                <p>Paul Zikas</p>
+                            </div>
+
+                            <div class="received_withd_msg">
+                                <p>How you doing Steve ?</p>
+                                <span class="time_date"> 11:01 AM | Today</span>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                
+                
+                
+                
+            
+            </div>
 
             
 
 
 
 
-        <div class="PSendWrapper" id="PSendWrapper">
-            <button type="button" class="OpenFile" >
-                <img src="../Images/Buttons/file.png" class="btn OpenFileImage" id="fi" alt="Chat">
-            </button>
-            <textarea name="message-to-send" id="message-to-send" class="message-to-send" placeholder ="Type your message" rows="3"></textarea>
-            <button type="button" class="SendMessage" >
-                <img src="../Images/Buttons/Tick.png" class="btn SendMessageImage" id="si" alt="Chat">
-            </button>
-
-        </div>   
+        
 
         <div class="PrivateChatPeople">
+                <div id="GroupChat" class="M3UserIcon" onclick="openPrivateChat(this)">
+                        <img src="../Images/Buttons/GroupChat.png" class="M2UserImage">
+                        <span class="M2dot"></span>
+                </div>
+
+
                 <div id="M3UserIcon 1" class="M3UserIcon" onclick="openPrivateChat(this)">
                 <img src="../Images/Users/User_Paul.jpg" class="M2UserImage">
                 <span class="M2dot"></span>
@@ -262,76 +284,19 @@
 
         </div>
 
+        <div class="PSendWrapper" id="PSendWrapper">
+                <button type="button" class="OpenFile" >
+                    <img src="../Images/Buttons/file.png" class="btn OpenFileImage" id="fi" alt="Chat">
+                </button>
+                <textarea name="message-to-send" id="message-to-send" class="message-to-send" placeholder ="Type your message" rows="3"></textarea>
+                <button type="button" class="SendMessage" >
+                    <img src="../Images/Buttons/Tick.png" class="btn SendMessageImage" id="si" alt="Chat">
+                </button>
+    
+            </div>   
+
             
         </div>
-
-
-   
-        <div class="Chat" id="Chat">
-            
-            <div class="Message">
-                <div id="MUserIcon" class="MUserIcon" >
-                <img src="../Images/Users/User_Paul.jpg" class="MUserImage">
-                <span class="Mdot"></span>
-                <p class="MRequestInfoText" >Paul Zikas</p>
-                <p class="MTime" >11:05</p>  
-  
-                </div>
-                <div class="ActualMessage">
-                    <p class="MessageText">Stratos send me please the logistics pdf!</p>
-                </div>
-            </div>
-            <div class="Message">
-                <div id="MUserIcon" class="MUserIcon" >
-                <img src="../Images/Users/User_Stratos.jpg" class="MUserImage">
-                <span class="Mdot"></span>
-                <p class="MRequestInfoText" >Stratos W.</p>  
-                <p class="MTime" >11:07</p>  
-                </div>
-                <div class="ActualMessage">
-                    
-                        <p class="FileText">Shared a file</p>
-                        <a class="fa fa-file-pdf-o" href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" style="font-size:24px;color:blue;position: relative;top:10; left:30px;
-                        text-decoration: underline ;"> Logistics.pdf</a>
-
-                </div>
-            </div>
-            <div class="Message">
-                <div id="MUserIcon" class="MUserIcon" >
-                <img src="../Images/Users/User_Steve.jpg" class="MUserImage">
-                <span class="Mdot"></span>
-                <p class="MRequestInfoText">Steve Ens</p> 
-                <p class="MTime" >11:09</p>  
-                </div>
-                <div class="ActualMessage">
-                    <p class="MessageText">Hello fellas! I am now at San Diego, cu
-                        in 3 days! We should really meet there sometime </p>
-                </div>
-            </div>
-
-           
-            
-        </div>
-
-        <div class="SendWrapper" id="SendWrapper">
-            <button type="button" class="OpenFile" >
-                <img src="../Images/Buttons/file.png" class="btn OpenFileImage" id="fi" alt="Chat">
-            </button>
-            <textarea name="message-to-send" id="message-to-send" class="message-to-send" placeholder ="Type your message" rows="3"></textarea>
-            <button type="button" class="SendMessage" >
-                <img src="../Images/Buttons/Tick.png" class="btn SendMessageImage" id="si" alt="Chat">
-            </button>
-        </div>   
-
-        <div class="ChatTab_wrapper">
-            <div id="ChatExtraButtons" class="ChatExtraButtons" >
-                <button class="tablink" onclick="openChat('Group Chat', this)" id="GroupChat">Group Chat</button>
-                <script>
-                    document.getElementById("GroupChat").click();
-                </script>
-                <button class="tablink" onclick="openChat('Private Chat', this)" id="PrivateChat">Private Chat</button>
-            </div>
-        </div> 
     </div>
 
     <div id="ParticipantsPanel" class="MainPanel" style="display:none">

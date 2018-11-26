@@ -339,3 +339,48 @@ h1.NextSlideText {
     top: -8px;
     background-color: #FFFFFF;
 }
+
+.incoming_msg{
+  left: 5%;
+}
+.incoming_msg_img {
+  display: inline-block;
+  width: 6%;
+}
+.received_msg {
+  display: inline-block;
+  padding: 0 0 0 10px;
+  vertical-align: top;
+  width: 92%;
+ }
+ .received_withd_msg p {
+  background:white none repeat scroll 0 0;
+  border-radius: 3px;
+  color: #646464;
+  font-size: 14px;
+  margin: 0;
+  padding: 5px 10px 5px 12px;
+  width: 100%;
+}
+.time_date {
+  color: #747474;
+  display: block;
+  font-size: 12px;
+  margin: 8px 0 0;
+}
+.received_withd_msg { width: 98%;}
+.mesgs {
+  float: left;
+  padding: 30px 15px 0 25px;
+  width: 60%;
+}
+.incoming_msg_img {
+  display: inline-block;
+  width: 6%;
+}
+.MsgImg {
+  vertical-align: middle;
+  border-style: none;
+  max-width: 100%;
+  border-radius: 20px;
+}
