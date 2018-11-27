@@ -21,6 +21,13 @@ var Sockets = (function () {
     } else {
       console.log('received a message from server that i dont handle with type:' + data.type);
     }
+
+    if (msgType.includes('kinect/speech')) {
+      
+
+    }
+
+
   }
 
 
