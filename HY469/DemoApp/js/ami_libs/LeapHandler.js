@@ -9,7 +9,22 @@ if (!GlobalConfig.DebugMode) {
     var leapLastTimeNoHand = 0;
     var cursorOn = false;
 
+    leapController.on('streamingStarted', function() {
+        console.log("Leap connected.");
+
+        $('body').css('cursor', 'none');
+        Cursor.Show();
+      });
+      
+      leapController.on('streamingStopped', function() {
+        console.log("Leap disconnected.");
+
+        $('body').css('cursor', 'default');
+        Cursor.Hide();
+      });
+
     leapController.loop(function (frame) {
+
         // NOOP
         var appWidth = $(window).width();
         var appHeight = $(window).height();
