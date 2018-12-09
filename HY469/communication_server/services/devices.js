@@ -6,4 +6,6 @@
 module.exports = {
     TV: 'tv',
     MOBILE: 'mobile'
+	TABLET: 'tablet'
+	PC: 'pc'
 };

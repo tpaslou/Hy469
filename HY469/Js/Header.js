@@ -24,6 +24,9 @@ $(document).ready(function(){
 
     /* Side Panel: Previous Button */
     $('#PreviousBtn').click(function(){
+        var myVideo = document.getElementById("PPTVideo");
+        myVideo.pause();
+
         if(currPPTSlide == 0){
             /* Do Nothing */
         }
@@ -50,6 +53,9 @@ $(document).ready(function(){
 
     /* Side Panel: Next Button */
     $('#NextBtn').click(function(){
+        var myVideo = document.getElementById("PPTVideo");
+        myVideo.pause();
+
         if(currPPTSlide == 0){
             ++currPPTSlide;
             $('#PPTVideoImg').attr('src', '../Images/VideoPresentation/PV_2.png'); 
