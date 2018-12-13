@@ -1,4 +1,9 @@
 $(document).ready(function(){
+    //here to connect with sockets
+    if (GlobalConfig.ConnectToServer) {
+        //Start sockets' connections
+        Sockets.Connect();
+      }
     var currPPTSlide = 0;
     var annotations = 0;
     /* Video Controls: Mute / Unmute Button */
@@ -83,6 +88,7 @@ $(document).ready(function(){
 
     //-------------Take Notes-------------------
     $('#TakeNotesBtn').click(function(){
+        Http.SendHelloWorldMessage("TakeNotes");
         $('#NotesPanel').show();
         $('#MainPanel').hide();
         $('#ParticipantsPanel').hide();
@@ -90,6 +96,7 @@ $(document).ready(function(){
         $('#FileSystemPanel').hide();
     });
     $('#ChangePPTBtn').click(function(){
+        Http.SendHelloWorldMessage("ChangePPT");
         $('#FileSystemPanel').show();
         $('#MainPanel').hide();
         $('#ParticipantsPanel').hide();
@@ -100,11 +107,13 @@ $(document).ready(function(){
         //-------------Take Notes-------------------
         $('#TakeAnnotationBtn').click(function(){
             if(annotations==0){
+                Http.SendHelloWorldMessage("AnnotationOn");
                 $('#VideoAnnotationRed').show();
                 $('#VideoAnnotationGreen').hide();
                 $('#VideoAnnotationBlack').hide();
                 annotations = 1;
             }else{
+                Http.SendHelloWorldMessage("AnnotationOff");
                 $('#VideoAnnotationRed').hide();
                 $('#VideoAnnotationGreen').hide();
                 $('#VideoAnnotationBlack').hide();
@@ -115,6 +124,7 @@ $(document).ready(function(){
 
         $('#ColorRedBtn').click(function(){
             if(annotations==1){
+                Http.SendHelloWorldMessage("AnnotationRed");
                 $('#VideoAnnotationRed').show();
                 $('#VideoAnnotationGreen').hide();
                 $('#VideoAnnotationBlack').hide();
@@ -123,6 +133,7 @@ $(document).ready(function(){
 
         $('#ColorGreenBtn').click(function(){
             if(annotations==1){
+                Http.SendHelloWorldMessage("AnnotationGreen");
                 $('#VideoAnnotationRed').hide();
                 $('#VideoAnnotationGreen').show();
                 $('#VideoAnnotationBlack').hide();
@@ -131,6 +142,7 @@ $(document).ready(function(){
 
         $('#ColorBlackBtn').click(function(){
             if(annotations==1){
+                Http.SendHelloWorldMessage("AnnotationBlack");
                 $('#VideoAnnotationRed').hide();
                 $('#VideoAnnotationGreen').hide();
                 $('#VideoAnnotationBlack').show();

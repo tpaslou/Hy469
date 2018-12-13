@@ -21,7 +21,7 @@ exports.helloWorld = (req, res) => {
 
 
     //if this call affects a device, you can send the message via the websocket using a function in the connection file
-    connection.sendHelloWold(myMessage,DEVICES.TV);
+    connection.sendHelloWold(message,DEVICES.TV);
 
     //send a response
     res.send('i received and sent the message successfully');
