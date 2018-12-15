@@ -16,6 +16,8 @@ $(document).ready(function(){
         currPressedButton ="#MobileBarPresentationBtn";
         $('#ChatPanel').hide();
         $('#PeoplePanel').hide();
+        $('#SettingsPanel').hide();
+
         $('#PresentationTabMobile').show();
     });
 
@@ -27,6 +29,8 @@ $(document).ready(function(){
         currPressedButton ="#MobileBarChatBtn";
         $('#PeoplePanel').hide();
         $('#PresentationTabMobile').hide();
+        $('#SettingsPanel').hide();
+
         $('#ChatPanel').show();
     });
 
@@ -38,6 +42,7 @@ $(document).ready(function(){
         currPressedButton ="#MobileBarParticipantsBtn";
         $('#ChatPanel').hide();
         $('#PresentationTabMobile').hide();
+        $('#SettingsPanel').hide();
         $('#PeoplePanel').show();
 
     });
@@ -52,6 +57,8 @@ $(document).ready(function(){
         $('#PeoplePanel').hide();
 
         $('#PresentationTabMobile').hide();
+        $('#SettingsPanel').show();
+
     });
     
     $('.topButtonHeader').click(function () {

@@ -293,6 +293,54 @@
                     </fieldset>
             </div>
             </div>
+            
+            <div id="SettingsPanel"  style="display:none">
+                <div id="MiddlePanelMoreOptionsParticipant" class="MiddlePanelSettingsNoScrl" style="top:-10px;">
+
+                    <fieldset>
+                        <legend>OPTIONS:</legend>
+                        <form action="">
+                            <div class="item">
+                                <p>Microphone</p>
+                                <input type="checkbox" id="toggle_microphonePart" name="" value="">
+                                <div class="toggle">
+                                    <label for="toggle_microphonePart"><i></i></label>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <p>Camera</p>
+                                <input type="checkbox" id="toggle_cameraPart" name="" value="">
+                                <div class="toggle">
+                                    <label for="toggle_cameraPart"><i></i></label>
+                                </div>
+                            </div>
+                        </form>
+                    </fieldset>
+                    <fieldset>
+                        <legend>SESSION:</legend>
+                        <form action="">
+                            <div class="item">
+                                <p>Log Out</p>
+                            </div>
+                        </form>
+                    </fieldset>
+                    <button id="LogOutBtn" type="button" style="margin-bottom: 70px; left: 475px;" class="LogOutButton" onclick="window.location.href='../Html/LoginScreen.html'">
+                        <img id="LogOutButtonImg" src="../Images/MiddleSection/Button_LogOut.png"class="PresentationButtonImage">
+                    </button>
+                    <fieldset style="position:relative; top:-140px;">
+                            <legend>TV MONITOR:</legend>
+                            <form action="">
+                                <div class="item">
+                                    <p>Ask for coordinator privileges</p>
+                                    <input type="checkbox" id="toggle_presentation" name="" value="">
+                                </div>
+                            </form>
+                        </fieldset>
+                        <button id="CoordPrivBtn" type="button" style="left: 475px;position:relative; top:-225px;" class="LogOutButton">
+                            <img id="LogOutButtonImg" src="../Images/Buttons/Button_Coord.png"class="PresentationButtonImage">
+                        </button>
+            </div>
+            </div>
 
 
 
