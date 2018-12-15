@@ -9,6 +9,10 @@ var Sockets = (function () {
     var data = jQuery.parseJSON(e.data);
     //data.type - the type of the message
     //data.message - the data sent from server
+
+    console.log(data.type);
+    console.log(data.message);
+
     if(data.message == "TakeNotes"){
       $('#NotesPanel').show();
       $('#MainPanel').hide();
@@ -21,27 +25,26 @@ var Sockets = (function () {
       $('#ParticipantsPanel').hide();
       $('#SettingsPanel').hide();
       $('#NotesPanel').hide();
-    }else if(data.message == "AnnotationOn"){
-      //see annotations = 0 and 1 here (how to change those)
-      $('#VideoAnnotationRed').show();
-      $('#VideoAnnotationGreen').hide();
-      $('#VideoAnnotationBlack').hide();
-    }else if(data.message == "AnnotationOff"){
-      $('#VideoAnnotationRed').hide();
-      $('#VideoAnnotationGreen').hide();
-      $('#VideoAnnotationBlack').hide();
+    }else if(data.message == "Annotation"){
+      TakeAnnotation();     
     }else if(data.message == "AnnotationRed"){
-      $('#VideoAnnotationRed').show();
-      $('#VideoAnnotationGreen').hide();
-      $('#VideoAnnotationBlack').hide();
+      AnnotationColor(0);
     }else if(data.message == "AnnotationGreen"){
-      $('#VideoAnnotationRed').hide();
-      $('#VideoAnnotationGreen').show();
-      $('#VideoAnnotationBlack').hide();
+      AnnotationColor(1);
     }else if(data.message == "AnnotationBlack"){
-      $('#VideoAnnotationRed').hide();
-      $('#VideoAnnotationGreen').hide();
-      $('#VideoAnnotationBlack').show();
+      AnnotationColor(2);
+    }
+    else if(data.message == "NextSlide"){
+      NextSlide();
+    }
+    else if(data.message == "PreviousSlide"){
+      PreviousSlide();
+    }
+    else if(data.message == "PlayPauseVideo"){
+      VideoControls(0);
+    }
+    else if(data.message == "MuteUnmuteVideo"){
+      VideoControls(1);
     }
   }
 

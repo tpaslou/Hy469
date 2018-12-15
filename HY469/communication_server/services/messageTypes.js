@@ -13,5 +13,5 @@ module.exports = {
 	ANNOTATION_OFF: "annotationOFF",
 	ANNOTATION_ACCEPT: "annotationAccept",
 	COORD_ACCEPT: "coordAccept",
-	COORD_REJECT: "coordReject",
+	COORD_REJECT: "coordReject"
 };
