@@ -7,11 +7,13 @@ var Sockets = (function () {
 
   function HandleMessages(e) {
     var data = jQuery.parseJSON(e.data);
+    
     //data.type - the type of the message
     //data.message - the data sent from server
 
     console.log(data.type);
     console.log(data.message);
+    console.log();
 
     if(data.message == "TakeNotes"){
       $('#NotesPanel').show();
@@ -34,8 +36,7 @@ var Sockets = (function () {
     }else if(data.message == "AnnotationBlack"){
       AnnotationColor(2);
     }
-    else if(data.message == "NextSlide"){
-      console.log(window.location.pathname);
+    else if(data.message == "NextSlide"){      
       NextSlide();
     }
     else if(data.message == "PreviousSlide"){
