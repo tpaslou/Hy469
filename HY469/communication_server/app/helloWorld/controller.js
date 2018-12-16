@@ -1,6 +1,10 @@
 var connection = require('./connection');
-
 var DEVICES = require("../../services/devices");
+
+//-----------------HOLOLENS---------------------
+
+//----------------------------------------------
+
 
 // The main code for you remote function
 exports.helloWorld = (req, res) => {

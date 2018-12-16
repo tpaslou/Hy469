@@ -6,7 +6,9 @@
 //o server to pernei edw kai to kanei broadcast edw
 var remoteMessenger = require('../../services/remoteMessenger/remoteMessenger');
 const MESSAGE_TYPES = require('../../services/messageTypes');
+var holoConnection = require('../../services/HoloConnection');
 
 exports.sendHelloWold = (message, deviceTypes) => {
     remoteMessenger.sendMessage(MESSAGE_TYPES.HELLOWORLD, message, deviceTypes);
 }
+
