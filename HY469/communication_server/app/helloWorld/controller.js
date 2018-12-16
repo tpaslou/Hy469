@@ -1,6 +1,22 @@
 var connection = require('./connection');
 
+//-----------------HOLOLENS---------------------
 var DEVICES = require("../../services/devices");
+var io = require('socket.io')({
+    transports: ['websocket'],
+});
+io.attach(4567);
+
+io.on('connection', function(socket){
+    socket.on('Annotation',function(){
+        console.log('Annotation event received');
+        socket.emit('Annotation');
+    });
+});
+
+console.log('Hololens Server started');
+//----------------------------------------------
+
 
 // The main code for you remote function
 exports.helloWorld = (req, res) => {
