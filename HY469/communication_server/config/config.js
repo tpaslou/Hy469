@@ -6,4 +6,6 @@ module.exports = {
 
     sensorSocketPort : 7684, // the port where the kinect and phidget sensors will connect.
 
+    hololensPort : 4567,
+
 };

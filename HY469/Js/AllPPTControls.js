@@ -23,7 +23,12 @@ function NextSlide(){
         TVNextPrevSlide(currPPTSlide + 1);
     else if(window.location.pathname == PartMobile)
         MobileNextSlide();
-
+    else{
+        TabletNextSlide();
+        MobileNextSlide();
+        TVNextPrevSlide(currPPTSlide + 1);
+        LaptopNextSlide();
+    }
     ++currPPTSlide;
 }
 
@@ -48,12 +53,13 @@ function TakeAnnotation(){
         annotations = 1;
     else
         annotations = 0;
-
+        console.log("zik" + window.location.pathname);
     if(window.location.pathname == Coord || window.location.pathname == PartTablet)
         TabletTakeAnnotation();
 }
 
 function AnnotationColor(color){
+    
     if(window.location.pathname == Coord || window.location.pathname == PartTablet)
         TabletAnnotationColor();
 }
