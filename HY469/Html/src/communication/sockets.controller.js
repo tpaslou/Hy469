@@ -35,6 +35,7 @@ var Sockets = (function () {
       AnnotationColor(2);
     }
     else if(data.message == "NextSlide"){
+      console.log(window.location.pathname);
       NextSlide();
     }
     else if(data.message == "PreviousSlide"){
@@ -43,12 +44,13 @@ var Sockets = (function () {
     else if(data.message == "PlayPauseVideo"){
       VideoControls(0);
     }
-    else if(data.message == "MuteUnmuteVideo"){
+    else if(data.message == "MuteVideo"){
       VideoControls(1);
     }
+    else if(data.message == "UnmuteVideo"){
+      VideoControls(2);
+    }
   }
-
-
 
   class WSConnection {
 
