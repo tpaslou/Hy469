@@ -354,7 +354,7 @@ h1.NextSlideText {
   width: 92%;
  }
  .received_withd_msg p {
-  background:white none repeat scroll 0 0;
+  background:#ebebeb  none repeat scroll 0 0;
   border-radius: 3px;
   color: #646464;
   font-size: 14px;
@@ -389,6 +389,10 @@ h1.NextSlideText {
   width: 562px;
   height: 375px;
 }
+#SettingsPanel{
+  width: 562px;
+  height: 375px;
+}
 
 
 .MiddlePanelMoreOptionsParticipant{
@@ -409,26 +413,26 @@ h1.NextSlideText {
   position: relative;
   border-radius: 50%;
   left: 10px;
-  width: 120px;
-  height: 120px;
+  width: 80px;
+  height: 80px;
 }
 
 .RemoteUserDot {
   position: relative;
-  height: 25px;
-  width: 25px;
-  top: 55px;
-  left: -35px;
-  background-color: rgb(0, 255, 0);
-  border-radius: 50%;
-  display: inline-block;
+    height: 15px;
+    width: 15px;
+    top: 37px;
+    left: -25px;
+    background-color: rgb(0, 255, 0);
+    border-radius: 50%;
+    display: inline-block;
 }
 
 .RemoteUserName {
   position: relative;
   color: rgb(0, 0, 0);
   left: 12px;
-  font-size: 25px;
+  font-size: 20px;
   font-weight: bold;
 }
 
@@ -438,7 +442,115 @@ h1.NextSlideText {
   background-size: cover;
   border: none;
   outline: 0;
-  width: 120px;
-  height: 120px;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+}
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 6px 5px;
+  padding: .35em .625em .75em;
+}
+
+.PresentationButtonImage {
+  position: relative;
+  left: 0px;
+  top: 0px;
+  width: 40px;
+  height: 40px;
+}
+legend {
+  margin: 0 0 5px;
+  color: #6f6f74;
+  font-size: 20px;
+  line-height: 1.4;
+}
+form {
+  border-top: 1px solid #c8c7cc;
+  border-bottom: 1px solid #c8c7cc;
+}
+.item {
+  position: relative;
+  box-sizing: border-box;
+  background: #ffffff;
+}
+.item:nth-child(1) p {
+  border: 0;
+}
+input[type="checkbox"] {
+  display: none;
+}
+.toggle {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 9px;
+  margin: auto;
+  width: 51px;
+  height: 31px;
+}
+.toggle label {
+  width: 51px;
+  height: 32px;
+  border-radius: 32px;
+  border: 2px solid #e5e5e5;
+  transition: all 0.30s ease;
+}
+.item p {
+  border-top: 1px solid #c8c7cc;
+  margin: 0 0 0 8px;
+  height: 50px;
+  color: #000000;
+  font-size: 20px;
+  line-height: 44px;
+}
+form {
+  border-top: 1px solid #c8c7cc;
+  border-bottom: 1px solid #c8c7cc;
+}
+.toggle i {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 28px;
+  height: 28px;
+  border-radius: 28px;
+  box-shadow: 0 0 1px 0 rgba(0,0,0, 0.25), 0 3px 3px 0 rgba(0,0,0, 0.15);
+  background: #ffffff;
+  transition: all 0.3s cubic-bezier(0.275, -0.450, 0.725, 1.450);
+}
+.toggle label, .toggle i {
+  box-sizing: border-box;
+  display: block;
+  background: #ffffff;
+}
+toggle label, .toggle i {
+  box-sizing: border-box;
+  display: block;
+  background: #ffffff;
+}
+input[type="checkbox"]:active + .toggle label, input[type="checkbox"]:checked + .toggle label {
+  border: 16px solid #1C67A0;
+}
+input[type="checkbox"]:checked + .toggle i {
+  left: 21px;
+}
+button, html [type=button], [type=reset], [type=submit] {
+  -webkit-appearance: button;
+}
+.LogOutButton {
+  position: relative;
+  background-color: rgba(155, 155, 155, 0.534);
+  background-size: cover;
+  top: -85px;
+  left: 590px;
+  border-radius: 6px;
+  border: none;
+  outline: 0;
+  width: 40px;
+  height: 40px;
+  margin: 20px;
+  padding: 0px;
   cursor: pointer;
 }
