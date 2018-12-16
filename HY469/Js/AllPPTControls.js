@@ -64,8 +64,12 @@ function AnnotationColor(color){
 function VideoControls(controlType){
     if(window.location.pathname == Coord || window.location.pathname == PartTablet)
         TabletVideoControls(controlType);
+    else if(window.location.pathname == PartLaptop)
+        LaptopVideoControls();
     else if(window.location.pathname == TV)
         TVVideoControls();
+    else if(window.location.pathname == PartMobile)
+        MobileVideoControls();
 }
 
 /* ---- START: TABLET : Coord + Participant */
@@ -89,7 +93,8 @@ function TabletNextSlide(){
         $('#PPTVideo').show(); 
         $('#NextSlideImg').attr('src', '../Images/VideoPresentation/PV_5.png'); 
         
-        $('#VideoControlsDiv').show();
+        if(window.location.pathname == Coord)
+            $('#VideoControlsDiv').show();
     }  
 }
 
@@ -111,7 +116,8 @@ function TabletPreviousSlide(){
         $('#PPTVideoImg').attr('src', '../Images/VideoPresentation/PV_3.png'); 
         $('#NextSlideImg').attr('src', '../Images/VideoPresentation/PV_4.png'); 
 
-        $('#VideoControlsDiv').hide();
+        if(window.location.pathname == Coord)
+            $('#VideoControlsDiv').hide();
     } 
 }
 
@@ -168,11 +174,13 @@ function TabletVideoControls(controlType){
 
 /* ---- START: LAPTOP */
 
-function LaptopNextSlide(){   
+function LaptopNextSlide(){  
+    var myVideo = document.getElementById("PPTVideo");
+    myVideo.pause();
+
     if(currPPTSlide == 0){
         $('#LaptopCurrentPPTScreen').attr('src', '../Images/VideoPresentation/PV_2.png'); 
         $('#LaptopNextPPTScreen').attr('src', '../Images/VideoPresentation/PV_3.png'); 
-
     }
     else if(currPPTSlide == 1){
         $('#LaptopCurrentPPTScreen').attr('src', '../Images/VideoPresentation/PV_3.png'); 
@@ -180,15 +188,16 @@ function LaptopNextSlide(){
     }  
     else if(currPPTSlide == 2){
         $('#LaptopCurrentPPTScreen').attr('src', '../Images/VideoPresentation/PV_4.png');
-        //$('#PPTVideoImg').hide(); 
-        //$('#PPTVideo').show(); 
+        $('#LaptopCurrentPPTScreen').hide(); 
+        $('#PPTVideo').show(); 
         $('#LaptopNextPPTScreen').attr('src', '../Images/VideoPresentation/PV_5.png'); 
-        
-        //$('#VideoControlsDiv').show();
     }  
 }
 
 function LaptopPreviousSlide(){
+    var myVideo = document.getElementById("PPTVideo");
+    myVideo.pause();
+
     if(currPPTSlide == 1){
         $('#LaptopCurrentPPTScreen').attr('src', '../Images/VideoPresentation/LaptopSize/PV_1.png'); 
         $('#LaptopNextPPTScreen').attr('src', '../Images/VideoPresentation/PV_2.png'); 
@@ -198,9 +207,27 @@ function LaptopPreviousSlide(){
         $('#LaptopNextPPTScreen').attr('src', '../Images/VideoPresentation/PV_3.png'); 
     }
     else if(currPPTSlide == 3){
+        $('#LaptopCurrentPPTScreen').show();           
+        $('#PPTVideo').hide(); 
         $('#LaptopCurrentPPTScreen').attr('src', '../Images/VideoPresentation/PV_3.png'); 
         $('#LaptopNextPPTScreen').attr('src', '../Images/VideoPresentation/PV_4.png'); 
     } 
+}
+
+function LaptopVideoControls(controlType){
+    var myVideo = document.getElementById("PPTVideo"); 
+    if(controlType == 0){      
+        if (myVideo.paused) 
+            myVideo.play(); 
+        else 
+            myVideo.pause();
+    }
+    else if (controlType == 1){
+        myVideo.muted = true;
+    }
+    else if (controlType == 2){
+        myVideo.muted = false;
+    }
 }
 
 /* ---- END: LAPTOP */
@@ -252,11 +279,60 @@ function TVVideoControls(){
 /* ---- START: MOBILE */
 
 function MobileNextSlide(){   
-    
+    var myVideo = document.getElementById("PPTVideo");
+    myVideo.pause();
+
+    if(currPPTSlide == 0){
+        $('#PresentationMobileImg').attr('src', '../Images/VideoPresentation/PV_2.png'); 
+        $('#NextSlideImg').attr('src', '../Images/VideoPresentation/PV_3.png'); 
+
+    }
+    else if(currPPTSlide == 1){
+        $('#PresentationMobileImg').attr('src', '../Images/VideoPresentation/PV_3.png'); 
+        $('#NextSlideImg').attr('src', '../Images/VideoPresentation/PV_4.png'); 
+    }  
+    else if(currPPTSlide == 2){
+        /*$('#PresentationMobileImg').attr('src', '../Images/VideoPresentation/PV_4.png');*/ 
+        $('#PresentationMobileImg').hide(); 
+        $('#PPTVideo').show(); 
+        $('#NextSlideImg').attr('src', '../Images/VideoPresentation/PV_5.png'); 
+    }  
 }
 
 function MobilePreviousSlide(){
-    
+    var myVideo = document.getElementById("PPTVideo");
+    myVideo.pause();
+
+    if(currPPTSlide == 1){
+        $('#PresentationMobileImg').attr('src', '../Images/VideoPresentation/PV_1.png'); 
+        $('#NextSlideImg').attr('src', '../Images/VideoPresentation/PV_2.png'); 
+    }  
+    else if(currPPTSlide == 2){
+        $('#PresentationMobileImg').attr('src', '../Images/VideoPresentation/PV_2.png'); 
+        $('#NextSlideImg').attr('src', '../Images/VideoPresentation/PV_3.png'); 
+    }
+    else if(currPPTSlide == 3){
+        $('#PresentationMobileImg').show();           
+        $('#PPTVideo').hide(); 
+        $('#PresentationMobileImg').attr('src', '../Images/VideoPresentation/PV_3.png'); 
+        $('#NextSlideImg').attr('src', '../Images/VideoPresentation/PV_4.png'); 
+    } 
+}
+
+function MobileVideoControls(controlType){
+    var myVideo = document.getElementById("PPTVideo"); 
+    if(controlType == 0){      
+        if (myVideo.paused) 
+            myVideo.play(); 
+        else 
+            myVideo.pause();
+    }
+    else if (controlType == 1){
+        myVideo.muted = true;
+    }
+    else if (controlType == 2){
+        myVideo.muted = false;
+    }
 }
 
 /* ---- END: MOBILE */
