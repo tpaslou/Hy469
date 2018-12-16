@@ -11,7 +11,7 @@ if (!GlobalConfig.DebugMode) {
 
     var waitGestureUpdate = false;
 
-    var currPPTImage = 1;
+    var currPPTImageLeap = 1;
 
 
     var controller = Leap.loop({enableGestures: true}, function(frame){
@@ -36,19 +36,22 @@ if (!GlobalConfig.DebugMode) {
         {
             if(rightSwipeTimes > 20){
                 console.log("Swipe RIGHT");
-                if(currPPTImage < 5)
-                    ChangePPTImage(1);
+                Http.SendHelloWorldMessage("NextSlide");
+                //if(currPPTImageLeap < 5)
+                    //ChangePPTImage(1);
                 ResetValues();
             }
             else if(leftSwipeTimes > 20){
                 console.log("Swipe LEFT");
-                if(currPPTImage > 1)
-                    ChangePPTImage(-1);
+                Http.SendHelloWorldMessage("PreviousSlide");
+                //if(currPPTImageLeap > 1)
+                    //ChangePPTImage(-1);
                 ResetValues();
             }
             else if(circleTimes > 10){
                 console.log("Circle");
-                PlayPauseVideo();
+                Http.SendHelloWorldMessage("PlayPauseVideo");
+                //PlayPauseVideo();
                 ResetValues();
             }
         }        
@@ -64,7 +67,7 @@ function PlayPauseVideo(){
         return;
     }
 
-    if(currPPTImage == 4){
+    if(currPPTImageLeap == 4){
         if (myVideo.paused){
             console.log("-- Play Video");
             myVideo.play(); 
@@ -77,9 +80,9 @@ function PlayPauseVideo(){
 }
 
 function ChangePPTImage(newValue){
-    currPPTImage += newValue;
+    currPPTImageLeap += newValue;
     
-    var name = '../Images/TVScreen/PV_' + currPPTImage.toString() +'.png';
+    var name = '../Images/TVScreen/PV_' + currPPTImageLeap.toString() +'.png';
 
     console.log(name);
 
@@ -87,7 +90,7 @@ function ChangePPTImage(newValue){
 
     for (var i = 0, len = elements.length; i < len; i++) {
         elements[i].setAttribute('src', name); 
-        if(currPPTImage == 4){
+        if(currPPTImageLeap == 4){
             elements[i].hidden = true;
             $('.PPTPanelVideo').show();    
         }
