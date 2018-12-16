@@ -13,21 +13,9 @@ var Sockets = (function () {
 
     console.log(data.type);
     console.log(data.message);
-    console.log();
 
-    if(data.message == "TakeNotes"){
-      $('#NotesPanel').show();
-      $('#MainPanel').hide();
-      $('#ParticipantsPanel').hide();
-      $('#SettingsPanel').hide();
-      $('#FileSystemPanel').hide();
-    }else if(data.message == "ChangePPT"){
-      $('#FileSystemPanel').show();
-      $('#MainPanel').hide();
-      $('#ParticipantsPanel').hide();
-      $('#SettingsPanel').hide();
-      $('#NotesPanel').hide();
-    }else if(data.message == "Annotation"){
+    // Presentation Header Controls ---------------------------------------
+    if(data.message == "Annotation"){
       TakeAnnotation();     
     }else if(data.message == "AnnotationRed"){
       AnnotationColor(0);
@@ -50,6 +38,27 @@ var Sockets = (function () {
     }
     else if(data.message == "UnmuteVideo"){
       VideoControls(2);
+    }
+    // Coordinator Requests ------------------------------------------------
+    else if(data.message == "AnnotationRequest"){
+      if(window.location.pathname == "/Html/Coordinator.html")
+        AnnotationRequest();
+    }
+    else if(data.message == "ChangeFileRequest"){
+      if(window.location.pathname == "/Html/Coordinator.html")
+        ChangeFileRequest();
+    }
+    else if(data.message == "CoordinatorRequest"){
+      if(window.location.pathname == "/Html/Coordinator.html")
+        CoordinatorRequest();
+    }
+    else if(data.message == "JoinRequest"){
+      if(window.location.pathname == "/Html/Coordinator.html")
+        JoinRequest();
+    }
+    else if(data.message == "ParticipantOptionsRequest"){
+      if(window.location.pathname == "/Html/Coordinator.html")
+        ParticipantOptionsRequest();
     }
   }
 

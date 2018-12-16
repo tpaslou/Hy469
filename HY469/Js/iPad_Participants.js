@@ -2,6 +2,7 @@ $(document).ready(function(){
 
     /* -- NOTIFICATION PARTICIPANT -- */
     $('#RequestAnnotationBtn').click(function () {
+        Http.SendHelloWorldMessage("AnnotationRequest");
         $('.Notification').hide();
         $('#AnnotationsNotification').show();
     });
@@ -12,6 +13,7 @@ $(document).ready(function(){
     });
 
     $('#RequestChangePPTBtn').click(function () {
+        Http.SendHelloWorldMessage("ChangeFileRequest");
         $('.Notification').hide();
         $('#PresentationNotification').show();
     });
@@ -44,6 +46,7 @@ $(document).ready(function(){
     });
 
     $("#CoordPrivBtn").click(function(){
+        Http.SendHelloWorldMessage("CoordinatorRequest");
         $('#CoordinatorPrivilegesNotification').show();
     });
 

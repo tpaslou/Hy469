@@ -40,7 +40,6 @@ $(document).ready(function(){
 
     //-------------Take Notes-------------------
     $('#TakeNotesBtn').click(function(){
-        Http.SendHelloWorldMessage("TakeNotes");
         $('#NotesPanel').show();
         $('#MainPanel').hide();
         $('#ParticipantsPanel').hide();
@@ -48,7 +47,6 @@ $(document).ready(function(){
         $('#FileSystemPanel').hide();
     });
     $('#ChangePPTBtn').click(function(){
-        Http.SendHelloWorldMessage("ChangePPT");
         $('#FileSystemPanel').show();
         $('#MainPanel').hide();
         $('#ParticipantsPanel').hide();
