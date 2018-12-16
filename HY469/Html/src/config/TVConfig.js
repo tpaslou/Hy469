@@ -6,7 +6,7 @@
 var GlobalConfig = (function () {
   var ConnectToServer = true; //true/false 
 
-  var DeviceType = "mobile";
+  var DeviceType = "tv";
 
   var serverIP = '192.168.56.1';
 

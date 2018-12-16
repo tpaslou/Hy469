@@ -15,6 +15,9 @@ $(document).ready(function(){
         $(this).attr('src', '../Images/Mobile/Bar/PresentationPRESSED.png'); 
         currPressedButton ="#MobileBarPresentationBtn";
         $('#ChatPanel').hide();
+        $('#PeoplePanel').hide();
+        $('#SettingsPanel').hide();
+
         $('#PresentationTabMobile').show();
     });
 
@@ -24,8 +27,10 @@ $(document).ready(function(){
         UnPressAllLeftBarButtons();
         $(this).attr('src', '../Images/Mobile/Bar/ChatPRESSED.png'); 
         currPressedButton ="#MobileBarChatBtn";
-
+        $('#PeoplePanel').hide();
         $('#PresentationTabMobile').hide();
+        $('#SettingsPanel').hide();
+
         $('#ChatPanel').show();
     });
 
@@ -37,6 +42,9 @@ $(document).ready(function(){
         currPressedButton ="#MobileBarParticipantsBtn";
         $('#ChatPanel').hide();
         $('#PresentationTabMobile').hide();
+        $('#SettingsPanel').hide();
+        $('#PeoplePanel').show();
+
     });
 
     $('#MobileBarSettingsBtn').click(function () {
@@ -46,7 +54,11 @@ $(document).ready(function(){
         $(this).attr('src', '../Images/Mobile/Bar/SettingsPRESSED.png'); 
         currPressedButton ="#MobileBarSettingsBtn";
         $('#ChatPanel').hide();
+        $('#PeoplePanel').hide();
+
         $('#PresentationTabMobile').hide();
+        $('#SettingsPanel').show();
+
     });
     
     $('.topButtonHeader').click(function () {

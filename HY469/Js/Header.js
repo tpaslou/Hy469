@@ -4,87 +4,39 @@ $(document).ready(function(){
         //Start sockets' connections
         Sockets.Connect();
       }
-    var currPPTSlide = 0;
-    var annotations = 0;
-    /* Video Controls: Mute / Unmute Button */
+    
+    $('#PlayPauseBtn').click(function () {
+        Http.SendHelloWorldMessage("PlayPauseVideo");
+        //VideoControls(0);
+    });
+
     $('#SwapMuteBtn').click(function () {
-        var myVideo = document.getElementById("PPTVideo");
         if ($('#MuteUnmuteImg').attr('src') == "../Images/Buttons/Button_Mute.png") {
             $('#MuteUnmuteImg').attr('src', '../Images/Buttons/Button_Unmute.png'); 
-            myVideo.muted = true;
+            Http.SendHelloWorldMessage("UnmuteVideo");
         }
         else{
             $('#MuteUnmuteImg').attr('src', '../Images/Buttons/Button_Mute.png'); 
-            myVideo.muted = false;
-        }
+            Http.SendHelloWorldMessage("MuteVideo");
+        } 
+        //VideoControls(1);
     });
 
-    $('#PlayPauseBtn').click(function () {
-        var myVideo = document.getElementById("PPTVideo"); 
-        if (myVideo.paused) 
-            myVideo.play(); 
-        else 
-            myVideo.pause();
-    });
+    
 
     /* Side Panel: Previous Button */
     $('#PreviousBtn').click(function(){
-        var myVideo = document.getElementById("PPTVideo");
-        myVideo.pause();
-
-        if(currPPTSlide == 0){
-            /* Do Nothing */
-        }
-        else if(currPPTSlide == 1){
-            --currPPTSlide;
-            $('#PPTVideoImg').attr('src', '../Images/VideoPresentation/PV_1.png'); 
-            $('#NextSlideImg').attr('src', '../Images/VideoPresentation/PV_2.png'); 
-        }  
-        else if(currPPTSlide == 2){
-            --currPPTSlide;
-            $('#PPTVideoImg').attr('src', '../Images/VideoPresentation/PV_2.png'); 
-            $('#NextSlideImg').attr('src', '../Images/VideoPresentation/PV_3.png'); 
-        }
-        else if(currPPTSlide == 3){
-            --currPPTSlide;
-            $('#PPTVideoImg').show();           
-            $('#PPTVideo').hide(); 
-            $('#PPTVideoImg').attr('src', '../Images/VideoPresentation/PV_3.png'); 
-            $('#NextSlideImg').attr('src', '../Images/VideoPresentation/PV_4.png'); 
-
-            $('#VideoControlsDiv').hide();
-        }
+        Http.SendHelloWorldMessage("PreviousSlide");
+        //PreviousSlide();
     });
 
     /* Side Panel: Next Button */
     $('#NextBtn').click(function(){
-        var myVideo = document.getElementById("PPTVideo");
-        myVideo.pause();
-
-        if(currPPTSlide == 0){
-            ++currPPTSlide;
-            $('#PPTVideoImg').attr('src', '../Images/VideoPresentation/PV_2.png'); 
-            $('#NextSlideImg').attr('src', '../Images/VideoPresentation/PV_3.png'); 
-
-        }
-        else if(currPPTSlide == 1){
-            ++currPPTSlide;
-            $('#PPTVideoImg').attr('src', '../Images/VideoPresentation/PV_3.png'); 
-            $('#NextSlideImg').attr('src', '../Images/VideoPresentation/PV_4.png'); 
-        }  
-        else if(currPPTSlide == 2){
-            ++currPPTSlide;
-            /*$('#PPTVideoImg').attr('src', '../Images/VideoPresentation/PV_4.png');*/ 
-            $('#PPTVideoImg').hide(); 
-            $('#PPTVideo').show(); 
-            $('#NextSlideImg').attr('src', '../Images/VideoPresentation/PV_5.png'); 
-            
-            $('#VideoControlsDiv').show();
-        }  
-        else if(currPPTSlide == 3){
-            /* Do Nothing */ 
-        }  
+        Http.SendHelloWorldMessage("NextSlide");
+        //NextSlide();
     });
+
+    
 
     //-------------Take Notes-------------------
     $('#TakeNotesBtn').click(function(){
@@ -106,47 +58,20 @@ $(document).ready(function(){
 
         //-------------Take Notes-------------------
         $('#TakeAnnotationBtn').click(function(){
-            if(annotations==0){
-                Http.SendHelloWorldMessage("AnnotationOn");
-                $('#VideoAnnotationRed').show();
-                $('#VideoAnnotationGreen').hide();
-                $('#VideoAnnotationBlack').hide();
-                annotations = 1;
-            }else{
-                Http.SendHelloWorldMessage("AnnotationOff");
-                $('#VideoAnnotationRed').hide();
-                $('#VideoAnnotationGreen').hide();
-                $('#VideoAnnotationBlack').hide();
-                annotations = 0;
-            }
-
+            Http.SendHelloWorldMessage("Annotation");
+            //TakeAnnotation();
         });
 
         $('#ColorRedBtn').click(function(){
-            if(annotations==1){
-                Http.SendHelloWorldMessage("AnnotationRed");
-                $('#VideoAnnotationRed').show();
-                $('#VideoAnnotationGreen').hide();
-                $('#VideoAnnotationBlack').hide();
-            }
+            Http.SendHelloWorldMessage("AnnotationRed");
         });
 
         $('#ColorGreenBtn').click(function(){
-            if(annotations==1){
-                Http.SendHelloWorldMessage("AnnotationGreen");
-                $('#VideoAnnotationRed').hide();
-                $('#VideoAnnotationGreen').show();
-                $('#VideoAnnotationBlack').hide();
-            }
+            Http.SendHelloWorldMessage("AnnotationGreen");
         });
 
         $('#ColorBlackBtn').click(function(){
-            if(annotations==1){
-                Http.SendHelloWorldMessage("AnnotationBlack");
-                $('#VideoAnnotationRed').hide();
-                $('#VideoAnnotationGreen').hide();
-                $('#VideoAnnotationBlack').show();
-            }
+            Http.SendHelloWorldMessage("AnnotationBlack");
         });
     
 });

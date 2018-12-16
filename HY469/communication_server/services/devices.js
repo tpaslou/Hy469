@@ -5,8 +5,8 @@
 
 module.exports = {
     TV: 'tv',
-    MOBILE: 'mobile'
-    /*
-	TABLET: 'tablet'
-	PC: 'pc'*/
+    MOBILE: 'mobile',
+	TABLET: 'tablet',
+	PC: 'pc',
+	HOLOLENS: 'hololens'
 };
