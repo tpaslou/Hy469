@@ -34,5 +34,8 @@ function AcceptCoordinatorRequest(){
 }
 
 function HideParticipantPendingRequests(){
-    
+    if(window.location.pathname == PartTablet)
+        $('.Notification').hide();
+    else if(window.location.pathname == PartLaptop)
+        $('.PerOptionsPanel').hide();
 }

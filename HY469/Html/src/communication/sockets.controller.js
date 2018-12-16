@@ -60,6 +60,9 @@ var Sockets = (function () {
       if(window.location.pathname == "/Html/Coordinator.html")
         ParticipantOptionsRequest();
     }
+    else if(data.message == "HideParticipantPendingRequests"){
+      HideParticipantPendingRequests();
+    }
   }
 
   class WSConnection {

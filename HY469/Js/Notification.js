@@ -9,10 +9,12 @@ $(document).ready(function(){
     $('#AcceptBtn').click(function(){
         $('#AnnotationsNotification').hide();
         Http.SendHelloWorldMessage("Annotation");
+        Http.SendHelloWorldMessage("HideParticipantPendingRequests");
     });
 
     $('#DeclineBtn').click(function(){
         $('#AnnotationsNotification').hide();
+        Http.SendHelloWorldMessage("HideParticipantPendingRequests");
     });
 
     $("#ExitBtn").mousedown(function(){
