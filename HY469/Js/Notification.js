@@ -8,6 +8,7 @@ $(document).ready(function(){
 
     $('#AcceptBtn').click(function(){
         $('#AnnotationsNotification').hide();
+        Http.SendHelloWorldMessage("Annotation");
     });
 
     $('#DeclineBtn').click(function(){

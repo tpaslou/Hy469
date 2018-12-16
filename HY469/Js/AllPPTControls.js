@@ -122,7 +122,7 @@ function TabletPreviousSlide(){
 }
 
 function TabletTakeAnnotation(){
-    if(annotations==0){
+    if(annotations==1){
         Http.SendHelloWorldMessage("AnnotationOn");
         $('#VideoAnnotationRed').show();
         $('#VideoAnnotationGreen').hide();
