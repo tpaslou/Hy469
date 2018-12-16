@@ -27,3 +27,12 @@ function ParticipantOptionsRequest(){
 function HideAllRequests(){
     $('.Notification').hide();
 }
+
+function AcceptCoordinatorRequest(){
+    HideAllRequests();
+    $('#CoordinatorNotification').show();
+}
+
+function HideParticipantPendingRequests(){
+    
+}
