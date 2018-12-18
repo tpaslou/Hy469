@@ -6,22 +6,9 @@ $(document).ready(function(){
         $('#ParticipantOptionsNotification').hide();
     });
 
-    $('#AcceptBtn').click(function(){
-        $('#AnnotationsNotification').hide();
-        Http.SendHelloWorldMessage("Annotation");
-        Http.SendHelloWorldMessage("HideParticipantPendingRequests");
-    });
-
-    $('#DeclineBtn').click(function(){
-        $('#AnnotationsNotification').hide();
-        Http.SendHelloWorldMessage("HideParticipantPendingRequests");
-    });
-
     $("#ExitBtn").mousedown(function(){
         $('#ExitButtonImg').attr('src', '../Images/Notification/Button_Decline.png'); 
-    });
-    $("#ExitBtn").mouseleave(function(){
-        $('#ExitButtonImg').attr('src', '../Images/Notification/Button_Exit.png'); 
+        $('.Notification').hide();
     });
 
     /* Coordinator - UserOptions Screen */
@@ -47,5 +34,36 @@ $(document).ready(function(){
     $("#ExitParticipantOptionsBtn").mouseleave(function(){
         $('#ExitParticipantOptionsButtonImg').attr('src', '../Images/Notification/Button_Exit.png'); 
     });
+
+    // ALL ACCEPT DECLINE
+
+    $('#NotificationAcceptBtn').click(function(){
+        $('#AnnotationsNotification').hide();
+        Http.SendHelloWorldMessage("Annotation");
+        Http.SendHelloWorldMessage("HideParticipantPendingRequests");
+    });
+
+    $('#NotificationDeclineBtn').click(function(){
+        $('#AnnotationsNotification').hide();
+        Http.SendHelloWorldMessage("HideParticipantPendingRequests");
+    });
+
+    $('#JoinAcceptBtn').click(function(){
+        $('#JoinNotification').hide();
+        Http.SendHelloWorldMessage("ParticipantJoin");
+        Http.SendHelloWorldMessage("HideParticipantPendingRequests");
+    });
+
+    $('#JoinDeclineBtn').click(function(){
+        $('#JoinNotification').hide();
+        Http.SendHelloWorldMessage("HideParticipantPendingRequests");
+    });
+
+    $('#RemoveUserBtn').click(function(){
+        LastUserStatus(false);
+        $('#ParticipantOptionsNotification').hide();
+        Http.SendHelloWorldMessage("RemoveParticipant");
+    });
+    
 
 });

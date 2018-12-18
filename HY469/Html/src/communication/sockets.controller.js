@@ -63,6 +63,13 @@ var Sockets = (function () {
     else if(data.message == "HideParticipantPendingRequests"){
       HideParticipantPendingRequests();
     }
+    else if(data.message == "ParticipantJoin"){
+      ParticipantJoin();
+    }
+    else if(data.message == "AddJoinnedParticipant"){
+      if(window.location.pathname == "/Html/Coordinator.html")
+        LastUserStatus(true);
+    }
   }
 
   class WSConnection {

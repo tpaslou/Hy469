@@ -48,6 +48,16 @@ $(document).ready(function(){
         $('#LoginPart5').hide();
     });  
 
+    // REQUEST JOIN
+
+    $("#RequestSessionBtn").click( function () {
+        Http.SendHelloWorldMessage("JoinRequest");
+    });  
+
+    $("#JoinSessionBtn").click( function () {
+        Http.SendHelloWorldMessage("AddJoinnedParticipant");
+    });
+
     /* FILE SYSTEM */
     function PPTSelected(){
         $('#LoginPart4').show();

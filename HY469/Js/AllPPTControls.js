@@ -7,6 +7,8 @@ var PartLaptop = "/Html/Laptop_Participant.html";
 var PartMobile = "/Html/Mobile_Participant.html";
 var TV = "/Html/TVScreen.html";
 
+var LoginTablet = "/Html/LoginScreen.html";
+var LoginLaptop = "/Html/Laptop_LoginScreen.html";
 
 
 /* REDIRECT other devices to their proper functions */
