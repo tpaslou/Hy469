@@ -1,5 +1,11 @@
 $(document).ready(function(){
    
+    //here to connect with sockets
+    if (GlobalConfig.ConnectToServer) {
+        //Start sockets' connections
+        Sockets.Connect();
+    }
+
     $(".InputLogin").focus( function () {
         this.value = "";
         $("#Keyboard").slideDown(600);

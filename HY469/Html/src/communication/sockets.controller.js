@@ -70,6 +70,9 @@ var Sockets = (function () {
       if(window.location.pathname == "/Html/Coordinator.html")
         LastUserStatus(true);
     }
+    else if(data.message == "RemoveParticipant"){
+        RemoveParticipant();
+    }
   }
 
   class WSConnection {

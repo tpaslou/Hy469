@@ -68,6 +68,8 @@ function VideoControls(controlType){
         TabletVideoControls(controlType);
     else if(window.location.pathname == TV)
         TVVideoControls();
+    else if(window.location.pathname == PartMobile)
+        MobileVideoControls();
 }
 
 /* ---- START: TABLET : Coord + Participant */
@@ -254,11 +256,61 @@ function TVVideoControls(){
 /* ---- START: MOBILE */
 
 function MobileNextSlide(){   
-    
+    var myVideo = document.getElementById("PPTVideo");
+    myVideo.pause();
+
+    if(currPPTSlide == 0){
+        $('#PresentationMobileImg').attr('src', '../Images/VideoPresentation/PV_2.png'); 
+        $('#NextSlideImg').attr('src', '../Images/VideoPresentation/PV_3.png'); 
+
+    }
+    else if(currPPTSlide == 1){
+        $('#PresentationMobileImg').attr('src', '../Images/VideoPresentation/PV_3.png'); 
+        $('#NextSlideImg').attr('src', '../Images/VideoPresentation/PV_4.png'); 
+    }  
+    else if(currPPTSlide == 2){
+        /*$('#PresentationMobileImg').attr('src', '../Images/VideoPresentation/PV_4.png');*/ 
+        $('#PresentationMobileImg').hide(); 
+        $('#PPTVideo').show(); 
+        $('#NextSlideImg').attr('src', '../Images/VideoPresentation/PV_5.png'); 
+        
+    }  
 }
 
 function MobilePreviousSlide(){
-    
+    var myVideo = document.getElementById("PPTVideo");
+    myVideo.pause();
+
+    if(currPPTSlide == 1){
+        $('#PresentationMobileImg').attr('src', '../Images/VideoPresentation/PV_1.png'); 
+        $('#NextSlideImg').attr('src', '../Images/VideoPresentation/PV_2.png'); 
+    }  
+    else if(currPPTSlide == 2){
+        $('#PresentationMobileImg').attr('src', '../Images/VideoPresentation/PV_2.png'); 
+        $('#NextSlideImg').attr('src', '../Images/VideoPresentation/PV_3.png'); 
+    }
+    else if(currPPTSlide == 3){
+        $('#PresentationMobileImg').show();           
+        $('#PPTVideo').hide(); 
+        $('#PresentationMobileImg').attr('src', '../Images/VideoPresentation/PV_3.png'); 
+        $('#NextSlideImg').attr('src', '../Images/VideoPresentation/PV_4.png'); 
+    } 
+}
+
+function MobileVideoControls(controlType){
+    var myVideo = document.getElementById("PPTVideo"); 
+    if(controlType == 0){      
+        if (myVideo.paused) 
+            myVideo.play(); 
+        else 
+            myVideo.pause();
+    }
+    else if (controlType == 1){
+        myVideo.muted = true;
+    }
+    else if (controlType == 2){
+        myVideo.muted = false;
+    }
 }
 
 /* ---- END: MOBILE */

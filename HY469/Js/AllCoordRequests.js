@@ -51,6 +51,8 @@ function ParticipantJoin(){
         window.location.href='../Html/Participant.html'
     else if(window.location.pathname == LoginLaptop)
         window.location.href='../Html/Laptop_Participant.html'
+    else if(window.location.pathname == Coord)
+        LastUserStatus(true);
 }
 
 function LastUserStatus(joined){
@@ -58,4 +60,9 @@ function LastUserStatus(joined){
         $('#RemoteUserIconNewJoinedParticipant').show();
     else
         $('#RemoteUserIconNewJoinedParticipant').hide();
+}
+
+function RemoveParticipant(){
+    if(window.location.pathname == PartTablet)
+        window.location.href='../Html/LoginScreen.html'
 }

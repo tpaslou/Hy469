@@ -1,4 +1,11 @@
 $(document).ready(function(){
+
+    //here to connect with sockets
+    if (GlobalConfig.ConnectToServer) {
+        //Start sockets' connections
+        Sockets.Connect();
+      }
+
     var currPressedButton ="#MobileBarPresentationBtn"; 
 
     function UnPressAllLeftBarButtons(){

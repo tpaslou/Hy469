@@ -8,7 +8,7 @@ var GlobalConfig = (function () {
 
   var DeviceType = "mobile";
 
-  var serverIP = '192.168.56.1';
+  var serverIP = '192.168.1.14';
 
   var Connections = {
     Sockets: `ws:${serverIP}:8123`, // URL of socket server
