@@ -35,7 +35,8 @@ function HideAllRequests(){
 
 function AcceptCoordinatorRequest(){
     HideAllRequests();
-    $('#CoordinatorNotification').show();
+    if(window.location.pathname == PartTablet)
+        window.location.href='../Html/Coordinator.html'
 }
 
 function HideParticipantPendingRequests(){

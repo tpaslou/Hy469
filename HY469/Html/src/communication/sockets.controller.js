@@ -73,6 +73,15 @@ var Sockets = (function () {
     else if(data.message == "RemoveParticipant"){
         RemoveParticipant();
     }
+    else if(data.message == "ChangePPTFile"){
+      ChangePPT();
+    }
+    else if(data.message == "AllowPPTChangeParticipant"){
+      AllowPPTChangeParticipant();
+    }
+    else if(data.message == "AcceptCoordinator"){
+      AcceptCoordinatorRequest();
+    }
   }
 
   class WSConnection {

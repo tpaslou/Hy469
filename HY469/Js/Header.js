@@ -71,5 +71,10 @@ $(document).ready(function(){
         $('#ColorBlackBtn').click(function(){
             Http.SendHelloWorldMessage("AnnotationBlack");
         });
+
+        // TEMP Placement for PPT change
+        $('#PPTButton1').click(function(){
+            Http.SendHelloWorldMessage("ChangePPTFile");
+        });
     
 });

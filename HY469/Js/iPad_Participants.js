@@ -50,4 +50,7 @@ $(document).ready(function(){
         $('#CoordinatorPrivilegesNotification').show();
     });
 
+    $('#ExitBtn').click(function(){
+        $('.Notification').hide();
+    });
 });

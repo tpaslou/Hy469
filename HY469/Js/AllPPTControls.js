@@ -1,6 +1,8 @@
 var annotations = 0;
 var currPPTSlide = 0;
 
+var currPPTDefault = true;
+
 var Coord = "/Html/Coordinator.html";
 var PartTablet = "/Html/Participant.html";
 var PartLaptop = "/Html/Laptop_Participant.html";
@@ -43,6 +45,31 @@ function PreviousSlide(){
         MobilePreviousSlide();
 
     --currPPTSlide;
+}
+
+function ChangePPT(){
+    currPPTDefault = !currPPTDefault;
+
+    if(window.location.pathname == Coord || window.location.pathname == PartTablet)
+        TabletChangePPT();
+    else if(window.location.pathname == PartLaptop)
+        LaptopChangePPT();
+    else if(window.location.pathname == TV)
+        TVNextChangePPT(currPPTSlide + 1);
+    else if(window.location.pathname == PartMobile)
+        MobileChangePPT();
+}
+
+function AllowPPTChangeParticipant(){
+    // Currently features ONLY for tablet
+    if(window.location.pathname == PartTablet)
+    {
+        $('#FileSystemPanel').show();
+        $('#MainPanel').hide();
+        $('#ParticipantsPanel').hide();
+        $('#SettingsPanel').hide();
+        $('#NotesPanel').hide();
+    }
 }
 
 function TakeAnnotation(){
@@ -117,6 +144,17 @@ function TabletPreviousSlide(){
 
         $('#VideoControlsDiv').hide();
     } 
+}
+
+function TabletChangePPT(){   
+    if(currPPTDefault){
+        $('#PPTVideoImg').attr('src', '../Images/VideoPresentation/PV_1.png'); 
+        $('#NextSlideImg').attr('src', '../Images/VideoPresentation/PV_2.png'); 
+    }
+    else{
+        $('#PPTVideoImg').attr('src', '../Images/ChangePPT/PV_1.png'); 
+        $('#NextSlideImg').attr('src', '../Images/ChangePPT/PV_2.png'); 
+    }
 }
 
 function TabletTakeAnnotation(){
@@ -207,6 +245,17 @@ function LaptopPreviousSlide(){
     } 
 }
 
+function LaptopChangePPT(){   
+    if(currPPTDefault){
+        $('#LaptopCurrentPPTScreen').attr('src', '../Images/VideoPresentation/PV_1.png'); 
+        $('#LaptopNextPPTScreen').attr('src', '../Images/VideoPresentation/PV_2.png'); 
+    }
+    else{
+        $('#LaptopCurrentPPTScreen').attr('src', '../Images/ChangePPT/PV_1.png'); 
+        $('#LaptopNextPPTScreen').attr('src', '../Images/ChangePPT/PV_2.png'); 
+    }
+}
+
 /* ---- END: LAPTOP */
 
 /* ---- START: TV */
@@ -248,6 +297,15 @@ function TVVideoControls(){
             console.log("-- Pause Video");
             myVideo.pause();
         }
+    }
+}
+
+function TVChangePPT(){ 
+    if(currPPTDefault){
+        $('.PPTPanelImage').attr('src', '../Images/TVScreen/PV_1.png'); 
+    }
+    else{
+        $('.PPTPanelImage').attr('src', '../Images/Change/PV_1.png'); 
     }
 }
 
@@ -295,6 +353,17 @@ function MobilePreviousSlide(){
         $('#PresentationMobileImg').attr('src', '../Images/VideoPresentation/PV_3.png'); 
         $('#NextSlideImg').attr('src', '../Images/VideoPresentation/PV_4.png'); 
     } 
+}
+
+function MobileChangePPT(){   
+    if(currPPTDefault){
+        $('#PresentationMobileImg').attr('src', '../Images/VideoPresentation/PV_1.png'); 
+        $('#NextSlideImg').attr('src', '../Images/VideoPresentation/PV_2.png'); 
+    }
+    else{
+        $('#PresentationMobileImg').attr('src', '../Images/ChangePPT/PV_1.png'); 
+        $('#NextSlideImg').attr('src', '../Images/ChangePPT/PV_2.png'); 
+    }
 }
 
 function MobileVideoControls(controlType){

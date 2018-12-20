@@ -2,8 +2,7 @@ $(document).ready(function(){
     /* Annotation Screen */
     $('#ExitBtn').click(function(){
         $('#ExitButtonImg').attr('src', '../Images/Notification/Button_Exit.png'); 
-        $('#AnnotationsNotification').hide();
-        $('#ParticipantOptionsNotification').hide();
+        $('.Notification').hide();
     });
 
     $("#ExitBtn").mousedown(function(){
@@ -55,7 +54,30 @@ $(document).ready(function(){
     });
 
     $('#JoinDeclineBtn').click(function(){
-        $('#JoinNotification').hide();
+        $('#PresentationNotification').hide();
+        Http.SendHelloWorldMessage("HideParticipantPendingRequests");
+    });
+
+    $('#PPTAcceptBtn').click(function(){
+        $('#PresentationNotification').hide();
+        Http.SendHelloWorldMessage("AllowPPTChangeParticipant");
+        Http.SendHelloWorldMessage("HideParticipantPendingRequests");
+    });
+
+    $('#PPTDeclineBtn').click(function(){
+        $('#PresentationNotification').hide();
+        Http.SendHelloWorldMessage("HideParticipantPendingRequests");
+    });
+
+    $('#CoordAcceptBtn').click(function(){
+        $('#CoordinatorNotification').hide();
+        Http.SendHelloWorldMessage("AcceptCoordinator");
+        Http.SendHelloWorldMessage("HideParticipantPendingRequests");
+        window.location.href='../Html/Participant.html';
+    });
+
+    $('#CoordDeclineBtn').click(function(){
+        $('#CoordinatorNotification').hide();
         Http.SendHelloWorldMessage("HideParticipantPendingRequests");
     });
 
@@ -64,6 +86,5 @@ $(document).ready(function(){
         $('#ParticipantOptionsNotification').hide();
         Http.SendHelloWorldMessage("RemoveParticipant");
     });
-    
 
 });
