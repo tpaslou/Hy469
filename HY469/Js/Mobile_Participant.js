@@ -65,3 +65,33 @@ $(document).ready(function(){
         $('.SideAnnotationPanel').toggle("slide");      
     });
 });
+
+
+function send(){
+
+    var message = $.trim($("#message-to-send").val());
+    if(message!=""){
+    var myvar = '<div class="incoming_msg">'+
+    '                            <div class="incoming_msg_img"> <img src="../Images/Users/User_Stratos.jpg" class="MsgImg"'+
+    '                                    alt="sunil"> </div>'+
+    '                            <div class="received_msg">'+
+    '                                <div class="Name" style="display:inline-block">'+
+    '                                    <p>Me</p>'+
+    '                                </div>'+
+    ''+
+    '                                <div class="received_withd_msg">'+
+    '                                    <p>'+message+
+    '</p>'+
+    '                                    <span class="time_date"> 11:01 AM | Today</span>'+
+    '                                </div>'+
+    '                            </div>'+
+    '                        </div>';
+        
+    
+
+    $("#message-to-send").val('');    
+    $(".MessagesPanel").append(myvar);
+    $('.MessagesPanel').scrollTop=  $('.MessagesPanel').scrollHeight;
+}
+
+}
