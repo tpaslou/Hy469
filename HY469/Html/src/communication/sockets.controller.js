@@ -48,6 +48,9 @@ var Sockets = (function () {
       if(window.location.pathname == "/Html/Coordinator.html")
         ChangeFileRequest();
     }
+    else if(data.message == "ChangeFileRequestHolo"){
+        ChangeFileRequest();
+    }
     else if(data.message == "CoordinatorRequest"){
       if(window.location.pathname == "/Html/Coordinator.html")
         CoordinatorRequest();
